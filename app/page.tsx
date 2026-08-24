@@ -29,7 +29,6 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { MetricCounter } from "@/components/sections/MetricCounter";
-import { HeroImage } from "@/components/sections/HeroImage";
 import { InteractiveSimulator } from "@/components/sections/InteractiveSimulator";
 import { CasesShowcase } from "@/components/sections/CasesShowcase";
 import { CorporateClientsMarquee } from "@/components/sections/CorporateClientsMarquee";
@@ -66,7 +65,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION COM IDENTIDADE INSTITUCIONAL        */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy-deep min-h-[640px] lg:min-h-[720px] pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-0 text-mundo-white overflow-hidden flex flex-col justify-center">
+      <section className="relative bg-mundo-navy-deep min-h-[640px] lg:min-h-[720px] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-40 lg:pb-0 text-mundo-white overflow-hidden flex flex-col justify-center">
         {/* Ambient Glow Background */}
         <div 
           className="absolute inset-0 pointer-events-none z-0"
@@ -79,9 +78,9 @@ export default function HomePage() {
         <div className="arc-decor w-[600px] h-[600px] -top-64 -right-48 opacity-20 hidden lg:block pointer-events-none z-1" />
         <div className="arc-decor-glow w-[500px] h-[500px] -bottom-48 -left-32 opacity-15 hidden lg:block pointer-events-none z-1" />
 
-        {/* Full Bleed Right/Bottom Hero Image with Header Clearance */}
-        <div className="absolute right-0 bottom-0 top-20 sm:top-24 lg:top-24 w-full lg:w-[55%] xl:w-[50%] 2xl:w-[46%] z-1 pointer-events-none select-none flex items-end justify-end overflow-hidden">
-          <div className="relative w-full h-[84%] sm:h-[88%] lg:h-[92%] xl:h-[94%]">
+        {/* Full Bleed Hero Image: Flush with right edge on mobile & desktop */}
+        <div className="absolute right-0 bottom-0 h-[380px] sm:h-[450px] lg:top-24 lg:bottom-0 lg:h-auto w-full sm:w-[90%] md:w-[80%] lg:w-[55%] xl:w-[50%] 2xl:w-[46%] z-1 pointer-events-none select-none flex items-end justify-end overflow-hidden">
+          <div className="relative w-full h-full lg:h-[92%] xl:h-[94%]">
             <Image
               src="/images/fotos-home/foto-hero-section-1.png"
               alt="Especialista em atendimento e telefonia corporativa da Mundo Telecom"
