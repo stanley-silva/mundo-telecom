@@ -13,13 +13,7 @@ import {
   Headphones,
   Building2,
   Landmark,
-  Cloud,
   MessageSquare,
-  Send,
-  Star,
-  BarChart2,
-  ShieldCheck,
-  FileCheck,
   Lock,
   ArrowRight
 } from "lucide-react";
@@ -69,28 +63,22 @@ export function Header() {
 
   // Soluções para Empresas (Sub-itens)
   const empresasItems = [
-    { title: "Telefonia & Conectividade", desc: "Rotas de voz e identificador local (DDD)", href: "/servicos#telefonia-ip", icon: <PhoneCall className="w-4 h-4 text-mundo-orange" /> },
-    { title: "PABX em Nuvem", desc: "Central sem hardware para matriz e filiais", href: "/servicos#pabx-nuvem", icon: <Cloud className="w-4 h-4 text-mundo-orange" /> },
-    { title: "Contact Center na Nuvem", desc: "Discadores, filas e supervisão ao vivo", href: "/servicos#contact-center", icon: <Headphones className="w-4 h-4 text-mundo-orange" /> },
-    { title: "Omnichannel + IA (Plataforma Conecta)", desc: "WhatsApp oficial com múltiplos atendentes", href: "/servicos#whatsapp-omnichannel", icon: <MessageSquare className="w-4 h-4 text-mundo-orange" /> },
-    { title: "Mensageria em Massa", desc: "Disparos oficiais de SMS e WhatsApp", href: "/servicos#mensageria", icon: <Send className="w-4 h-4 text-mundo-orange" /> },
-    { 
-      title: "Terceirização de Telecom", 
-      desc: "Gestão completa de infraestrutura e custos", 
-      href: "/servicos#terceirizacao", 
-      icon: <Star className="w-4 h-4 text-amber-400 fill-amber-400" />,
-      badge: "PRODUTO MAIS RENTÁVEL"
-    },
-    { title: "Software de Gestão", desc: "Tarifação, auditoria e bilhetagem precisa", href: "/servicos#software-gestao", icon: <BarChart2 className="w-4 h-4 text-mundo-orange" /> },
+    { title: "Telefonia & Conectividade", desc: "Rotas de voz e identificador local (DDD)", href: "/servicos#telefonia-ip" },
+    { title: "PABX em Nuvem", desc: "Central sem hardware para matriz e filiais", href: "/servicos#pabx-nuvem" },
+    { title: "Contact Center na Nuvem", desc: "Discadores, filas e supervisão ao vivo", href: "/servicos#contact-center" },
+    { title: "Omnichannel + IA (Plataforma Conecta)", desc: "WhatsApp oficial com múltiplos atendentes", href: "/servicos#whatsapp-omnichannel" },
+    { title: "Mensageria em Massa", desc: "Disparos oficiais de SMS e WhatsApp", href: "/servicos#mensageria" },
+    { title: "Terceirização de Telecom", desc: "Gestão completa de infraestrutura e custos", href: "/servicos#terceirizacao" },
+    { title: "Software de Gestão", desc: "Tarifação, auditoria e bilhetagem precisa", href: "/servicos#software-gestao" },
   ];
 
   // Soluções para Governo (Sub-itens)
   const governoItems = [
-    { title: "Telefonia STFC B2G", desc: "Atendimento a prefeituras e órgãos públicos", href: "/governo#telefonia-stfc", icon: <PhoneCall className="w-4 h-4 text-mundo-orange" /> },
-    { title: "PABX em Nuvem Governo", desc: "Comunicação pública sem aquisição de servidor", href: "/governo#pabx-governo", icon: <Cloud className="w-4 h-4 text-mundo-orange" /> },
-    { title: "NOC 24×7 / Monitoramento", desc: "SLA estrito para serviços essenciais", href: "/governo#noc-governo", icon: <ShieldCheck className="w-4 h-4 text-mundo-orange" /> },
-    { title: "Omnichannel Governo", desc: "Canais unificados para atendimento ao cidadão", href: "/governo#omnichannel-governo", icon: <MessageSquare className="w-4 h-4 text-mundo-orange" /> },
-    { title: "Compliance & Licitações", desc: "Termos de Referência e apoio em editais", href: "/governo#compliance-licitacoes", icon: <FileCheck className="w-4 h-4 text-mundo-orange" /> },
+    { title: "Telefonia STFC B2G", desc: "Atendimento a prefeituras e órgãos públicos", href: "/governo#telefonia-stfc" },
+    { title: "PABX em Nuvem Governo", desc: "Comunicação pública sem aquisição de servidor", href: "/governo#pabx-governo" },
+    { title: "NOC 24×7 / Monitoramento", desc: "SLA estrito para serviços essenciais", href: "/governo#noc-governo" },
+    { title: "Omnichannel Governo", desc: "Canais unificados para atendimento ao cidadão", href: "/governo#omnichannel-governo" },
+    { title: "Compliance & Licitações", desc: "Termos de Referência e apoio em editais", href: "/governo#compliance-licitacoes" },
   ];
 
   return (
@@ -170,43 +158,29 @@ export function Header() {
 
               {activeDropdown === "empresas" && (
                 <div className="absolute top-full left-0 mt-2 z-50 animate-in fade-in zoom-in-95 duration-150">
-                  <div className="w-[480px] rounded-2xl bg-[#07224B] border border-white/15 p-4 shadow-2xl backdrop-blur-2xl">
+                  <div className="w-[440px] rounded-2xl bg-[#07224B] border border-white/15 p-4 shadow-2xl backdrop-blur-2xl">
                     <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange mb-3 pb-2 border-b border-white/10 flex items-center justify-between">
                       <span>{"// PORTFÓLIO CORPORATIVO B2B"}</span>
-                      <Link href="/empresas" className="hover:underline flex items-center gap-1 text-slate-300 hover:text-white">
+                      <Link href="/empresas" className="hover:underline flex items-center gap-1 text-slate-300 hover:text-white text-xs">
                         Ver todas <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
-                    <div className="grid grid-cols-1 gap-1.5">
+                    <div className="grid grid-cols-1 gap-1">
                       {empresasItems.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
-                          className={`flex items-center justify-between p-2.5 rounded-xl transition-all group ${
-                            item.badge
-                              ? "bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/20"
-                              : "hover:bg-white/10 border border-transparent"
-                          }`}
+                          className="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all group"
                         >
-                          <div className="flex items-center gap-3">
-                            <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-mundo-orange shrink-0">
-                              {item.icon}
+                          <div className="space-y-0.5">
+                            <div className="text-xs font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
+                              {item.title}
                             </div>
-                            <div>
-                              <div className="text-xs font-bold text-white group-hover:text-mundo-orange transition-colors flex items-center gap-2">
-                                <span>{item.title}</span>
-                                {item.badge && (
-                                  <span className="text-[9px] font-mono font-black uppercase px-2 py-0.5 rounded-full bg-mundo-orange text-white">
-                                    {item.badge}
-                                  </span>
-                                )}
-                              </div>
-                              <div className="text-[11px] text-slate-300">
-                                {item.desc}
-                              </div>
+                            <div className="text-[11px] text-slate-300 group-hover:text-slate-200 transition-colors leading-tight">
+                              {item.desc}
                             </div>
                           </div>
-                          <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-mundo-orange group-hover:translate-x-0.5 transition-all" />
+                          <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-mundo-orange group-hover:translate-x-0.5 transition-all shrink-0 ml-3" />
                         </Link>
                       ))}
                     </div>
@@ -239,32 +213,27 @@ export function Header() {
 
               {activeDropdown === "governo" && (
                 <div className="absolute top-full left-0 mt-2 z-50 animate-in fade-in zoom-in-95 duration-150">
-                  <div className="w-[420px] rounded-2xl bg-[#07224B] border-2 border-mundo-orange/40 p-4 shadow-2xl backdrop-blur-2xl">
+                  <div className="w-[420px] rounded-2xl bg-[#07224B] border border-white/15 p-4 shadow-2xl backdrop-blur-2xl">
                     <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange mb-3 pb-2 border-b border-white/10 flex items-center justify-between">
                       <span>{"// ATENDIMENTO GOVERNAMENTAL B2G"}</span>
                       <span className="text-[10px] bg-mundo-orange/20 text-mundo-orange px-2 py-0.5 rounded-md font-bold">ANATEL STFC</span>
                     </div>
-                    <div className="space-y-1.5">
+                    <div className="grid grid-cols-1 gap-1">
                       {governoItems.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
-                          className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/10 transition-all border border-transparent hover:border-white/10 group"
+                          className="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all group"
                         >
-                          <div className="flex items-center gap-3">
-                            <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-mundo-orange shrink-0">
-                              {item.icon}
+                          <div className="space-y-0.5">
+                            <div className="text-xs font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
+                              {item.title}
                             </div>
-                            <div>
-                              <div className="text-xs font-bold text-white group-hover:text-mundo-orange transition-colors">
-                                {item.title}
-                              </div>
-                              <div className="text-[11px] text-slate-300">
-                                {item.desc}
-                              </div>
+                            <div className="text-[11px] text-slate-300 group-hover:text-slate-200 transition-colors leading-tight">
+                              {item.desc}
                             </div>
                           </div>
-                          <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-mundo-orange group-hover:translate-x-0.5 transition-all" />
+                          <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-mundo-orange group-hover:translate-x-0.5 transition-all shrink-0 ml-3" />
                         </Link>
                       ))}
                     </div>
@@ -360,23 +329,18 @@ export function Header() {
                 </button>
 
                 {mobileExpandedSection === "empresas" && (
-                  <div className="p-3 pt-0 space-y-2 border-t border-white/5 mt-1 bg-black/20">
+                  <div className="p-3 pt-1 space-y-1 border-t border-white/5 mt-1 bg-black/20">
                     {empresasItems.map((item, idx) => (
                       <Link
                         key={idx}
                         href={item.href}
-                        className="flex items-center justify-between p-2 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+                        className="flex items-center justify-between p-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
                       >
-                        <div className="flex items-center gap-2">
-                          {item.icon}
-                          <span>{item.title}</span>
-                          {item.badge && (
-                            <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-mundo-orange text-white font-bold">
-                              {item.badge}
-                            </span>
-                          )}
+                        <div className="space-y-0.5">
+                          <div className="font-semibold text-white">{item.title}</div>
+                          <div className="text-[11px] text-slate-400">{item.desc}</div>
                         </div>
-                        <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
+                        <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0 ml-2" />
                       </Link>
                     ))}
                   </div>
@@ -402,18 +366,18 @@ export function Header() {
                 </button>
 
                 {mobileExpandedSection === "governo" && (
-                  <div className="p-3 pt-0 space-y-2 border-t border-white/5 mt-1 bg-black/20">
+                  <div className="p-3 pt-1 space-y-1 border-t border-white/5 mt-1 bg-black/20">
                     {governoItems.map((item, idx) => (
                       <Link
                         key={idx}
                         href={item.href}
-                        className="flex items-center justify-between p-2 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+                        className="flex items-center justify-between p-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
                       >
-                        <div className="flex items-center gap-2">
-                          {item.icon}
-                          <span>{item.title}</span>
+                        <div className="space-y-0.5">
+                          <div className="font-semibold text-white">{item.title}</div>
+                          <div className="text-[11px] text-slate-400">{item.desc}</div>
                         </div>
-                        <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
+                        <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0 ml-2" />
                       </Link>
                     ))}
                   </div>
