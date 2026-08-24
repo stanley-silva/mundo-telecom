@@ -26,6 +26,9 @@ yarn-error.log*
 # Vercel deployment
 .vercel
 
+# Agents and internal configurations
+.agents/
+
 # TypeScript build info and caches
 *.tsbuildinfo
 next-env.d.ts.bak
