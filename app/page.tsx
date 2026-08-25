@@ -67,7 +67,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       <section className="relative bg-mundo-navy-deep min-h-[640px] lg:min-h-[720px] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-40 lg:pb-0 text-mundo-white overflow-hidden flex flex-col justify-center">
         {/* Ambient Glow Background */}
-        <div 
+        <div
           className="absolute inset-0 pointer-events-none z-0"
           style={{
             background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(0, 89, 242, 0.12) 0%, rgba(7, 34, 75, 0.6) 50%, rgba(4, 18, 38, 0.98) 100%)"
@@ -107,12 +107,12 @@ export default function HomePage() {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-white tracking-tight leading-[1.12]">
-              Aumente a taxa de atendimento e a eficiência da sua comunicação com telefonia corporativa em nuvem.
+              Transforme sua comunicação em um ativo estratégico
             </h1>
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              Soluções completas de Telefonia IP, PABX em Nuvem, Atendimento Inteligente e Telefonia STFC para empresas e órgãos públicos. Elimine faturas imprevisíveis, aumente o completamento de chamadas com identificador local e mantenha todas as ligações gravadas com SLA garantido.
+              Unimos infraestrutura robusta de telecom e uma plataforma omnichannel com Inteligência Artificial, integrando Telefonia, Service Desk, CRM, WhatsApp e múltiplos canais digitais. Com URA humanizada e Contact Center automatizado, reduzimos seus custos e elevamos a experiência do seu cliente. Pronto para aumentar sua taxa de atendimento com a telefonia em nuvem?
             </p>
 
             {/* CTAs */}
@@ -127,12 +127,12 @@ export default function HomePage() {
                 Fale com um Especialista
               </Button>
               <Button
-                href="/governo"
+                href="#solucoes"
                 variant="outline-white"
                 size="lg"
                 className="w-full sm:w-auto"
               >
-                Conhecer Soluções para Governo
+                Conhecer soluções
               </Button>
             </div>
 
@@ -163,7 +163,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* BLOCO 3: SEGMENTAÇÃO COM FOTOGRAFIA (EMPRESAS vs GOVERNO) */}
       {/* ========================================================= */}
-      <section className="py-16 sm:py-24 bg-white border-t border-slate-200/80 relative">
+      <section id="solucoes" className="py-16 sm:py-24 bg-white border-t border-slate-200/80 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="text-xs font-display font-bold uppercase tracking-wider text-mundo-orange mb-2">
@@ -196,25 +196,29 @@ export default function HomePage() {
                     Soluções para Empresas
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Potencialize suas operações comerciais e de suporte. Conte com identificador local para aumentar o atendimento das suas ligações, integre sua telefonia ao WhatsApp e elimine centrais físicas com um PABX em Nuvem completo e escalável.
+                    Potencialize suas operações comerciais e de suporte. Conte com um parceiro para aumentar o atendimento das suas ligações. Entregamos infraestrutura robusta de telecomunicações e a solução definitiva para seu atendimento, unindo tecnologia de ponta e eficiência operacional.
                   </p>
 
                   <div className="space-y-2 pt-2">
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Telefonia em nuvem com alta taxa de completamento</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span><strong className="text-slate-900 font-semibold">Plataforma Omnichannel:</strong> Telefonia, WhatsApp, Redes Sociais, CRM e Service Desk integrados em uma só tela.</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Gravação integral de chamadas e histórico auditável</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span><strong className="text-slate-900 font-semibold">Inteligência Artificial:</strong> Automação inteligente para guiar o seu atendimento (voz e texto) de ponta a ponta.</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Planos estruturados com custo previsível sem surpresas</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span><strong className="text-slate-900 font-semibold">Tecnologia Avançada:</strong> URA humanizada, monitoramento contínuo (NOC) e Contact Center automatizado.</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Integração com WhatsApp, CRM e sistemas legados</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span>Telefonia em nuvem com alta taxa de completamento, com gravação integral de chamadas e histórico auditável.</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span>Planos estruturados com custo previsível sem surpresas.</span>
                     </div>
                   </div>
                 </div>
