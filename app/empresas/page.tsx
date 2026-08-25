@@ -24,7 +24,6 @@ import {
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { InteractiveSimulator } from "@/components/sections/InteractiveSimulator";
 import { EmpresasSolutionsCarousel } from "@/components/sections/EmpresasSolutionsCarousel";
 import { siteContent } from "@/lib/content";
 
@@ -217,55 +216,41 @@ export default function EmpresasPage() {
       </section>
 
       {/* ========================================================= */}
-      {/* BLOCO 4: SIMULADOR & CONVERSÃO FINAL                       */}
+      {/* BLOCO 4: CONVERSÃO FINAL (CTA DE FECHAMENTO)               */}
       {/* ========================================================= */}
       <section className="py-16 sm:py-24 bg-mundo-navy text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#EF831C_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <Badge variant="orange">
-              CONVERSÃO CORPORATIVA
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white tracking-tight">
-              Pronto para modernizar a comunicação da sua empresa com custos previsíveis?
-            </h2>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Fale com nossos consultores técnicos e receba uma proposta dimensionada para sua operação.
-            </p>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+          <Badge variant="orange">
+            CONVERSÃO CORPORATIVA
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white tracking-tight">
+            Pronto para modernizar a comunicação da sua empresa com custos previsíveis?
+          </h2>
+          <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            Fale com nossos consultores técnicos e receba uma proposta dimensionada para sua operação.
+          </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button
-                href="/contato?perfil=empresa"
-                variant="primary"
-                size="lg"
-                className="w-full sm:w-auto"
-                rightIcon={<ArrowRight className="w-4 h-4" />}
-              >
-                Simular Solução Corporativa
-              </Button>
-              <Button
-                href={`https://wa.me/${siteContent.brand.whatsappNumber}?text=${encodeURIComponent("Olá! Gostaria de falar com um consultor via WhatsApp sobre soluções corporativas.")}`}
-                isExternal
-                variant="outline-white"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                Falar com Consultor via WhatsApp
-              </Button>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-white/10">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-mundo-orange block mb-1">
-                CALCULADORA DIMENSIONADA
-              </span>
-              <h3 className="text-xl sm:text-2xl font-display font-bold text-white">
-                Simule seu plano corporativo em tempo real
-              </h3>
-            </div>
-            <InteractiveSimulator />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <Button
+              href="/contato?perfil=empresa"
+              variant="primary"
+              size="lg"
+              className="w-full sm:w-auto"
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+            >
+              Simular Solução Corporativa
+            </Button>
+            <Button
+              href={`https://wa.me/${siteContent.brand.whatsappNumber}?text=${encodeURIComponent("Olá! Gostaria de falar com um consultor via WhatsApp sobre soluções corporativas.")}`}
+              isExternal
+              variant="outline-white"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              Falar com Consultor via WhatsApp
+            </Button>
           </div>
         </div>
       </section>
