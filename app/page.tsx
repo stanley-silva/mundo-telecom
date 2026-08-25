@@ -65,7 +65,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION COM IDENTIDADE INSTITUCIONAL        */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy-deep min-h-[640px] lg:min-h-[720px] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-40 lg:pb-0 text-mundo-white overflow-hidden flex flex-col justify-center">
+      <section className="relative bg-mundo-navy-deep min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-mundo-white overflow-hidden flex flex-col justify-center">
         {/* Ambient Glow Background */}
         <div
           className="absolute inset-0 pointer-events-none z-0"
