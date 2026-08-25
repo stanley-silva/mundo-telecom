@@ -5,103 +5,145 @@ import Link from "next/link";
 import { 
   PhoneCall, 
   Cloud, 
-  Bot, 
-  ShieldAlert, 
+  Headphones, 
   MessageSquareText, 
-  Activity, 
-  CheckCircle2, 
-  ArrowRight, 
-  ChevronRight, 
+  Send,
+  Wrench,
+  BarChart3,
+  ChevronRight,
   ChevronLeft,
+  CheckCircle2,
+  ArrowRight,
   Zap
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
-export function PortfolioSection() {
-  const technicalCards = [
+export function EmpresasSolutionsCarousel() {
+  const b2bCards = [
     {
-      id: "plataforma-conecta",
+      id: "terceirizacao-telecom",
       index: "01",
-      code: "OMNICHANNEL // ATENDIMENTO IA",
-      categoryTag: "OMNICHANNEL & IA",
-      title: "Plataforma Conecta (Omnichannel & IA)",
-      headline: "Centralize o atendimento em um único painel",
-      description: "Centralize o atendimento da sua organização em um único painel. Múltiplos atendentes em um só número oficial de WhatsApp, integrando canais de voz e mensagens com triagem ágil por Inteligência Artificial — sem menus robóticos lentos e com histórico unificado de interações.",
-      chips: ["WhatsApp Multi-atendentes", "Triagem com IA", "Histórico Unificado"],
-      metric: "Atendimento unificado & ágil",
-      href: "/servicos#whatsapp-omnichannel",
-      ctaText: "Conhecer a Plataforma Conecta",
-      icon: <MessageSquareText className="w-5 h-5" />,
+      code: "OPEX // GESTÃO COMPLETA",
+      tag: "OUTSOURCING & GOVERNANÇA",
+      title: "Terceirização de Telecom",
+      headline: "Gestão integral da sua infraestrutura de telefonia: fornecemos aparelhos IP, links, manutenção preventiva e suporte especializado em modelo OpEx.",
+      benefits: [
+        "Redução direta de custos sem imobilização de capital (CapEx)",
+        "Ponto único de contato para links, ramais, aparelhos e suporte",
+        "Manutenção preventiva e substituição rápida de equipamentos",
+        "Acordo de Nível de Serviço (SLA) rígido com equipe de engenharia"
+      ],
+      ctaText: "Consultar Terceirização de Telecom",
+      href: "/contato?servico=terceirizacao-telecom",
+      icon: <Wrench className="w-5 h-5" />,
     },
     {
-      id: "telefonia-ip",
+      id: "telefonia-conectividade",
       index: "02",
       code: "STFC // VOZ CORPORATIVA",
-      categoryTag: "INFRAESTRUTURA & VOZ",
-      title: "Telefonia IP & Conexão STFC",
-      headline: "Identificador Local Dinâmico & Alta Taxa de Atendimento",
-      description: "Conexão direta às operadoras nacionais com outorga ANATEL. Chamadas ativas com o DDD da cidade do cliente, aumentando em até 3x o atendimento.",
-      chips: ["Outorga Direta ANATEL", "Identificador Local (DDD)", "Portabilidade Sem Queda"],
-      metric: "Atendimento até 3x maior",
-      href: "/servicos#telefonia-ip",
-      ctaText: "Conhecer Telefonia IP",
+      tag: "VOZ & PERFORMANCE COMERCIAL",
+      title: "Telefonia & Conectividade",
+      headline: "Suas ligações ativas tocam com o DDD da região do cliente, aumentando expressivamente o atendimento com custos fixos e previsíveis.",
+      benefits: [
+        "Identificador local com DDD da cidade de destino",
+        "Planos estruturados sem cobrança por minuto",
+        "Áudio HD em rotas corporativas homologadas pela ANATEL",
+        "Portabilidade numérica rápida sem paradas na operação"
+      ],
+      ctaText: "Solicitar Proposta de Telefonia",
+      href: "/contato?servico=telefonia-conectividade",
       icon: <PhoneCall className="w-5 h-5" />,
+      featured: false,
     },
     {
-      id: "pabx-nuvem",
+      id: "pabx-em-nuvem",
       index: "03",
       code: "CLOUD // PABX VIRTUAL",
-      categoryTag: "PLATAFORMA EM NUVEM",
-      title: "PABX em Nuvem Integrado",
-      headline: "Central Telefônica 100% Digital Sem Hardware",
-      description: "Conecte matriz, filiais e trabalho remoto em uma rede unificada de ramais com áudio em alta definição no computador, celular e aparelhos IP.",
-      chips: ["Zero Servidor Físico", "Ramais Ilimitados", "Mobilidade PC & App"],
-      metric: "Economia média de 40% em custos",
-      href: "/servicos#pabx-nuvem",
-      ctaText: "Conhecer PABX em Nuvem",
+      tag: "INFRAESTRUTURA VIRTUAL",
+      title: "PABX em Nuvem",
+      headline: "Central telefônica virtual para integrar matriz, filiais e equipes remotas a custo zero de chamadas internas e sem aparelhos físicos.",
+      benefits: [
+        "Ramais ilimitados e gratuitos entre filiais e home office",
+        "Mobilidade total via computador, smartphone ou telefone IP",
+        "Gestão ágil de fluxos e horários de atendimento via painel web",
+        "Fim dos custos de manutenção de servidores locais e fiações"
+      ],
+      ctaText: "Conhecer Recursos do PABX em Nuvem",
+      href: "/contato?servico=pabx-em-nuvem",
       icon: <Cloud className="w-5 h-5" />,
+      featured: false,
     },
     {
-      id: "ura-inteligente",
+      id: "contact-center-nuvem",
       index: "04",
-      code: "ROUTING // URA",
-      categoryTag: "EXPERIÊNCIA DO CLIENTE",
-      title: "URA & Atendimento Inteligente",
-      headline: "Triagem Rápida e Roteamento Humanizado",
-      description: "Acolhimento automático e direcionamento rápido para o setor correto. Menus ágeis, filas organizadas e mensagens personalizadas de plantão.",
-      chips: ["Redução de Tempo de Espera", "Menus de Plantão", "Distribuição Equitativa"],
-      metric: "Queda no abandono de chamadas",
-      href: "/servicos#ura-inteligente",
-      ctaText: "Conhecer URA Inteligente",
-      icon: <Bot className="w-5 h-5" />,
+      code: "CALL CENTER // DAC & GRAVAÇÃO",
+      tag: "ATENDIMENTO EM ESCALA",
+      title: "Contact Center na Nuvem",
+      headline: "Gestão avançada de atendimento com distribuição automática de chamadas (DAC), discadores inteligentes e supervisão ao vivo.",
+      benefits: [
+        "Filas inteligentes com distribuição automática de chamadas (DAC)",
+        "Painel de monitoria ao vivo com métricas de TMA e TME",
+        "Gravação integral de áudio para controle de qualidade e compliance",
+        "Relatórios operacionais detalhados de produtividade por agente"
+      ],
+      ctaText: "Estruturar Contact Center",
+      href: "/contato?servico=contact-center-nuvem",
+      icon: <Headphones className="w-5 h-5" />,
+      featured: false,
     },
     {
-      id: "gravacao-chamadas",
+      id: "plataforma-conecta",
       index: "05",
-      code: "SECURITY // COMPLIANCE",
-      categoryTag: "SEGURANÇA & AUDITORIA",
-      title: "Gravação 100% de Chamadas",
-      headline: "Histórico Seguro em Nuvem e Proteção Jurídica",
-      description: "Armazenamento criptografado em nuvem de todas as ligações de entrada e saída. Busca instantânea por data, atendente, ramal ou cliente.",
-      chips: ["Criptografia Ponta a Ponta", "Busca em Segundos", "Resguardo Jurídico"],
-      metric: "100% gravado e auditável",
-      href: "/servicos#gravacao-chamadas",
-      ctaText: "Conhecer Gravação",
-      icon: <ShieldAlert className="w-5 h-5" />,
+      code: "OMNICHANNEL // ATENDIMENTO IA",
+      tag: "ATENDIMENTO DIGITAL & IA",
+      title: "Plataforma Conecta (Omnichannel + IA)",
+      headline: "Centralize WhatsApp oficial multiatendente, voz e chat em um único painel, com agentes de IA para triagem rápida sem menus robóticos.",
+      benefits: [
+        "Múltiplos atendentes em 1 único número oficial de WhatsApp",
+        "Agentes de IA que compreendem o contexto e agilizam o atendimento",
+        "Histórico centralizado e seguro, blindando os contatos da empresa",
+        "Painel ao vivo com tempo de resposta, volume de filas e TMA"
+      ],
+      ctaText: "Conhecer a Plataforma Conecta",
+      href: "/contato?servico=plataforma-conecta",
+      icon: <MessageSquareText className="w-5 h-5" />,
+      featured: false,
     },
     {
-      id: "noc-monitoramento",
+      id: "mensageria-em-massa",
       index: "06",
-      code: "NETWORK // SLA 24/7",
-      categoryTag: "GOVERNANÇA TÉCNICA",
-      title: "NOC & Monitoramento 24/7",
-      headline: "Engenharia Própria e Supervisão Contínua",
-      description: "Centro de Operações de Rede vigiando a estabilidade de troncos, latência e jitter em tempo real. Resolução antecipada de oscilações.",
-      chips: ["Supervisão 24/7/365", "SLA em Contrato", "Engenharia Especializada"],
-      metric: "99.98% de disponibilidade",
-      href: "/servicos#noc-monitoramento",
-      ctaText: "Conhecer NOC 24/7",
-      icon: <Activity className="w-5 h-5" />,
+      code: "MESSAGING // WHATSAPP & SMS",
+      tag: "ENGAJAMENTO & NOTIFICAÇÕES",
+      title: "Mensageria em Massa",
+      headline: "Disparos automatizados via WhatsApp Oficial e SMS para réguas de cobrança, confirmações e avisos com alta entregabilidade.",
+      benefits: [
+        "Automação de réguas de cobrança e lembretes de agendamento",
+        "Rotas oficiais homologadas que protegem contra bloqueios",
+        "Relatórios em tempo real com taxas de entrega e leitura",
+        "Integração rápida via API com seus sistemas de ERP e CRM"
+      ],
+      ctaText: "Ativar Mensageria em Massa",
+      href: "/contato?servico=mensageria-em-massa",
+      icon: <Send className="w-5 h-5" />,
+      featured: false,
+    },
+    {
+      id: "software-gestao",
+      index: "07",
+      code: "MANAGEMENT // AUDITORIA & RATEIO",
+      tag: "CONTROLE & BILHETAGEM",
+      title: "Software de Gestão",
+      headline: "Painel analítico com bilhetagem em tempo real, auditoria de consumo e rateio automatizado de despesas de telefonia por centro de custo.",
+      benefits: [
+        "Bilhetagem detalhada com histórico e duração de cada chamada",
+        "Rateio automatizado de custos por departamento ou filial",
+        "Identificação imediata de desperdícios e desvios de tráfego",
+        "Exportação simplificada de dados para sistemas financeiros"
+      ],
+      ctaText: "Conhecer o Software de Gestão",
+      href: "/contato?servico=software-gestao",
+      icon: <BarChart3 className="w-5 h-5" />,
+      featured: false,
     },
   ];
 
@@ -122,10 +164,10 @@ export function PortfolioSection() {
       setActiveCardIndex(0);
     } else {
       const progress = Math.max(0, Math.min(1, el.scrollLeft / maxScroll));
-      const index = Math.round(progress * (technicalCards.length - 1));
+      const index = Math.round(progress * (b2bCards.length - 1));
       setActiveCardIndex(index);
     }
-  }, [technicalCards.length]);
+  }, [b2bCards.length]);
 
   useEffect(() => {
     const el = scrollContainerRef.current;
@@ -149,8 +191,8 @@ export function PortfolioSection() {
     if (maxScroll <= 0) return;
 
     const card = el.querySelector<HTMLElement>(".snap-start");
-    const cardWidth = card?.offsetWidth || 320;
-    const scrollStep = cardWidth + 24; // card width + gap
+    const cardWidth = card?.offsetWidth || 340;
+    const scrollStep = cardWidth + 24;
 
     if (direction === "right") {
       const target = Math.min(el.scrollLeft + scrollStep, maxScroll);
@@ -168,7 +210,7 @@ export function PortfolioSection() {
     const maxScroll = el.scrollWidth - el.clientWidth;
     if (maxScroll <= 0) return;
 
-    const targetScroll = (index / (technicalCards.length - 1)) * maxScroll;
+    const targetScroll = (index / (b2bCards.length - 1)) * maxScroll;
     el.scrollTo({
       left: targetScroll,
       behavior: "smooth",
@@ -176,7 +218,7 @@ export function PortfolioSection() {
   };
 
   return (
-    <section id="portfolio" className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+    <section id="portfolio-empresas" className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
       {/* Background Subtle Grid Texture */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#07224b08_1px,transparent_1px),linear-gradient(to_bottom,#07224b08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -186,14 +228,14 @@ export function PortfolioSection() {
           <div className="max-w-2xl space-y-2.5">
             <div className="flex items-center gap-2">
               <Badge variant="orange" icon={<Zap className="w-3.5 h-3.5" />}>
-                PORTFÓLIO DE ENGENHARIA & TELECOM
+                PORTFÓLIO CORPORATIVO
               </Badge>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-black text-mundo-navy tracking-tight">
-              Soluções integradas de comunicação empresarial
+              Soluções completas de telefonia e tecnologia para empresas
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              Estrutura de ponta a ponta com alta taxa de completamento, custos previsíveis e suporte técnico consultivo.
+              Do aumento da taxa de atendimento à terceirização integral de telecom com custos previsíveis.
             </p>
           </div>
 
@@ -202,7 +244,7 @@ export function PortfolioSection() {
             <div className="hidden sm:flex items-center font-mono text-xs font-bold text-slate-400 mr-2">
               <span className="text-mundo-orange">{String(activeCardIndex + 1).padStart(2, "0")}</span>
               <span className="mx-1">/</span>
-              <span>{String(technicalCards.length).padStart(2, "0")}</span>
+              <span>{String(b2bCards.length).padStart(2, "0")}</span>
             </div>
 
             <button
@@ -241,13 +283,13 @@ export function PortfolioSection() {
           className="flex gap-6 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory py-4 px-1 -mx-1"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {technicalCards.map((card) => (
+          {b2bCards.map((card) => (
             <div
               key={card.id}
-              className="snap-start shrink-0 w-[300px] sm:w-[340px] lg:w-[380px] xl:w-[390px] min-h-[440px] rounded-3xl bg-white border border-slate-200/90 hover:border-mundo-orange/50 hover:shadow-xl transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between group relative overflow-hidden text-slate-800"
+              className="snap-start shrink-0 w-[300px] sm:w-[350px] lg:w-[380px] xl:w-[400px] min-h-[480px] rounded-3xl bg-white border border-slate-200/90 hover:border-mundo-orange/50 hover:shadow-xl p-6 sm:p-7 flex flex-col justify-between group relative overflow-hidden transition-all duration-300"
             >
               <div className="space-y-4">
-                {/* Header: Icon, Category & Index */}
+                {/* Header: Icon, Tag & Index */}
                 <div className="flex items-center justify-between border-b border-slate-100 pb-3.5">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-mundo-navy/5 text-mundo-navy group-hover:bg-mundo-orange group-hover:text-white transition-all flex items-center justify-center shrink-0">
@@ -255,7 +297,7 @@ export function PortfolioSection() {
                     </div>
                     <div>
                       <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange block">
-                        {card.categoryTag}
+                        {card.tag}
                       </span>
                       <span className="text-[10px] font-mono text-slate-400 block truncate max-w-[170px]">
                         {card.code}
@@ -268,39 +310,39 @@ export function PortfolioSection() {
                   </span>
                 </div>
 
-                {/* Title & Description */}
+                {/* Title & Headline */}
                 <div className="space-y-1.5">
-                  <h3 className="text-lg sm:text-xl font-display font-bold text-mundo-navy group-hover:text-mundo-orange transition-colors line-clamp-2">
+                  <h3 className="text-lg sm:text-xl font-display font-bold text-mundo-navy group-hover:text-mundo-orange transition-colors">
                     {card.title}
                   </h3>
-                  <p className="text-xs font-semibold text-slate-500 line-clamp-1">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {card.headline}
-                  </p>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-4 pt-1">
-                    {card.description}
                   </p>
                 </div>
 
-                {/* Chips */}
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {card.chips.map((chip, i) => (
-                    <span
-                      key={i}
-                      className="text-[10px] sm:text-[11px] font-medium px-2.5 py-0.5 rounded-lg bg-slate-50 border border-slate-200/80 text-slate-600 group-hover:bg-slate-100 transition-colors"
-                    >
-                      {chip}
-                    </span>
-                  ))}
+                {/* Benefits list */}
+                <div className="pt-2">
+                  <div className="text-xs font-display font-bold text-mundo-navy mb-2">
+                    Benefícios Chave:
+                  </div>
+                  <ul className="space-y-2 text-xs text-slate-700">
+                    {card.benefits.map((b, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                        <span className="leading-tight">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
               {/* Card Footer: Orange CTA Button */}
-              <div className="mt-4 pt-3.5 border-t border-slate-100">
+              <div className="mt-6 pt-4 border-t border-slate-100">
                 <Link
                   href={card.href}
                   className="w-full py-2.5 px-4 rounded-xl bg-mundo-orange hover:bg-mundo-orange-hover text-white flex items-center justify-center gap-1.5 text-xs font-display font-bold shadow-md shadow-mundo-orange/15 transition-all group-hover:shadow-lg text-center"
                 >
-                  <span className="truncate">{card.ctaText || "Detalhes"}</span>
+                  <span className="truncate">{card.ctaText}</span>
                   <ArrowRight className="w-3.5 h-3.5 shrink-0 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
@@ -310,7 +352,7 @@ export function PortfolioSection() {
 
         {/* Carousel Pagination Dots */}
         <div className="flex items-center justify-center gap-2 mt-8">
-          {technicalCards.map((_, i) => (
+          {b2bCards.map((_, i) => (
             <button
               key={i}
               type="button"
@@ -329,4 +371,4 @@ export function PortfolioSection() {
   );
 }
 
-export default PortfolioSection;
+export default EmpresasSolutionsCarousel;

@@ -74,8 +74,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#050505] text-[#1E293B] antialiased selection:bg-[#EF831C] selection:text-white">
+    <html lang="pt-BR" suppressHydrationWarning className={`${spaceGrotesk.variable} ${inter.variable}`}>
+      <body
+        suppressHydrationWarning
+        className="min-h-screen flex flex-col bg-[#050505] text-[#1E293B] antialiased selection:bg-[#EF831C] selection:text-white"
+      >
         <Header />
         <main className="flex-1 w-full bg-[#FFFEFF]">{children}</main>
         <Footer />

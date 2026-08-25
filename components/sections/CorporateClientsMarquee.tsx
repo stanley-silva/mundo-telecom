@@ -39,7 +39,7 @@ export function CorporateClientsMarquee() {
           AUTORIDADE & CREDIBILIDADE
         </Badge>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-mundo-navy tracking-tight">
-          Alguns de nossos clientes corporativos
+          Alguns de nossos parceiros
         </h2>
         <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
           Empresas e instituições que confiam suas operações de voz, atendimento e infraestrutura à Mundo Telecom.

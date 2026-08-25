@@ -156,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================= */}
-      {/* BLOCO 2: ALGUNS DE NOSSOS CLIENTES CORPORATIVOS (MARQUEE) */}
+      {/* BLOCO 2: ALGUNS DE NOSSOS PARCEIROS (MARQUEE) */}
       {/* ========================================================= */}
       <CorporateClientsMarquee />
 
@@ -234,7 +234,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 2: B2G Governo com Imagem */}
-            <div className="rounded-3xl bg-mundo-navy text-white border border-mundo-navy-border hover:border-mundo-orange/60 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div className="rounded-3xl bg-white border border-slate-200 hover:border-mundo-orange/60 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
               <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                 <Image
                   src="/images/b2g-government.jpg"
@@ -247,27 +247,27 @@ export default function HomePage() {
 
               <div className="p-6 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-display font-bold text-white">
+                  <h3 className="text-2xl font-display font-bold text-mundo-navy">
                     Soluções para Órgãos Públicos
                   </h3>
-                  <p className="text-sm text-slate-200 leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed">
                     Infraestrutura robusta de Telefonia STFC e plataformas de comunicação para órgãos municipais, estaduais e federais. Conectividade segura, transparência operacional e atendimento ao cidadão em regime 24/7 com total conformidade.
                   </p>
 
                   <div className="space-y-2 pt-2">
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-200">
+                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
                       <span>Licenciamento direto ANATEL e conformidade Lei 14.133/2021</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-200">
+                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
                       <span>Conectividade segura para serviços essenciais e emergências</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-200">
+                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
                       <span>Relatórios gerenciais detalhados para prestação de contas</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-200">
+                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
                       <span>Suporte técnico dedicado e monitoramento NOC 24/7 ininterrupto</span>
                     </div>
