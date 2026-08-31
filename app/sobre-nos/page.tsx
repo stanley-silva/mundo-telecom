@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { 
   ShieldCheck, 
   ArrowRight, 
@@ -18,14 +19,18 @@ import {
   Compass,
   Eye,
   ShieldAlert,
-  Sparkles
+  Sparkles,
+  Target,
+  Scale,
+  Lock
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { SectionDivider } from "@/components/ui/SectionDivider";
 import { MetricCounter } from "@/components/sections/MetricCounter";
 import { HistoryTimeline } from "@/components/sections/HistoryTimeline";
 import { siteContent } from "@/lib/content";
+
+import { QuemSomosHeroBackground } from "@/components/sections/QuemSomosHeroBackground";
 
 export const metadata = {
   title: "Quem Somos | Mundo Telecom — Operadora Licenciada ANATEL e Telefonia em Nuvem",
@@ -66,24 +71,39 @@ export default function SobreNosPage() {
 
   const values = [
     {
-      title: "Previsibilidade e Transparência",
-      description: "Eliminamos custos ocultos e tarifações complexas por minuto. Nossos planos contam com estrutura clara e voz corporativa sem surpresas no fim do mês.",
+      number: "01",
+      title: "Previsibilidade",
+      tag: "TRANSPARÊNCIA",
+      description: "Eliminamos custos ocultos e tarifações por minuto. Nossos planos entregam voz corporativa estruturada sem surpresas na fatura.",
+      icon: <Scale className="w-4 h-4" />,
     },
     {
-      title: "Autoridade e Conformidade Regulatória",
-      description: "Nossa licença formal da ANATEL e as duas décadas de mercado asseguram plena conformidade técnica e segurança jurídica em cada contrato.",
+      number: "02",
+      title: "Conformidade",
+      tag: "LICENÇA ANATEL",
+      description: "Licença formal STFC da ANATEL e duas décadas de mercado que asseguram conformidade técnica e segurança jurídica para a sua operação.",
+      icon: <ShieldCheck className="w-4 h-4" />,
     },
     {
-      title: "Completamento e Desempenho Técnico",
-      description: "Foco rigoroso em assegurar que cada chamada seja entregue com identificador local, áudio em alta definição e estabilidade de tráfego.",
+      number: "03",
+      title: "Desempenho",
+      tag: "COMPLETAMENTO",
+      description: "Rotas de voz com identificador local, áudio em alta definição e estabilidade de tráfego que maximizam a taxa de atendimento.",
+      icon: <Activity className="w-4 h-4" />,
     },
     {
-      title: "Registro e Auditoria Inegociáveis",
-      description: "Garantimos o armazenamento seguro de todas as interações de voz e texto, resguardando a integridade das operações e acordos dos nossos clientes.",
+      number: "04",
+      title: "Integridade",
+      tag: "REGISTRO & LGPD",
+      description: "Armazenamento seguro e auditável de todas as interações de voz e dados, resguardando acordos comerciais e conformidade jurídica.",
+      icon: <Lock className="w-4 h-4" />,
     },
     {
-      title: "Atendimento Técnico Humanizado e 24/7",
-      description: "Suporte consultivo contínuo, ágil e realizado por especialistas próprios, sem transferências infinitas ou respostas automatizadas genéricas.",
+      number: "05",
+      title: "Suporte Próprio",
+      tag: "HUMANIZADO 24/7",
+      description: "Atendimento consultivo contínuo por especialistas de engenharia próprios, sem transferências infinitas ou respostas automatizadas genéricas.",
+      icon: <Headphones className="w-4 h-4" />,
     },
   ];
 
@@ -92,9 +112,15 @@ export default function SobreNosPage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION (QUEM SOMOS)                        */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy pt-32 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-24 text-mundo-white overflow-hidden">
+      <section className="relative bg-mundo-navy pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-20 text-mundo-white overflow-hidden">
+        {/* Animated PixelBlast Background (Autonomous, full height, no mouse interaction) */}
+        <QuemSomosHeroBackground />
+
+        {/* Ambient Gradient Overlay for Text Legibility & Contrast */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,34,75,0.2)_0%,rgba(4,21,48,0.65)_100%)] pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center gap-2 text-xs text-slate-300 mb-6 font-display">
+          <nav className="flex items-center justify-center gap-2 text-xs text-slate-300 mb-6 font-display">
             <Link href="/" className="hover:text-mundo-orange transition-colors">
               Início
             </Link>
@@ -102,24 +128,26 @@ export default function SobreNosPage() {
             <span className="text-mundo-orange font-bold">Quem Somos</span>
           </nav>
 
-          <div className="max-w-4xl space-y-6 text-left">
-            <Badge
-              variant="orange"
-              icon={<ShieldCheck className="w-3.5 h-3.5" />}
-              className="py-1 px-3.5"
-            >
-              AUTORIDADE, INFRAESTRUTURA E EXPERIÊNCIA EM TELECOMUNICAÇÕES
-            </Badge>
+          <div className="max-w-4xl mx-auto space-y-6 text-center flex flex-col items-center">
+            <div className="flex justify-center">
+              <Badge
+                variant="orange"
+                icon={<ShieldCheck className="w-3.5 h-3.5" />}
+                className="py-1 px-3.5"
+              >
+                AUTORIDADE, INFRAESTRUTURA E EXPERIÊNCIA EM TELECOMUNICAÇÕES
+              </Badge>
+            </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-display font-black text-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-display font-black text-white tracking-tight leading-[1.14] text-center max-w-4xl">
               Conectando empresas e governos com solidez técnica, conformidade regulatória e infraestrutura em nuvem.
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal text-center max-w-3xl mx-auto">
               Há mais de duas décadas, a Mundo Telecom atua como operadora licenciada pela ANATEL e integradora de soluções de voz e comunicação digital. Transformamos a comunicação corporativa e pública em um motor de eficiência, previsibilidade orçamentária e total segurança operacional.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full sm:w-auto">
               <Button
                 href="/contato"
                 variant="primary"
@@ -139,16 +167,16 @@ export default function SobreNosPage() {
               </Button>
             </div>
 
-            <div className="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
-              <div className="flex items-center gap-2">
+            <div className="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300 w-full max-w-3xl">
+              <div className="flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Licença Própria ANATEL</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>3 Unidades Físicas (BH, BSB, SP)</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Suporte e Monitoramento 24/7</span>
               </div>
@@ -156,8 +184,6 @@ export default function SobreNosPage() {
           </div>
         </div>
       </section>
-
-      <SectionDivider fromColor="#07224B" direction="down" height={36} />
 
       {/* ========================================================= */}
       {/* BLOCO 2: HISTÓRIA E TRAJETÓRIA INSTITUCIONAL (TIMELINE)   */}
@@ -167,59 +193,149 @@ export default function SobreNosPage() {
       {/* ========================================================= */}
       {/* BLOCO 3: DNA CORPORATIVO (MISSÃO, VISÃO E VALORES)        */}
       {/* ========================================================= */}
-      <section className="py-16 sm:py-24 bg-mundo-navy-deep text-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="text-xs font-display font-bold uppercase tracking-wider text-mundo-orange mb-2">
-              DIRETRIZES INSTITUCIONAIS
+      <section className="py-20 sm:py-28 bg-[#031127] text-white relative overflow-hidden">
+        {/* Subtle geometric circles in corners (Brand signature) */}
+        <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full border border-white/5 pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full border border-mundo-orange/10 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16 sm:space-y-20">
+          {/* Header da Seção */}
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold tracking-wider text-mundo-orange bg-mundo-orange/10 border border-mundo-orange/20">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>DIRETRIZES INSTITUCIONAIS</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display font-black text-white">
-              Os pilares que orientam cada solução e atendimento
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white tracking-tight">
+              Os pilares que sustentam cada conexão e decisão
             </h2>
+            <p className="text-base text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
+              Há mais de duas décadas, estruturamos nossa operadora sobre compromissos claros: engenharia de alta disponibilidade, transparência orçamentária e responsabilidade operacional.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 sm:p-10 rounded-3xl bg-mundo-navy-surface border border-mundo-navy-border space-y-4 shadow-xl">
-              <div className="w-12 h-12 rounded-2xl bg-mundo-orange/15 border border-mundo-orange/30 text-mundo-orange flex items-center justify-center">
-                <Compass className="w-6 h-6" />
+          {/* PARTE 1: MISSÃO E VISÃO — CARDS DE AUTORIDADE ESTRATÉGICA */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+            {/* Card Missão */}
+            <div className="relative group p-8 sm:p-10 rounded-3xl bg-mundo-navy-surface/40 border border-white/10 hover:border-mundo-orange/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between overflow-hidden shadow-2xl">
+              {/* Top Accent Line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-mundo-orange to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold tracking-widest text-mundo-orange uppercase">
+                    01 / PROPÓSITO OPERACIONAL
+                  </span>
+                  <div className="w-11 h-11 rounded-2xl bg-mundo-orange/10 border border-mundo-orange/20 text-mundo-orange flex items-center justify-center">
+                    <Target className="w-5 h-5" />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-2xl sm:text-3xl font-display font-black text-white">
+                    Nossa Missão
+                  </h3>
+                  <p className="text-sm sm:text-base font-display font-medium text-mundo-orange/90 leading-snug">
+                    Eliminar as falhas de comunicação empresarial que custam vendas, tempo e credibilidade.
+                  </p>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                  Ajudamos empresas e instituições públicas a vender, atender e operar melhor por meio de telefonia em nuvem de alta confiabilidade, integrada a IA, WhatsApp e CRM, com custos previsíveis, registro inegociável de chamadas e suporte responsável.
+                </p>
               </div>
-              <h3 className="text-2xl font-display font-bold text-white">
-                Nossa Missão
-              </h3>
-              <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
-                Garantir que empresas e instituições públicas mantenham uma comunicação fluida, estável e segura, eliminando a baixa taxa de completamento e a imprevisibilidade orçamentária por meio de infraestrutura própria, tecnologia de ponta e suporte técnico especializado.
-              </p>
+
+              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Engenharia focada no completamento</span>
+                <span className="text-mundo-orange font-bold">STFC Licenciado</span>
+              </div>
             </div>
 
-            <div className="p-8 sm:p-10 rounded-3xl bg-mundo-navy-surface border border-mundo-navy-border space-y-4 shadow-xl">
-              <div className="w-12 h-12 rounded-2xl bg-mundo-orange/15 border border-mundo-orange/30 text-mundo-orange flex items-center justify-center">
-                <Eye className="w-6 h-6" />
+            {/* Card Visão */}
+            <div className="relative group p-8 sm:p-10 rounded-3xl bg-mundo-navy-surface/40 border border-white/10 hover:border-mundo-orange/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between overflow-hidden shadow-2xl">
+              {/* Top Accent Line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-mundo-orange to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold tracking-widest text-mundo-orange uppercase">
+                    02 / HORIZONTE ESTRATÉGICO
+                  </span>
+                  <div className="w-11 h-11 rounded-2xl bg-mundo-orange/10 border border-mundo-orange/20 text-mundo-orange flex items-center justify-center">
+                    <Eye className="w-5 h-5" />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-2xl sm:text-3xl font-display font-black text-white">
+                    Nossa Visão
+                  </h3>
+                  <p className="text-sm sm:text-base font-display font-medium text-mundo-orange/90 leading-snug">
+                    Ser a principal referência nacional em telefonia corporativa de alta criticidade.
+                  </p>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                  Consolidar a Mundo Telecom como a escolha definitiva para organizações que buscam controle total da sua comunicação, afastando-se tanto da burocracia engessada das grandes operadoras quanto da instabilidade de meros revendedores de tecnologia.
+                </p>
               </div>
-              <h3 className="text-2xl font-display font-bold text-white">
-                Nossa Visão
-              </h3>
-              <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
-                Ser a principal referência nacional em telecomunicações corporativas e governamentais para organizações que exigem previsibilidade financeira, segurança regulatória e atendimento ágil, consolidando-se como a alternativa sólida e descomplicada às grandes operadoras tradicionais.
-              </p>
+
+              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Solidez operacional & SLA de 99.98%</span>
+                <span className="text-mundo-orange font-bold">Referência Nacional</span>
+              </div>
             </div>
           </div>
 
+          {/* PARTE 2: OS 5 VALORES — GRID HARMONIOSO E EQUILIBRADO */}
           <div className="space-y-6">
-            <h3 className="text-xl sm:text-2xl font-display font-bold text-center text-white">
-              Nossos Valores-Chave
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 gap-2">
+              <div>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-mundo-orange">
+                  03 / CULTURA & CONDUTA
+                </span>
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-white mt-1">
+                  Nossos 5 Valores Inegociáveis
+                </h3>
+              </div>
+              <span className="text-xs text-slate-400 font-mono">
+                Princípios que regem 100% dos nossos contratos
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {values.map((val) => (
                 <div
-                  key={val.title}
-                  className="p-6 rounded-2xl bg-mundo-navy/80 border border-white/10 hover:border-mundo-orange/50 transition-all duration-200 space-y-2.5"
+                  key={val.number}
+                  className="p-6 rounded-2xl bg-mundo-navy-surface/30 border border-white/10 hover:border-mundo-orange/50 hover:bg-mundo-navy-surface/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-4 group"
                 >
-                  <h4 className="text-base font-display font-bold text-mundo-orange">
-                    {val.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                    {val.description}
-                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono font-black text-xl text-slate-500 group-hover:text-mundo-orange transition-colors">
+                        {val.number}
+                      </span>
+                      <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-slate-300 group-hover:text-mundo-orange group-hover:bg-mundo-orange/10 transition-colors">
+                        {val.icon}
+                      </div>
+                    </div>
+
+                    <div className="space-y-1">
+                      <div className="text-[10px] font-mono uppercase tracking-wider text-mundo-orange font-semibold">
+                        {val.tag}
+                      </div>
+                      <h4 className="text-base font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
+                        {val.title}
+                      </h4>
+                    </div>
+
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {val.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                    <span>Mundo Telecom</span>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-mundo-orange/70 group-hover:text-mundo-orange transition-colors" />
+                  </div>
                 </div>
               ))}
             </div>
