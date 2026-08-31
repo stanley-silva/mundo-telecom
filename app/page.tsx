@@ -75,11 +75,11 @@ export default function HomePage() {
         />
 
         {/* Subtle Arc Motif Layer */}
-        <div className="arc-decor w-[600px] h-[600px] -top-64 -right-48 opacity-20 hidden lg:block pointer-events-none z-1" />
-        <div className="arc-decor-glow w-[500px] h-[500px] -bottom-48 -left-32 opacity-15 hidden lg:block pointer-events-none z-1" />
+        <div className="arc-decor w-[600px] h-[600px] -top-64 -right-48 opacity-20 hidden lg:block pointer-events-none z-0" />
+        <div className="arc-decor-glow w-[500px] h-[500px] -bottom-48 -left-32 opacity-15 hidden lg:block pointer-events-none z-0" />
 
         {/* Full Bleed Hero Image: Flush with right edge on mobile & desktop */}
-        <div className="absolute right-0 bottom-0 h-[380px] sm:h-[450px] lg:top-24 lg:bottom-0 lg:h-auto w-full sm:w-[90%] md:w-[80%] lg:w-[55%] xl:w-[50%] 2xl:w-[46%] z-1 pointer-events-none select-none flex items-end justify-end overflow-hidden">
+        <div className="absolute right-0 bottom-0 h-[380px] sm:h-[450px] lg:top-24 lg:bottom-0 lg:h-auto w-full sm:w-[90%] md:w-[80%] lg:w-[55%] xl:w-[50%] 2xl:w-[46%] z-0 pointer-events-none select-none flex items-end justify-end overflow-hidden">
           <div className="relative w-full h-full lg:h-[92%] xl:h-[94%]">
             <Image
               src="/images/fotos-home/foto-hero-section-1.png"

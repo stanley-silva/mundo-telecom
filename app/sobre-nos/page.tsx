@@ -323,7 +323,7 @@ export default function SobreNosPage() {
             Converse com nossos consultores técnicos e descubra como nossas soluções de telefonia em nuvem e comunicação integrada podem aumentar a eficiência e reduzir os custos da sua operação.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <div className="flex items-center justify-center pt-4">
             <Button
               href="/contato"
               variant="primary"
@@ -332,15 +332,6 @@ export default function SobreNosPage() {
               rightIcon={<ArrowRight className="w-4 h-4" />}
             >
               Falar com Nossos Especialistas
-            </Button>
-            <Button
-              href={siteContent.brand.whatsappUrl}
-              isExternal
-              variant="outline-white"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              Atendimento Direto via WhatsApp
             </Button>
           </div>
 
