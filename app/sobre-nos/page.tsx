@@ -31,6 +31,7 @@ import { HistoryTimeline } from "@/components/sections/HistoryTimeline";
 import { siteContent } from "@/lib/content";
 
 import { QuemSomosHeroBackground } from "@/components/sections/QuemSomosHeroBackground";
+import { InstitutionalGuidelinesTabs } from "@/components/sections/InstitutionalGuidelinesTabs";
 
 export const metadata = {
   title: "Quem Somos | Mundo Telecom — Operadora Licenciada ANATEL e Telefonia em Nuvem",
@@ -41,24 +42,24 @@ export default function SobreNosPage() {
   const pillars = [
     {
       number: "01",
-      title: "Licença Própria ANATEL",
-      tag: "CONFORMIDADE & SLA",
-      description: "Atuação direta como operadora outorgada, permitindo a gestão direta de faixas de numeração, portabilidade numérica ágil e contratos diretos respaldados por SLA.",
-      icon: <Award className="w-6 h-6 text-mundo-orange" />,
+      title: "Licença ANATEL Própria",
+      tag: "STFC NACIONAL",
+      description: "Autorização de Serviço Telefônico Fixo Comutado emitida pela ANATEL para atuar como operadora independente em território nacional.",
+      icon: <ShieldCheck className="w-6 h-6 text-mundo-orange" />,
     },
     {
       number: "02",
-      title: "Redundância e Datacenters Tier",
-      tag: "ALTA DISPONIBILIDADE",
-      description: "Rotas redundantes de tráfego e servidores distribuídos em ambientes de alta segurança, assegurando disponibilidade contínua mesmo em picos extremos de tráfego.",
+      title: "NOC 24/7/365 Próprio",
+      tag: "ENGENHARIA DEDICADA",
+      description: "Centro de Operações de Rede com engenheiros e especialistas monitorando continuamente enlaces, rotas de voz e indicadores de latência.",
       icon: <Server className="w-6 h-6 text-mundo-orange" />,
     },
     {
       number: "03",
-      title: "Centro de Operações de Rede (NOC 24/7)",
-      tag: "ENGENHARIA PROATIVA",
-      description: "Monitoramento proativo e em tempo real de circuitos, servidores e enlaces de comunicação, prevenindo oscilações e garantindo resposta técnica imediata.",
-      icon: <Headphones className="w-6 h-6 text-mundo-orange" />,
+      title: "Infraestrutura Tier III",
+      tag: "REDUNDÂNCIA GEOGRÁFICA",
+      description: "Servidores alocados em datacenters redundantes com rotas contingenciadas, garantindo SLA de disponibilidade contratual de 99.98%.",
+      icon: <Building2 className="w-6 h-6 text-mundo-orange" />,
     },
     {
       number: "04",
@@ -66,44 +67,6 @@ export default function SobreNosPage() {
       tag: "COMPATIBILIDADE GLOBAL",
       description: "Compatibilidade e integração plena com os maiores players globais do ecossistema de telecom: 3CX, Khomp, Fanvil, Grandstream, Aligera e Plantec.",
       icon: <Activity className="w-6 h-6 text-mundo-orange" />,
-    },
-  ];
-
-  const values = [
-    {
-      number: "01",
-      title: "Previsibilidade",
-      tag: "TRANSPARÊNCIA",
-      description: "Eliminamos custos ocultos e tarifações por minuto. Nossos planos entregam voz corporativa estruturada sem surpresas na fatura.",
-      icon: <Scale className="w-4 h-4" />,
-    },
-    {
-      number: "02",
-      title: "Conformidade",
-      tag: "LICENÇA ANATEL",
-      description: "Licença formal STFC da ANATEL e duas décadas de mercado que asseguram conformidade técnica e segurança jurídica para a sua operação.",
-      icon: <ShieldCheck className="w-4 h-4" />,
-    },
-    {
-      number: "03",
-      title: "Desempenho",
-      tag: "COMPLETAMENTO",
-      description: "Rotas de voz com identificador local, áudio em alta definição e estabilidade de tráfego que maximizam a taxa de atendimento.",
-      icon: <Activity className="w-4 h-4" />,
-    },
-    {
-      number: "04",
-      title: "Integridade",
-      tag: "REGISTRO & LGPD",
-      description: "Armazenamento seguro e auditável de todas as interações de voz e dados, resguardando acordos comerciais e conformidade jurídica.",
-      icon: <Lock className="w-4 h-4" />,
-    },
-    {
-      number: "05",
-      title: "Suporte Próprio",
-      tag: "HUMANIZADO 24/7",
-      description: "Atendimento consultivo contínuo por especialistas de engenharia próprios, sem transferências infinitas ou respostas automatizadas genéricas.",
-      icon: <Headphones className="w-4 h-4" />,
     },
   ];
 
@@ -191,157 +154,9 @@ export default function SobreNosPage() {
       <HistoryTimeline />
 
       {/* ========================================================= */}
-      {/* BLOCO 3: DNA CORPORATIVO (MISSÃO, VISÃO E VALORES)        */}
+      {/* BLOCO 3: DIRETRIZES INSTITUCIONAIS (MISSÃO, VISÃO E VALORES) */}
       {/* ========================================================= */}
-      <section className="py-20 sm:py-28 bg-[#031127] text-white relative overflow-hidden">
-        {/* Subtle geometric circles in corners (Brand signature) */}
-        <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full border border-white/5 pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full border border-mundo-orange/10 pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16 sm:space-y-20">
-          {/* Header da Seção */}
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold tracking-wider text-mundo-orange bg-mundo-orange/10 border border-mundo-orange/20">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>DIRETRIZES INSTITUCIONAIS</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white tracking-tight">
-              Os pilares que sustentam cada conexão e decisão
-            </h2>
-            <p className="text-base text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
-              Há mais de duas décadas, estruturamos nossa operadora sobre compromissos claros: engenharia de alta disponibilidade, transparência orçamentária e responsabilidade operacional.
-            </p>
-          </div>
-
-          {/* PARTE 1: MISSÃO E VISÃO — CARDS DE AUTORIDADE ESTRATÉGICA */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-            {/* Card Missão */}
-            <div className="relative group p-8 sm:p-10 rounded-3xl bg-mundo-navy-surface/40 border border-white/10 hover:border-mundo-orange/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between overflow-hidden shadow-2xl">
-              {/* Top Accent Line */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-mundo-orange to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              <div className="space-y-5">
-                <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold tracking-widest text-mundo-orange uppercase">
-                    01 / PROPÓSITO OPERACIONAL
-                  </span>
-                  <div className="w-11 h-11 rounded-2xl bg-mundo-orange/10 border border-mundo-orange/20 text-mundo-orange flex items-center justify-center">
-                    <Target className="w-5 h-5" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-2xl sm:text-3xl font-display font-black text-white">
-                    Nossa Missão
-                  </h3>
-                  <p className="text-sm sm:text-base font-display font-medium text-mundo-orange/90 leading-snug">
-                    Eliminar as falhas de comunicação empresarial que custam vendas, tempo e credibilidade.
-                  </p>
-                </div>
-
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                  Ajudamos empresas e instituições públicas a vender, atender e operar melhor por meio de telefonia em nuvem de alta confiabilidade, integrada a IA, WhatsApp e CRM, com custos previsíveis, registro inegociável de chamadas e suporte responsável.
-                </p>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono">
-                <span>Engenharia focada no completamento</span>
-                <span className="text-mundo-orange font-bold">STFC Licenciado</span>
-              </div>
-            </div>
-
-            {/* Card Visão */}
-            <div className="relative group p-8 sm:p-10 rounded-3xl bg-mundo-navy-surface/40 border border-white/10 hover:border-mundo-orange/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between overflow-hidden shadow-2xl">
-              {/* Top Accent Line */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-mundo-orange to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              <div className="space-y-5">
-                <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold tracking-widest text-mundo-orange uppercase">
-                    02 / HORIZONTE ESTRATÉGICO
-                  </span>
-                  <div className="w-11 h-11 rounded-2xl bg-mundo-orange/10 border border-mundo-orange/20 text-mundo-orange flex items-center justify-center">
-                    <Eye className="w-5 h-5" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-2xl sm:text-3xl font-display font-black text-white">
-                    Nossa Visão
-                  </h3>
-                  <p className="text-sm sm:text-base font-display font-medium text-mundo-orange/90 leading-snug">
-                    Ser a principal referência nacional em telefonia corporativa de alta criticidade.
-                  </p>
-                </div>
-
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                  Consolidar a Mundo Telecom como a escolha definitiva para organizações que buscam controle total da sua comunicação, afastando-se tanto da burocracia engessada das grandes operadoras quanto da instabilidade de meros revendedores de tecnologia.
-                </p>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono">
-                <span>Solidez operacional & SLA de 99.98%</span>
-                <span className="text-mundo-orange font-bold">Referência Nacional</span>
-              </div>
-            </div>
-          </div>
-
-          {/* PARTE 2: OS 5 VALORES — GRID HARMONIOSO E EQUILIBRADO */}
-          <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 gap-2">
-              <div>
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-mundo-orange">
-                  03 / CULTURA & CONDUTA
-                </span>
-                <h3 className="text-xl sm:text-2xl font-display font-bold text-white mt-1">
-                  Nossos 5 Valores Inegociáveis
-                </h3>
-              </div>
-              <span className="text-xs text-slate-400 font-mono">
-                Princípios que regem 100% dos nossos contratos
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {values.map((val) => (
-                <div
-                  key={val.number}
-                  className="p-6 rounded-2xl bg-mundo-navy-surface/30 border border-white/10 hover:border-mundo-orange/50 hover:bg-mundo-navy-surface/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-4 group"
-                >
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="font-mono font-black text-xl text-slate-500 group-hover:text-mundo-orange transition-colors">
-                        {val.number}
-                      </span>
-                      <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-slate-300 group-hover:text-mundo-orange group-hover:bg-mundo-orange/10 transition-colors">
-                        {val.icon}
-                      </div>
-                    </div>
-
-                    <div className="space-y-1">
-                      <div className="text-[10px] font-mono uppercase tracking-wider text-mundo-orange font-semibold">
-                        {val.tag}
-                      </div>
-                      <h4 className="text-base font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
-                        {val.title}
-                      </h4>
-                    </div>
-
-                    <p className="text-xs text-slate-300 leading-relaxed">
-                      {val.description}
-                    </p>
-                  </div>
-
-                  <div className="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-500 font-mono">
-                    <span>Mundo Telecom</span>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-mundo-orange/70 group-hover:text-mundo-orange transition-colors" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <InstitutionalGuidelinesTabs />
 
       {/* ========================================================= */}
       {/* BLOCO 4: ESTRUTURA TÉCNICA E PILARES OPERACIONAIS         */}
