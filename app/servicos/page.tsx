@@ -14,11 +14,17 @@ import {
   Building2, 
   Landmark, 
   CheckCircle2, 
-  ChevronRight,
-  Radio,
-  FileText,
-  Clock,
-  Sparkles
+  ChevronRight, 
+  Radio, 
+  FileText, 
+  Clock, 
+  Sparkles,
+  Wrench,
+  Zap,
+  Lock,
+  BarChart3,
+  Send,
+  Headphones
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -27,19 +33,24 @@ import { MetricCounter } from "@/components/sections/MetricCounter";
 import { siteContent } from "@/lib/content";
 
 export const metadata = {
-  title: "Soluções em Telecomunicações Corporativas e Governamentais | Mundo Telecom",
-  description: "Conheça nossas soluções completas em Telefonia IP, PABX em Nuvem, Telefonia Fixa STFC, Atendimento Inteligente, Gravação de Chamadas, NOC 24/7 e Integração com WhatsApp. Operadora licenciada pela ANATEL.",
+  title: "Serviços e Plataformas de Comunicação Inteligente | Mundo Telecom",
+  description: "PABX na nuvem com rechamada automática, WhatsApp integrado com IA, agendamento online, outsourcing completo e infraestrutura própria com outorga ANATEL e NOC 24/7.",
 };
 
 export default function ServicosPage() {
   const solutionIcons: Record<string, React.ReactNode> = {
-    PhoneCall: <PhoneCall className="w-6 h-6" />,
-    Radio: <Radio className="w-6 h-6" />,
-    Cloud: <Cloud className="w-6 h-6" />,
-    Bot: <Bot className="w-6 h-6" />,
-    ShieldAlert: <ShieldAlert className="w-6 h-6" />,
     MessageSquareText: <MessageSquareText className="w-6 h-6" />,
+    PhoneCall: <PhoneCall className="w-6 h-6" />,
+    Cloud: <Cloud className="w-6 h-6" />,
+    Wrench: <Wrench className="w-6 h-6" />,
+    Zap: <Zap className="w-6 h-6" />,
+    Lock: <Lock className="w-6 h-6" />,
+    BarChart3: <BarChart3 className="w-6 h-6" />,
+    Send: <Send className="w-6 h-6" />,
+    Headphones: <Headphones className="w-6 h-6" />,
+    Radio: <Radio className="w-6 h-6" />,
     Activity: <Activity className="w-6 h-6" />,
+    ShieldAlert: <ShieldAlert className="w-6 h-6" />,
   };
 
   return (
@@ -63,15 +74,15 @@ export default function ServicosPage() {
               icon={<ShieldCheck className="w-3.5 h-3.5" />}
               className="py-1 px-3.5"
             >
-              OPERADORA LICENCIADA PELA ANATEL • 21 ANOS DE MERCADO
+              EMPRESA DE TECNOLOGIA COM INFRAESTRUTURA E SOLUÇÃO PRÓPRIA • +20 ANOS
             </Badge>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-white tracking-tight leading-[1.1]">
-              Soluções de telecomunicações sob medida para aumentar a eficiência e o controle da sua organização.
+              Comunicações inteligentes, IA e infraestrutura própria para transformar sua operação.
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
-              Da telefonia em nuvem com identificador local para empresas até infraestruturas robustas de STFC para órgãos públicos. Entregamos alta taxa de completamento, custos previsíveis sem surpresa na fatura, gravação integral de chamadas e suporte técnico consultivo 24/7.
+              PABX na nuvem com rechamada automática exclusiva, WhatsApp integrado com IA ativa 24h, agendamento online com confirmação automática e outsourcing completo de telecom com SLA contratual e monitoramento NOC 24/7.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
@@ -82,23 +93,14 @@ export default function ServicosPage() {
                 className="w-full sm:w-auto"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
               >
-                Fale com um Especialista
-              </Button>
-              <Button
-                href={siteContent.brand.whatsappUrl}
-                isExternal
-                variant="outline-white"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                Atendimento via WhatsApp
+                Falar com um Consultor
               </Button>
             </div>
 
             <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Licença Própria ANATEL</span>
+                <span>Rechamada automática exclusiva</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
@@ -106,7 +108,7 @@ export default function ServicosPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Monitoramento NOC 24/7</span>
+                <span>Monitoramento NOC 24/7 próprio</span>
               </div>
             </div>
           </div>
@@ -140,67 +142,93 @@ export default function ServicosPage() {
                   src="/images/b2b-corporate.jpg"
                   alt="Soluções para Empresas Mundo Telecom"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6">
-                  <Badge variant="orange">SETOR PRIVADO (B2B)</Badge>
+                <div className="absolute inset-0 bg-gradient-to-t from-mundo-navy/80 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider bg-mundo-orange text-white px-2.5 py-0.5 rounded-full">
+                    SETOR PRIVADO (B2B)
+                  </span>
+                  <Building2 className="w-5 h-5 text-white/80" />
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">
+              <div className="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-display font-bold text-mundo-navy">
-                    Frente Corporativa — Soluções para Empresas
+                  <h3 className="text-2xl font-display font-black text-mundo-navy">
+                    Soluções para Empresas
                   </h3>
-                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
-                    <strong className="text-slate-900 block font-semibold">Público-Alvo:</strong>
-                    Médias e grandes empresas, distribuidoras, redes de varejo, indústrias e empresas de serviços.
-                  </div>
-                  <p className="text-sm text-slate-700 leading-relaxed">
-                    Para organizações que não podem perder negócios por ligações não atendidas ou faturas imprevisíveis. Entregamos telefonia em nuvem com identificador local (DDD da região do cliente), planos estruturados com custos claros, gravação de 100% das chamadas e centralização do WhatsApp institucional em uma única plataforma.
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Mais ligações atendidas, integração total com WhatsApp corporativo e redução drástica no custo de telefonia com estabilidade garantida.
                   </p>
+                  <ul className="space-y-2 text-xs text-slate-700 pt-1">
+                    <li className="flex items-center gap-2">
+                      <Check className="w-3.5 h-3.5 text-mundo-orange shrink-0 stroke-[3]" />
+                      <span>PABX na nuvem com URA de IA e rechamada automática</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-3.5 h-3.5 text-mundo-orange shrink-0 stroke-[3]" />
+                      <span>WhatsApp oficial com múltiplos atendentes no mesmo número</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-3.5 h-3.5 text-mundo-orange shrink-0 stroke-[3]" />
+                      <span>Identificador local (DDD inteligente) para aumento de conversão</span>
+                    </li>
+                  </ul>
                 </div>
                 <div className="pt-2">
-                  <Button href="#catalogo" variant="primary" size="md" className="w-full sm:w-auto">
-                    Conhecer Soluções para Empresas
+                  <Button href="/empresas" variant="primary" size="md" className="w-full sm:w-auto">
+                    Ver Portfólio Corporativo
                   </Button>
                 </div>
               </div>
             </div>
 
             {/* Frente Governamental B2G */}
-            <div id="governo" className="rounded-3xl bg-mundo-navy text-white border border-mundo-navy-border shadow-xl overflow-hidden flex flex-col justify-between group">
-              <div className="relative h-48 w-full overflow-hidden bg-slate-900">
+            <div id="governo" className="rounded-3xl bg-white border border-slate-200 shadow-lg overflow-hidden flex flex-col justify-between group">
+              <div className="relative h-48 w-full overflow-hidden bg-slate-100">
                 <Image
                   src="/images/b2g-government.jpg"
                   alt="Soluções para Governo Mundo Telecom"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-mundo-navy via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-6">
-                  <Badge variant="orange">SETOR PÚBLICO (B2G)</Badge>
+                <div className="absolute inset-0 bg-gradient-to-t from-mundo-navy/80 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider bg-mundo-navy-surface text-white px-2.5 py-0.5 rounded-full border border-white/20">
+                    ADMINISTRAÇÃO PÚBLICA (B2G)
+                  </span>
+                  <Landmark className="w-5 h-5 text-white/80" />
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">
+              <div className="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-display font-bold text-white">
-                    Frente Governamental — Soluções para Órgãos Públicos
+                  <h3 className="text-2xl font-display font-black text-mundo-navy">
+                    Soluções para Governo
                   </h3>
-                  <div className="p-3.5 rounded-xl bg-mundo-navy-deep border border-white/10 text-xs text-slate-300">
-                    <strong className="text-slate-200 block font-semibold">Público-Alvo:</strong>
-                    Prefeituras, autarquias, câmaras municipais, universidades públicas e órgãos estaduais e federais.
-                  </div>
-                  <p className="text-sm text-slate-200 leading-relaxed">
-                    Infraestrutura robusta de Telefonia Fixa STFC e plataformas de atendimento omnichannel para conectar o cidadão com agilidade. Garantimos suporte contínuo 24/7, relatórios auditáveis para prestação de contas, alta disponibilidade de circuitos e atendimento estrito aos requisitos de segurança e termos de referência licitatórios.
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Infraestrutura de voz estável, canais de ouvidoria ao cidadão e suporte técnico completo para conformidade com a Lei nº 14.133/2021.
                   </p>
+                  <ul className="space-y-2 text-xs text-slate-700 pt-1">
+                    <li className="flex items-center gap-2">
+                      <Check className="w-3.5 h-3.5 text-mundo-orange shrink-0 stroke-[3]" />
+                      <span>Outorga direta ANATEL sem intermediários</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-3.5 h-3.5 text-mundo-orange shrink-0 stroke-[3]" />
+                      <span>Faixas DDR e integração de secretarias a custo zero interno</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-3.5 h-3.5 text-mundo-orange shrink-0 stroke-[3]" />
+                      <span>Apoio especializado na formulação de Termos de Referência</span>
+                    </li>
+                  </ul>
                 </div>
                 <div className="pt-2">
-                  <Button href="#governo-vantagens" variant="primary" size="md" className="w-full sm:w-auto">
+                  <Button href="/governo" variant="primary" size="md" className="w-full sm:w-auto">
                     Conhecer Soluções para Governo
                   </Button>
                 </div>
@@ -211,24 +239,24 @@ export default function ServicosPage() {
       </section>
 
       {/* ========================================================= */}
-      {/* BLOCO 3: CATÁLOGO DE SOLUÇÕES EM PROFUNDIDADE             */}
+      {/* BLOCO 3: CATÁLOGO DE SOLUÇÕES EM PROFUNDIDADE (9 SOLUÇÕES)*/}
       {/* ========================================================= */}
       <section id="catalogo" className="py-16 sm:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="text-center max-w-3xl mx-auto">
             <div className="text-xs font-display font-bold uppercase tracking-wider text-mundo-orange mb-2">
-              PORTFÓLIO DE ENGENHARIA & VOZ
+              PORTFÓLIO DE TECNOLOGIA & COMUNICAÇÕES
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-black text-mundo-navy">
-              Nossas Soluções em Telecomunicações
+              Nossas 9 Categorias de Soluções Corporativas
             </h2>
             <p className="text-base text-slate-600 mt-3 leading-relaxed">
-              Cada solução é construída com foco em resultados práticos: fazer a ligação completar, manter os registros protegidos e garantir previsibilidade no orçamento.
+              Cada solução é construída com foco em resultados práticos: atendimento inteligente, estabilidade de rotas, blindagem jurídica e previsibilidade total no orçamento.
             </p>
           </div>
 
           <div className="space-y-10">
-            {siteContent.solutions.map((sol, index) => (
+            {siteContent.commercialSolutions.map((sol) => (
               <div
                 key={sol.id}
                 id={sol.id}
@@ -237,15 +265,20 @@ export default function ServicosPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   <div className="lg:col-span-8 space-y-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-xl bg-mundo-navy text-white flex items-center justify-center shrink-0">
-                        {solutionIcons[sol.iconName] || <PhoneCall className="w-5 h-5" />}
+                      <div className="w-12 h-12 rounded-xl bg-mundo-navy text-white flex items-center justify-center shrink-0 shadow-md">
+                        {solutionIcons[sol.iconName] || <PhoneCall className="w-6 h-6" />}
                       </div>
                       <div>
-                        <span className="text-[10px] font-display font-bold uppercase tracking-wider text-mundo-orange bg-mundo-orange/10 px-2.5 py-0.5 rounded-full border border-mundo-orange/20">
-                          {sol.categoryTag}
-                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange bg-mundo-orange/10 px-2.5 py-0.5 rounded-full border border-mundo-orange/20">
+                            {sol.tag}
+                          </span>
+                          <span className="text-xs font-mono font-bold text-slate-400">
+                            {sol.number}
+                          </span>
+                        </div>
                         <h3 className="text-2xl font-display font-bold text-mundo-navy mt-0.5">
-                          {sol.title}
+                          {sol.name}
                         </h3>
                       </div>
                     </div>
@@ -254,14 +287,24 @@ export default function ServicosPage() {
                       &ldquo;{sol.headline}&rdquo;
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-950">
-                      <strong className="font-bold block text-mundo-navy mb-0.5">Problema que resolve na sua operação:</strong>
-                      {sol.problemResolved}
-                    </div>
-
                     <p className="text-sm text-slate-700 leading-relaxed">
                       {sol.description}
                     </p>
+
+                    {/* Diferenciais */}
+                    {sol.differentials && sol.differentials.length > 0 && (
+                      <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-950 space-y-1">
+                        <strong className="font-bold block text-mundo-navy">Diferencial Mundo Telecom:</strong>
+                        <ul className="space-y-1 text-slate-700">
+                          {sol.differentials.map((d, i) => (
+                            <li key={i} className="flex items-start gap-1.5">
+                              <span className="text-mundo-orange font-bold">•</span>
+                              <span>{d}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
 
                   <div className="lg:col-span-4 bg-white p-6 rounded-2xl border border-slate-200 space-y-5 flex flex-col justify-between h-full shadow-sm">
@@ -281,7 +324,7 @@ export default function ServicosPage() {
 
                     <div className="pt-3 border-t border-slate-100">
                       <Button
-                        href="/contato"
+                        href={sol.href}
                         variant="primary"
                         size="md"
                         className="w-full"

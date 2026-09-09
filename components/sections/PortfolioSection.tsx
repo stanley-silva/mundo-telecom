@@ -13,95 +13,126 @@ import {
   ArrowRight, 
   ChevronRight, 
   ChevronLeft,
-  Zap
+  Zap,
+  Calendar,
+  Radio,
+  Send
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
 export function PortfolioSection() {
   const technicalCards = [
     {
-      id: "plataforma-conecta",
-      index: "01",
-      code: "OMNICHANNEL // ATENDIMENTO IA",
-      categoryTag: "OMNICHANNEL & IA",
-      title: "Plataforma Conecta (Omnichannel & IA)",
-      headline: "Centralize o atendimento em um único painel",
-      description: "Centralize o atendimento da sua organização em um único painel. Múltiplos atendentes em um só número oficial de WhatsApp, integrando canais de voz e mensagens com triagem ágil por Inteligência Artificial — sem menus robóticos lentos e com histórico unificado de interações.",
-      chips: ["WhatsApp Multi-atendentes", "Triagem com IA", "Histórico Unificado"],
-      metric: "Atendimento unificado & ágil",
-      href: "/servicos#whatsapp-omnichannel",
-      ctaText: "Conhecer a Plataforma Conecta",
-      icon: <MessageSquareText className="w-5 h-5" />,
-    },
-    {
-      id: "telefonia-ip",
-      index: "02",
-      code: "STFC // VOZ CORPORATIVA",
-      categoryTag: "INFRAESTRUTURA & VOZ",
-      title: "Telefonia IP & Conexão STFC",
-      headline: "Identificador Local Dinâmico & Alta Taxa de Atendimento",
-      description: "Conexão direta às operadoras nacionais com outorga ANATEL. Chamadas ativas com o DDD da cidade do cliente, aumentando em até 3x o atendimento.",
-      chips: ["Outorga Direta ANATEL", "Identificador Local (DDD)", "Portabilidade Sem Queda"],
-      metric: "Atendimento até 3x maior",
-      href: "/servicos#telefonia-ip",
-      ctaText: "Conhecer Telefonia IP",
-      icon: <PhoneCall className="w-5 h-5" />,
-    },
-    {
       id: "pabx-nuvem",
-      index: "03",
-      code: "CLOUD // PABX VIRTUAL",
-      categoryTag: "PLATAFORMA EM NUVEM",
-      title: "PABX em Nuvem Integrado",
-      headline: "Central Telefônica 100% Digital Sem Hardware",
-      description: "Conecte matriz, filiais e trabalho remoto em uma rede unificada de ramais com áudio em alta definição no computador, celular e aparelhos IP.",
-      chips: ["Zero Servidor Físico", "Ramais Ilimitados", "Mobilidade PC & App"],
-      metric: "Economia média de 40% em custos",
-      href: "/servicos#pabx-nuvem",
-      ctaText: "Conhecer PABX em Nuvem",
+      index: "01",
+      code: "PRODUTO // IA & RECHAMADA",
+      categoryTag: "TELEFONIA INTELIGENTE",
+      title: "PABX na Nuvem com URA de IA & Rechamada",
+      headline: "Nunca dá ocupado · Nenhuma chamada perdida",
+      description: "Central telefônica virtual com inteligência artificial e rechamada automática exclusiva: se o cliente não consegue falar por fila cheia ou fora do horário, o sistema captura a ligação e retorna automaticamente. Custo 100% previsível.",
+      chips: ["Rechamada Automática", "URA com IA", "Ramais Virtuais sem Fio"],
+      metric: "Zero chamadas perdidas",
+      href: "/solucoes/pabx-virtual-cloud",
+      ctaText: "Conhecer PABX Virtual",
       icon: <Cloud className="w-5 h-5" />,
     },
     {
-      id: "ura-inteligente",
-      index: "04",
-      code: "ROUTING // URA",
+      id: "whatsapp-ia",
+      index: "02",
+      code: "PLATAFORMA // OMNICHANNEL & IA",
+      categoryTag: "OMNICHANNEL & IA",
+      title: "Omnichannel & IA (Plataforma AIkon)",
+      headline: "Centralize voz, WhatsApp, redes sociais e e-mail em uma única tela",
+      description: "Plataforma proprietária AIkon com múltiplos atendentes no mesmo número corporativo oficial, triagem automática com IA e histórico unificado do cliente.",
+      chips: ["Plataforma Própria AIkon", "WhatsApp Oficial", "Triagem com IA"],
+      metric: "Resposta em segundos",
+      href: "/solucoes/omnichannel-ia-aikon",
+      ctaText: "Conhecer Plataforma AIkon",
+      icon: <MessageSquareText className="w-5 h-5" />,
+    },
+    {
+      id: "agendamento-online",
+      index: "03",
+      code: "EXPERIÊNCIA // CX ROUTING",
       categoryTag: "EXPERIÊNCIA DO CLIENTE",
-      title: "URA & Atendimento Inteligente",
-      headline: "Triagem Rápida e Roteamento Humanizado",
-      description: "Acolhimento automático e direcionamento rápido para o setor correto. Menus ágeis, filas organizadas e mensagens personalizadas de plantão.",
-      chips: ["Redução de Tempo de Espera", "Menus de Plantão", "Distribuição Equitativa"],
-      metric: "Queda no abandono de chamadas",
-      href: "/servicos#ura-inteligente",
-      ctaText: "Conhecer URA Inteligente",
+      title: "Experiência do Cliente & Roteamento Inteligente",
+      headline: "Skill-based routing · DDD Local · Pesquisas de satisfação",
+      description: "Roteamento inteligente direcionando o cliente para o atendente especialista certo, com identificador de DDD local para triplicar a taxa de atendimento e pesquisas automáticas de CSAT/NPS.",
+      chips: ["Skill-Based Routing", "Identificador DDD Local", "Pesquisa CSAT/NPS"],
+      metric: "3x mais atendimentos",
+      href: "/solucoes/experiencia-cliente-cx-routing",
+      ctaText: "Conhecer CX Routing",
+      icon: <Zap className="w-5 h-5" />,
+    },
+    {
+      id: "outsourcing-telecom",
+      index: "04",
+      code: "OPERAÇÕES // NOC 24/7 & ITSM",
+      categoryTag: "GESTÃO DE TI & NOC",
+      title: "Gestão de TI & Operações ITSM (NOC 24/7)",
+      headline: "Vigilância ininterrupta 24/7/365 · SLA formal com engenharia",
+      description: "Centro de Operações de Rede vigiando a estabilidade de troncos, circuitos e servidores em tempo real com resposta preditiva antes de qualquer impacto operacional.",
+      chips: ["Vigilância 24/7/365", "Engenharia Própria", "SLA de 99,95%"],
+      metric: "99,95% de disponibilidade",
+      href: "/solucoes/gestao-servicos-ti-noc-itsm",
+      ctaText: "Conhecer NOC 24/7",
+      icon: <Activity className="w-5 h-5" />,
+    },
+    {
+      id: "infraestrutura-stfc",
+      index: "05",
+      code: "BASE // OUTORGA ANATEL",
+      categoryTag: "INFRAESTRUTURA PRÓPRIA",
+      title: "Telefonia Corporativa (Voz IP & STFC)",
+      headline: "Outorga direta ANATEL e protocolo anti-fraude STIR/SHAKEN",
+      description: "Troncos de voz de alta densidade, numeração DDR própria e protocolo STIR/SHAKEN para evitar bloqueios como SPAM. Segurança jurídica para empresas e órgãos públicos.",
+      chips: ["Outorga Própria ANATEL", "Protocolo STIR/SHAKEN", "Áudio HD com QoS"],
+      metric: "Compliance regulatório pleno",
+      href: "/solucoes/telefonia-corporativa-stfc",
+      ctaText: "Conhecer Telefonia STFC",
+      icon: <Radio className="w-5 h-5" />,
+    },
+    {
+      id: "mensageria-meta",
+      index: "06",
+      code: "MENSAGERIA // META PROVIDER",
+      categoryTag: "WHATSAPP OFICIAL",
+      title: "Mensageria Corporativa (Meta Provider)",
+      headline: "API Oficial WhatsApp com selo verificado e zero risco de banimento",
+      description: "Disparo homologado de notificações, boletos e réguas de cobrança no WhatsApp com múltiplos atendentes e total conformidade aos termos da Meta.",
+      chips: ["API Oficial Meta", "Selo Verificado", "Disparos em Escala"],
+      metric: "Zero risco de bloqueio",
+      href: "/solucoes/mensageria-corporativa-meta-provider",
+      ctaText: "Conhecer WhatsApp Oficial",
+      icon: <Send className="w-5 h-5" />,
+    },
+    {
+      id: "voice-ai",
+      index: "07",
+      code: "IA GENERATIVA // VOZ NATURAL",
+      categoryTag: "IA POR VOZ",
+      title: "Inteligência Artificial Aplicada à Voz (Voice AI)",
+      headline: "Agentes de voz inteligentes dialogando em linguagem natural",
+      description: "Substitua URAs travadas por agentes de voz cognitivos que compreendem intenções, realizam transações e transferem com contexto completo.",
+      chips: ["Agentes de Voz Cognitivos", "Fim da URA Engessada", "Escala Imediata"],
+      metric: "Atendimento no 1º toque",
+      href: "/solucoes/inteligencia-artificial-voz-voice-ai",
+      ctaText: "Conhecer Voice AI",
       icon: <Bot className="w-5 h-5" />,
     },
     {
-      id: "gravacao-chamadas",
-      index: "05",
-      code: "SECURITY // COMPLIANCE",
-      categoryTag: "SEGURANÇA & AUDITORIA",
-      title: "Gravação 100% de Chamadas",
-      headline: "Histórico Seguro em Nuvem e Proteção Jurídica",
-      description: "Armazenamento criptografado em nuvem de todas as ligações de entrada e saída. Busca instantânea por data, atendente, ramal ou cliente.",
-      chips: ["Criptografia Ponta a Ponta", "Busca em Segundos", "Resguardo Jurídico"],
-      metric: "100% gravado e auditável",
-      href: "/servicos#gravacao-chamadas",
-      ctaText: "Conhecer Gravação",
+      id: "infraestrutura-redes",
+      index: "08",
+      code: "NETWORK // ALTA DISPONIBILIDADE",
+      categoryTag: "INFRAESTRUTURA DE REDES",
+      title: "Infraestrutura de Redes (Alta Disponibilidade)",
+      headline: "Links dedicados simétricos e topologia em anel com redundância",
+      description: "Conectividade dedicada de fibra óptica com garantia de 100% de banda, interligação de filiais via VPN/SD-WAN e substituição expressa de hardware.",
+      chips: ["Link 100% Dedicado", "Topologia em Anel", "Hardware Homologado"],
+      metric: "Continuidade total",
+      href: "/solucoes/infraestrutura-rede-alta-disponibilidade",
+      ctaText: "Conhecer Infra de Redes",
       icon: <ShieldAlert className="w-5 h-5" />,
-    },
-    {
-      id: "noc-monitoramento",
-      index: "06",
-      code: "NETWORK // SLA 24/7",
-      categoryTag: "GOVERNANÇA TÉCNICA",
-      title: "NOC & Monitoramento 24/7",
-      headline: "Engenharia Própria e Supervisão Contínua",
-      description: "Centro de Operações de Rede vigiando a estabilidade de troncos, latência e jitter em tempo real. Resolução antecipada de oscilações.",
-      chips: ["Supervisão 24/7/365", "SLA em Contrato", "Engenharia Especializada"],
-      metric: "99.98% de disponibilidade",
-      href: "/servicos#noc-monitoramento",
-      ctaText: "Conhecer NOC 24/7",
-      icon: <Activity className="w-5 h-5" />,
     },
   ];
 
@@ -176,7 +207,7 @@ export function PortfolioSection() {
   };
 
   return (
-    <section id="portfolio" className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+    <section id="solucoes-inteligentes" className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden scroll-mt-20">
       {/* Background Subtle Grid Texture */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#07224b08_1px,transparent_1px),linear-gradient(to_bottom,#07224b08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -186,14 +217,14 @@ export function PortfolioSection() {
           <div className="max-w-2xl space-y-2.5">
             <div className="flex items-center gap-2">
               <Badge variant="orange" icon={<Zap className="w-3.5 h-3.5" />}>
-                PORTFÓLIO DE ENGENHARIA & TELECOM
+                COMUNICAÇÕES INTELIGENTES & TECNOLOGIA
               </Badge>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-black text-mundo-navy tracking-tight">
-              Soluções integradas de comunicação empresarial
+              Soluções inteligentes de comunicação e tecnologia
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              Estrutura de ponta a ponta com alta taxa de completamento, custos previsíveis e suporte técnico consultivo.
+              Telefonia em nuvem com rechamada automática, WhatsApp integrado com inteligência artificial, agendamento online e outsourcing completo com infraestrutura própria.
             </p>
           </div>
 

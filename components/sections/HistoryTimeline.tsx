@@ -107,7 +107,7 @@ export function HistoryTimeline() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Conheça as etapas que construíram a nossa autoridade como operadora licenciada e referência nacional em telefonia corporativa e governamental.
+            Conheça as etapas que construíram a nossa autoridade como empresa de tecnologia com infraestrutura própria e referência nacional em comunicações inteligentes.
           </p>
         </motion.div>
 

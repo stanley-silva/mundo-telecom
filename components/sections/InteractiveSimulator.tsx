@@ -133,21 +133,21 @@ export function InteractiveSimulator() {
               <div className="w-5 h-5 rounded-full bg-mundo-orange/15 border border-mundo-orange/30 text-mundo-orange flex items-center justify-center shrink-0">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </div>
-              <span>Estudo de viabilidade de DDDs locais gratuito</span>
+              <span>Diagnóstico técnico e dimensionamento sem custo</span>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-3">
               <div className="w-5 h-5 rounded-full bg-mundo-orange/15 border border-mundo-orange/30 text-mundo-orange flex items-center justify-center shrink-0">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </div>
-              <span>Plano de migração e continuidade sem quedas de linha</span>
+              <span>Rechamada automática e IA para não perder chamadas</span>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-3">
               <div className="w-5 h-5 rounded-full bg-mundo-orange/15 border border-mundo-orange/30 text-mundo-orange flex items-center justify-center shrink-0">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </div>
-              <span>Suporte técnico humanizado e NOC 24/7 próprio</span>
+              <span>Infraestrutura própria, outorga ANATEL e NOC 24/7</span>
             </div>
           </div>
         </div>

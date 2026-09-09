@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsAppButton } from "@/components/ui/FloatingWhatsAppButton";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -20,19 +21,22 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mundo Telecom | Telefonia em Nuvem, PABX e Soluções STFC ANATEL",
+    default: "Mundo Telecom | Empresa de Tecnologia com Infraestrutura e Solução Própria",
     template: "%s | Mundo Telecom",
   },
   description:
-    "Aumente a taxa de atendimento e a eficiência da sua comunicação com telefonia corporativa em nuvem. Operadora licenciada pela ANATEL há mais de 20 anos para empresas e governos.",
+    "Comunicações inteligentes para empresas e órgãos públicos. PABX na nuvem com URA de IA, rechamada automática exclusiva, WhatsApp integrado e infraestrutura própria com outorga ANATEL e NOC 24/7.",
   keywords: [
-    "telefonia ip",
-    "pabx em nuvem",
+    "empresa de tecnologia",
+    "comunicacoes inteligentes",
+    "pabx na nuvem",
+    "rechamada automatica",
+    "ia no atendimento",
+    "whatsapp com ia",
+    "agendamento online",
+    "outsourcing de telecom",
     "stfc anatel",
     "telefonia corporativa",
-    "identificador local",
-    "ura inteligente",
-    "gravacao de chamadas",
     "telefonia setor publico",
     "noc 24/7",
     "mundo telecom",
@@ -47,9 +51,9 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://mundotelecom.com.br"),
   openGraph: {
-    title: "Mundo Telecom | Telefonia em Nuvem e PABX Corporativo",
+    title: "Mundo Telecom | Empresa de Tecnologia com Infraestrutura e Solução Própria",
     description:
-      "Aumente a taxa de atendimento e a eficiência da sua comunicação com telefonia corporativa em nuvem. Operadora licenciada ANATEL.",
+      "PABX na nuvem com URA de IA, rechamada automática exclusiva de ligações perdidas, WhatsApp integrado e infraestrutura própria.",
     url: "https://mundotelecom.com.br",
     siteName: "Mundo Telecom",
     locale: "pt_BR",
@@ -82,6 +86,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1 w-full bg-[#FFFEFF]">{children}</main>
         <Footer />
+        <FloatingWhatsAppButton />
       </body>
     </html>
   );

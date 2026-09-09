@@ -29,7 +29,11 @@ export function Footer() {
           <div className="w-full lg:max-w-xs xl:max-w-sm space-y-4">
             <Logo variant="light" size="md" />
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Operadora e integradora de soluções inteligentes em telecomunicações corporativas e públicas. <strong className="text-white font-medium">Mais de duas décadas de tradição, solidez e relacionamento.</strong>
+              <strong>Empresa de tecnologia com infraestrutura e solução própria.</strong> Transformamos a comunicação de empresas e órgãos públicos com telefonia inteligente, inteligência artificial e mensageria.
+            </p>
+            <p className="text-[11px] text-slate-400">
+              {siteContent.brand.razaoSocial}<br />
+              CNPJ: {siteContent.brand.cnpj}
             </p>
           </div>
 
@@ -48,17 +52,17 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/sobre-nos" className="hover:text-white transition-colors">
-                    Sobre Nós
+                    Quem Somos
                   </Link>
                 </li>
                 <li>
                   <Link href="/empresas" className="hover:text-white transition-colors">
-                    Soluções B2B
+                    Empresas (B2B)
                   </Link>
                 </li>
                 <li>
                   <Link href="/governo" className="hover:text-white transition-colors">
-                    Soluções B2G
+                    Governo (B2G)
                   </Link>
                 </li>
                 <li>
@@ -72,32 +76,37 @@ export function Footer() {
             {/* Column 2: Soluções */}
             <div className="space-y-3.5">
               <h4 className="text-xs sm:text-sm font-display font-bold text-mundo-orange">
-                Soluções
+                Soluções Centrais
               </h4>
               <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
                 <li>
-                  <Link href="/servicos#pabx-nuvem" className="hover:text-white transition-colors">
-                    PABX em Nuvem
+                  <Link href="/produtos" className="hover:text-white transition-colors">
+                    PABX na Nuvem + Rechamada
                   </Link>
                 </li>
                 <li>
-                  <Link href="/servicos#stfc-outorgado" className="hover:text-white transition-colors">
-                    Telefonia STFC
+                  <Link href="/empresas" className="hover:text-white transition-colors">
+                    WhatsApp + IA 24h
                   </Link>
                 </li>
                 <li>
-                  <Link href="/servicos#ura-inteligente" className="hover:text-white transition-colors">
-                    URA Inteligente & IA
+                  <Link href="/produtos" className="hover:text-white transition-colors">
+                    Agendamento Online
                   </Link>
                 </li>
                 <li>
-                  <Link href="/servicos#whatsapp-omnichannel" className="hover:text-white transition-colors">
-                    WhatsApp Omnichannel
+                  <Link href="/empresas" className="hover:text-white transition-colors">
+                    Outsourcing de Telecom
                   </Link>
                 </li>
                 <li>
-                  <Link href="/servicos#noc-monitoramento" className="hover:text-white transition-colors">
-                    NOC & Monitoramento
+                  <Link href="/servicos" className="hover:text-white transition-colors">
+                    Infraestrutura STFC & ANATEL
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/servicos" className="hover:text-white transition-colors">
+                    NOC 24/7 & Monitoramento
                   </Link>
                 </li>
               </ul>
@@ -106,38 +115,79 @@ export function Footer() {
             {/* Column 3: Contato & Endereço */}
             <div className="space-y-3.5">
               <h4 className="text-xs sm:text-sm font-display font-bold text-mundo-orange">
-                Contato
+                Canais Oficiais
               </h4>
-              <div className="space-y-2.5 text-xs sm:text-sm text-slate-300">
-                <div>
-                  <span className="font-bold text-white block">0800 031 1919</span>
-                  <span className="text-slate-400 text-xs">(31) 2552-1919</span>
-                </div>
+              <div className="space-y-3 text-xs text-slate-300">
+                <ul className="space-y-1.5 text-xs text-slate-300">
+                  <li>
+                    <a 
+                      href={siteContent.brand.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-mundo-orange transition-colors"
+                    >
+                      WhatsApp: {siteContent.brand.whatsappDisplay}
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href={`tel:${siteContent.brand.phoneRegional.replace(/\D/g, "")}`}
+                      className="hover:text-white transition-colors"
+                    >
+                      Telefone: {siteContent.brand.phoneRegional}
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="tel:08000311919"
+                      className="text-slate-400 hover:text-white transition-colors"
+                    >
+                      0800 031 1919
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href={`mailto:${siteContent.brand.email}`}
+                      className="hover:text-mundo-orange transition-colors"
+                    >
+                      {siteContent.brand.email}
+                    </a>
+                  </li>
+                </ul>
 
-                <div className="pt-1.5 space-y-1">
-                  <h5 className="text-xs font-display font-bold text-mundo-orange">
-                    Endereço
-                  </h5>
-                  <p className="text-slate-300 text-xs leading-relaxed">
-                    Rua Hermilo Alves, 66, 2º Andar<br />
-                    Santa Tereza — Belo Horizonte, MG<br />
-                    CEP: 31010-070
-                  </p>
+                <div className="pt-1.5 space-y-2">
+                  <div>
+                    <h5 className="text-xs font-display font-bold text-mundo-orange">
+                      Sede & NOC Central (BH)
+                    </h5>
+                    <p className="text-slate-300 text-xs leading-relaxed">
+                      Rua Hermilo Alves, 66, 2º Andar<br />
+                      Santa Tereza, Belo Horizonte - MG<br />
+                      CEP: 31010-070
+                    </p>
+                  </div>
+                  <div className="pt-1">
+                    <h5 className="text-xs font-display font-bold text-mundo-orange">
+                      Unidade Regional São Paulo
+                    </h5>
+                    <p className="text-slate-300 text-xs leading-relaxed">
+                      Atendimento corporativo e suporte B2B/B2G<br />
+                      São Paulo, SP
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+        <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <div>
             Mundo Telecom @ {currentYear}. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/sobre-nos" className="hover:text-white transition-colors">
-              Quem Somos
-            </Link>
             <Link href="/contato" className="hover:text-white transition-colors">
               Suporte 24/7
             </Link>

@@ -20,38 +20,38 @@ import { QuemSomosHeroBackground } from "@/components/sections/QuemSomosHeroBack
 import { InstitutionalGuidelinesTabs } from "@/components/sections/InstitutionalGuidelinesTabs";
 
 export const metadata = {
-  title: "Quem Somos | Mundo Telecom — Operadora Licenciada ANATEL e Telefonia em Nuvem",
-  description: "Conheça a Mundo Telecom: mais de 20 anos de experiência, autorizada pela ANATEL, entregando telefonia corporativa em nuvem, PABX e soluções de comunicação para empresas e governos.",
+  title: "Quem Somos | Mundo Telecom — Empresa de Tecnologia com Infraestrutura e Solução Própria",
+  description: "Conheça a Mundo Telecom: empresa de tecnologia com mais de 20 anos de evolução, transformando a comunicação com telefonia inteligente, IA, rechamada automática e infraestrutura própria.",
 };
 
 export default function SobreNosPage() {
   const pillars = [
     {
       number: "01",
-      title: "Licença ANATEL Própria",
-      tag: "STFC NACIONAL",
-      description: "Autorização de Serviço Telefônico Fixo Comutado emitida pela ANATEL para atuar como operadora independente em território nacional.",
+      title: "Tecnologia & IA em Produção",
+      tag: "IA ATIVA 24H",
+      description: "Inteligência Artificial aplicada no atendimento de voz e texto: URA de IA, triagem inteligente e automações ativas 24 horas por dia.",
       icon: <ShieldCheck className="w-6 h-6 text-mundo-orange" />,
     },
     {
       number: "02",
-      title: "NOC 24/7/365 Próprio",
-      tag: "ENGENHARIA DEDICADA",
-      description: "Centro de Operações de Rede com engenheiros e especialistas monitorando continuamente enlaces, rotas de voz e indicadores de latência.",
+      title: "Rechamada Automática Exclusiva",
+      tag: "ZERO CHAMADAS PERDIDAS",
+      description: "Diferencial de ponta: se o cliente ligar e não conseguir falar, o sistema registra e realiza o retorno de forma automática.",
       icon: <Server className="w-6 h-6 text-mundo-orange" />,
     },
     {
       number: "03",
-      title: "Infraestrutura Tier III",
-      tag: "REDUNDÂNCIA GEOGRÁFICA",
-      description: "Servidores alocados em datacenters redundantes com rotas contingenciadas, garantindo SLA de disponibilidade contratual de 99.98%.",
+      title: "Customer Success Dedicado",
+      tag: "ATÉ O RESULTADO",
+      description: "Não somos fornecedor que vende e some. Acompanhamos sua operação com consultoria contínua até alcançar a máxima eficiência.",
       icon: <Building2 className="w-6 h-6 text-mundo-orange" />,
     },
     {
       number: "04",
-      title: "Ecossistema Homologado",
-      tag: "COMPATIBILIDADE GLOBAL",
-      description: "Compatibilidade e integração plena com os maiores players globais do ecossistema de telecom: 3CX, Khomp, Fanvil, Grandstream, Aligera e Plantec.",
+      title: "Infraestrutura Própria & NOC 24/7",
+      tag: "OUTORGA ANATEL",
+      description: "Base própria com outorga ANATEL e Centro de Operações de Rede vigiando a estabilidade técnica em regime 24/7/365 com SLA de 99,95%.",
       icon: <Activity className="w-6 h-6 text-mundo-orange" />,
     },
   ];
@@ -84,16 +84,16 @@ export default function SobreNosPage() {
                 icon={<ShieldCheck className="w-3.5 h-3.5" />}
                 className="py-1 px-3.5"
               >
-                AUTORIDADE, INFRAESTRUTURA E EXPERIÊNCIA EM TELECOMUNICAÇÕES
+                EMPRESA DE TECNOLOGIA COM INFRAESTRUTURA E SOLUÇÃO PRÓPRIA • +20 ANOS
               </Badge>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-display font-black text-white tracking-tight leading-[1.14] text-center max-w-4xl">
-              Conectando empresas e governos com solidez técnica, conformidade regulatória e infraestrutura em nuvem.
+              Empresa de Tecnologia com infraestrutura e solução própria
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal text-center max-w-3xl mx-auto">
-              Há mais de duas décadas, a Mundo Telecom atua como operadora licenciada pela ANATEL e integradora de soluções de voz e comunicação digital. Transformamos a comunicação corporativa e pública em um motor de eficiência, previsibilidade orçamentária e total segurança operacional.
+              Somos uma empresa de tecnologia. Das telecomunicações às comunicações inteligentes: tecnologia, IA e mensageria aplicadas ao atendimento. Licenciados pela ANATEL, operamos nossos próprios servidores e plataformas. Atendemos desde clínicas e concessionárias até ministérios públicos, com IA aplicada em produção, não é promessa, é operação.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full sm:w-auto">
@@ -107,7 +107,7 @@ export default function SobreNosPage() {
                 Falar com Nossos Especialistas
               </Button>
               <Button
-                href="/servicos"
+                href="/produtos"
                 variant="outline-white"
                 size="lg"
                 className="w-full sm:w-auto"
@@ -119,7 +119,7 @@ export default function SobreNosPage() {
             <div className="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300 w-full max-w-3xl">
               <div className="flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Licença Própria ANATEL</span>
+                <span>Infraestrutura Própria & ANATEL</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
@@ -127,7 +127,7 @@ export default function SobreNosPage() {
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Suporte e Monitoramento 24/7</span>
+                <span>Customer Success & NOC 24/7</span>
               </div>
             </div>
           </div>
@@ -251,13 +251,13 @@ export default function SobreNosPage() {
                   Matriz & Centro de Operações (NOC 24/7)
                 </p>
                 <p className="text-sm text-slate-600 leading-relaxed pt-2">
-                  Sede administrativa e operacional da operadora. Abriga o monitoramento ininterrupto de rede, suporte consultivo central e o laboratório de engenharia.
+                  Sede administrativa e centro de engenharia da Mundo Telecom. Abriga o monitoramento ininterrupto de rede (NOC Central 24/7), suporte consultivo e laboratório de inovação.
                 </p>
               </div>
 
               <div className="pt-6 border-t border-slate-100 text-xs text-slate-500 space-y-1">
-                <p className="text-slate-700 font-medium">Rua Hermilo Alves, 66, 2º Andar — Santa Tereza</p>
-                <p className="font-mono text-slate-900 font-bold pt-1">(31) 2552-1919</p>
+                <p className="text-slate-700 font-medium">Rua Hermilo Alves, 66, 2º Andar, Santa Tereza</p>
+                <p className="font-mono text-slate-900 font-bold pt-1">(31) 2011-2000</p>
               </div>
             </div>
 
@@ -279,7 +279,7 @@ export default function SobreNosPage() {
 
               <div className="pt-6 border-t border-slate-100 text-xs text-slate-500 space-y-1">
                 <p className="text-slate-700 font-medium">Ed. Oscar Niemeyer, Sala 1001, SCS Qd. 2</p>
-                <p className="font-mono text-slate-900 font-bold pt-1">(31) 2552-1919</p>
+                <p className="font-mono text-slate-900 font-bold pt-1">(31) 2011-2000</p>
               </div>
             </div>
 
@@ -300,8 +300,8 @@ export default function SobreNosPage() {
               </div>
 
               <div className="pt-6 border-t border-slate-100 text-xs text-slate-500 space-y-1">
-                <p className="text-slate-700 font-medium">Rua Funchal, 203, Conjunto 91 — Vila Olímpia</p>
-                <p className="font-mono text-slate-900 font-bold pt-1">(31) 2552-1919</p>
+                <p className="text-slate-700 font-medium">Rua Funchal, 203, Conjunto 91, Vila Olímpia</p>
+                <p className="font-mono text-slate-900 font-bold pt-1">(31) 2011-2000</p>
               </div>
             </div>
           </div>
@@ -317,7 +317,7 @@ export default function SobreNosPage() {
             CONTATO CONSULTIVO
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white">
-            Pronto para ter uma operadora séria e transparente ao lado da sua organização?
+            Pronto para ter uma empresa de tecnologia com infraestrutura própria ao lado da sua organização?
           </h2>
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Converse com nossos consultores técnicos e descubra como nossas soluções de telefonia em nuvem e comunicação integrada podem aumentar a eficiência e reduzir os custos da sua operação.

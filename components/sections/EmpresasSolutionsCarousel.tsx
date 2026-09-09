@@ -7,143 +7,182 @@ import {
   Cloud, 
   Headphones, 
   MessageSquareText, 
-  Send,
-  Wrench,
-  BarChart3,
-  ChevronRight,
-  ChevronLeft,
-  CheckCircle2,
-  ArrowRight,
-  Zap
+  Send, 
+  Wrench, 
+  BarChart3, 
+  ChevronRight, 
+  ChevronLeft, 
+  CheckCircle2, 
+  ArrowRight, 
+  Zap,
+  Lock,
+  Sparkles
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
 export function EmpresasSolutionsCarousel() {
   const b2bCards = [
     {
-      id: "terceirizacao-telecom",
+      id: "omnichannel-ia-aikon",
       index: "01",
-      code: "OPEX // GESTÃO COMPLETA",
-      tag: "OUTSOURCING & GOVERNANÇA",
-      title: "Terceirização de Telecom",
-      headline: "Gestão integral da sua infraestrutura de telefonia: fornecemos aparelhos IP, links, manutenção preventiva e suporte especializado em modelo OpEx.",
+      code: "PLATAFORMA PRÓPRIA // ATENDIMENTO",
+      tag: "ATENDIMENTO & IA",
+      title: "Omnichannel & IA (Plataforma AIkon)",
+      headline: "Centralize todos os canais de atendimento da sua empresa em uma única tela inteligente desenvolvida pela Mundo Telecom.",
       benefits: [
-        "Redução direta de custos sem imobilização de capital (CapEx)",
-        "Ponto único de contato para links, ramais, aparelhos e suporte",
-        "Manutenção preventiva e substituição rápida de equipamentos",
-        "Acordo de Nível de Serviço (SLA) rígido com equipe de engenharia"
+        "Plataforma própria AIkon com autonomia e evolução contínua",
+        "Voz, WhatsApp, redes sociais e e-mail integrados em uma tela",
+        "Múltiplos atendentes em 1 só número oficial com controle total",
+        "Triagem ágil com IA (NLP) para resolver dúvidas 24/7 sem fila"
       ],
-      ctaText: "Consultar Terceirização de Telecom",
-      href: "/contato?servico=terceirizacao-telecom",
-      icon: <Wrench className="w-5 h-5" />,
+      ctaText: "Conhecer Plataforma AIkon",
+      href: "/solucoes/omnichannel-ia-aikon",
+      icon: <MessageSquareText className="w-5 h-5" />,
+      featured: true,
     },
     {
-      id: "telefonia-conectividade",
+      id: "telefonia-corporativa-stfc",
       index: "02",
-      code: "STFC // VOZ CORPORATIVA",
-      tag: "VOZ & PERFORMANCE COMERCIAL",
-      title: "Telefonia & Conectividade",
-      headline: "Suas ligações ativas tocam com o DDD da região do cliente, aumentando expressivamente o atendimento com custos fixos e previsíveis.",
+      code: "STFC OFICIAL // OUTORGA ANATEL",
+      tag: "COMUNICAÇÃO CORPORATIVA",
+      title: "Telefonia Corporativa (Voz IP & STFC)",
+      headline: "Operadora oficial STFC com outorga direta ANATEL, áudio HD, portabilidade sem downtime e protocolo anti-fraude STIR/SHAKEN.",
       benefits: [
-        "Identificador local com DDD da cidade de destino",
-        "Planos estruturados sem cobrança por minuto",
-        "Áudio HD em rotas corporativas homologadas pela ANATEL",
-        "Portabilidade numérica rápida sem paradas na operação"
+        "Conexão STFC oficial licenciada pela ANATEL com numeração própria",
+        "Protocolo STIR/SHAKEN: chamadas verificadas sem cair no SPAM",
+        "Qualidade de voz HD cristalina com QoS no backbone próprio",
+        "Portabilidade numérica assistida com zero downtime operacional"
       ],
-      ctaText: "Solicitar Proposta de Telefonia",
-      href: "/contato?servico=telefonia-conectividade",
+      ctaText: "Consultar Telefonia STFC",
+      href: "/solucoes/telefonia-corporativa-stfc",
       icon: <PhoneCall className="w-5 h-5" />,
       featured: false,
     },
     {
-      id: "pabx-em-nuvem",
+      id: "pabx-virtual-cloud",
       index: "03",
-      code: "CLOUD // PABX VIRTUAL",
-      tag: "INFRAESTRUTURA VIRTUAL",
-      title: "PABX em Nuvem",
-      headline: "Central telefônica virtual para integrar matriz, filiais e equipes remotas a custo zero de chamadas internas e sem aparelhos físicos.",
+      code: "NUVEM & IA // RECHAMADA AUTOMÁTICA",
+      tag: "COMUNICAÇÃO UNIFICADA (UCaaS)",
+      title: "PABX Virtual — Cloud PABX",
+      headline: "Central telefônica em nuvem com URA inteligente, ramais remotos em qualquer dispositivo e rechamada automática exclusiva.",
       benefits: [
-        "Ramais ilimitados e gratuitos entre filiais e home office",
-        "Mobilidade total via computador, smartphone ou telefone IP",
-        "Gestão ágil de fluxos e horários de atendimento via painel web",
-        "Fim dos custos de manutenção de servidores locais e fiações"
+        "Rechamada automática exclusiva: nenhuma chamada perdida",
+        "Ramais virtuais em computadores, smartphones ou aparelhos IP",
+        "URA multinível dinâmica com direcionamento ágil e humanizado",
+        "Cofre de gravações em nuvem 100% auditável com busca avançada"
       ],
-      ctaText: "Conhecer Recursos do PABX em Nuvem",
-      href: "/contato?servico=pabx-em-nuvem",
+      ctaText: "Conhecer PABX Virtual",
+      href: "/solucoes/pabx-virtual-cloud",
       icon: <Cloud className="w-5 h-5" />,
-      featured: false,
+      featured: true,
     },
     {
-      id: "contact-center-nuvem",
+      id: "infraestrutura-rede-alta-disponibilidade",
       index: "04",
-      code: "CALL CENTER // DAC & GRAVAÇÃO",
-      tag: "ATENDIMENTO EM ESCALA",
-      title: "Contact Center na Nuvem",
-      headline: "Gestão avançada de atendimento com distribuição automática de chamadas (DAC), discadores inteligentes e supervisão ao vivo.",
+      code: "BACKBONE // REDUNDÂNCIA FÍSICA",
+      tag: "NETWORK",
+      title: "Infraestrutura de Redes — Alta Disp.",
+      headline: "Conectividade dedicada, redundância física e topologia em anel para operações críticas que não podem parar.",
       benefits: [
-        "Filas inteligentes com distribuição automática de chamadas (DAC)",
-        "Painel de monitoria ao vivo com métricas de TMA e TME",
-        "Gravação integral de áudio para controle de qualidade e compliance",
-        "Relatórios operacionais detalhados de produtividade por agente"
+        "SLA formal de disponibilidade para manter sua empresa faturando",
+        "Links dedicados com tráfego simétrico de altíssima performance",
+        "Redundância automática de circuitos contra rompimentos de fibra",
+        "Interligação segura entre filiais e datacenters (VPN / SD-WAN)"
       ],
-      ctaText: "Estruturar Contact Center",
-      href: "/contato?servico=contact-center-nuvem",
-      icon: <Headphones className="w-5 h-5" />,
+      ctaText: "Consultar Infraestrutura",
+      href: "/solucoes/infraestrutura-rede-alta-disponibilidade",
+      icon: <Wrench className="w-5 h-5" />,
       featured: false,
     },
     {
-      id: "plataforma-conecta",
+      id: "experiencia-cliente-cx-routing",
       index: "05",
-      code: "OMNICHANNEL // ATENDIMENTO IA",
-      tag: "ATENDIMENTO DIGITAL & IA",
-      title: "Plataforma Conecta (Omnichannel + IA)",
-      headline: "Centralize WhatsApp oficial multiatendente, voz e chat em um único painel, com agentes de IA para triagem rápida sem menus robóticos.",
+      code: "ROTEAMENTO // SKILL-BASED & DDD LOCAL",
+      tag: "CUSTOMER EXPERIENCE",
+      title: "Experiência do Cliente (CX Routing)",
+      headline: "Roteamento inteligente por habilidades e identificador de DDD local para entregar a melhor jornada de contato.",
       benefits: [
-        "Múltiplos atendentes em 1 único número oficial de WhatsApp",
-        "Agentes de IA que compreendem o contexto e agilizam o atendimento",
-        "Histórico centralizado e seguro, blindando os contatos da empresa",
-        "Painel ao vivo com tempo de resposta, volume de filas e TMA"
+        "Skill-based Routing: o cliente certo no atendente especialista certo",
+        "Identificador local inteligente: chamadas ativas com DDD da região",
+        "Pesquisa de satisfação automatizada (CSAT/NPS) pós-atendimento",
+        "Filas transparentes com estimativa de espera e callback integrado"
       ],
-      ctaText: "Conhecer a Plataforma Conecta",
-      href: "/contato?servico=plataforma-conecta",
-      icon: <MessageSquareText className="w-5 h-5" />,
+      ctaText: "Otimizar Experiência do Cliente",
+      href: "/solucoes/experiencia-cliente-cx-routing",
+      icon: <Zap className="w-5 h-5" />,
       featured: false,
     },
     {
-      id: "mensageria-em-massa",
+      id: "seguranca-compliance-cybersecurity",
       index: "06",
-      code: "MESSAGING // WHATSAPP & SMS",
-      tag: "ENGAJAMENTO & NOTIFICAÇÕES",
-      title: "Mensageria em Massa",
-      headline: "Disparos automatizados via WhatsApp Oficial e SMS para réguas de cobrança, confirmações e avisos com alta entregabilidade.",
+      code: "LGPD // BLINDAGEM CONTRA FRAUDES",
+      tag: "GOVERNANÇA DE DADOS",
+      title: "Segurança & Compliance — Cybersecurity",
+      headline: "Blindagem contra fraudes telefônicas, cofre criptografado em nuvem e total conformidade com a LGPD.",
       benefits: [
-        "Automação de réguas de cobrança e lembretes de agendamento",
-        "Rotas oficiais homologadas que protegem contra bloqueios",
-        "Relatórios em tempo real com taxas de entrega e leitura",
-        "Integração rápida via API com seus sistemas de ERP e CRM"
+        "Prevenção ativa contra fraudes e roubo de tráfego de voz",
+        "Cofre de gravação criptografado com trilhas de auditoria imutáveis",
+        "Adequação plena à LGPD com anonimização de dados sensíveis",
+        "Gestão rigorosa de acessos com autenticação em duas etapas (2FA)"
       ],
-      ctaText: "Ativar Mensageria em Massa",
-      href: "/contato?servico=mensageria-em-massa",
+      ctaText: "Falar com Especialista em Segurança",
+      href: "/solucoes/seguranca-compliance-cybersecurity",
+      icon: <Lock className="w-5 h-5" />,
+      featured: false,
+    },
+    {
+      id: "gestao-servicos-ti-noc-itsm",
+      index: "07",
+      code: "VIGILÂNCIA 24/7/365 // ENGENHARIA",
+      tag: "NOC 24/7",
+      title: "Gestão de TI — Operações ITSM (NOC 24/7)",
+      headline: "Centro de Operações de Rede com vigilância ininterrupta 24/7/365 e gestão proativa de incidentes.",
+      benefits: [
+        "Vigilância contínua 24/7/365 por equipe própria de engenharia",
+        "Detecção proativa de oscilações antes de impactar a operação",
+        "Acordos de Nível de Serviço (SLA) formais para tempo de resposta",
+        "Atendimento técnico direto com especialistas, sem robôs genéricos"
+      ],
+      ctaText: "Conhecer Operações NOC 24/7",
+      href: "/solucoes/gestao-servicos-ti-noc-itsm",
+      icon: <BarChart3 className="w-5 h-5" />,
+      featured: false,
+    },
+    {
+      id: "mensageria-corporativa-meta-provider",
+      index: "08",
+      code: "WHATSAPP OFICIAL // META PROVIDER",
+      tag: "WHATSAPP",
+      title: "Mensageria Corporativa — Meta Provider",
+      headline: "API Oficial do WhatsApp com selo verificado, disparos em massa homologados e atendimento sem risco de banimento.",
+      benefits: [
+        "Acesso à API Oficial Meta com proteção contra bloqueios de número",
+        "Disparo homologado de notificações, boletos e réguas de cobrança",
+        "Selo oficial de verificação para autoridade e confiança da marca",
+        "Múltiplos atendentes conversando pelo mesmo número institucional"
+      ],
+      ctaText: "Ativar API Oficial WhatsApp",
+      href: "/solucoes/mensageria-corporativa-meta-provider",
       icon: <Send className="w-5 h-5" />,
       featured: false,
     },
     {
-      id: "software-gestao",
-      index: "07",
-      code: "MANAGEMENT // AUDITORIA & RATEIO",
-      tag: "CONTROLE & BILHETAGEM",
-      title: "Software de Gestão",
-      headline: "Painel analítico com bilhetagem em tempo real, auditoria de consumo e rateio automatizado de despesas de telefonia por centro de custo.",
+      id: "inteligencia-artificial-voz-voice-ai",
+      index: "09",
+      code: "IA GENERATIVA // VOZ NATURAL",
+      tag: "IA POR VOZ",
+      title: "Inteligência Artificial Aplicada à Voz",
+      headline: "Agentes virtuais de voz com IA conversacional para triagem inteligente e automação de atendimento telefônico.",
       benefits: [
-        "Bilhetagem detalhada com histórico e duração de cada chamada",
-        "Rateio automatizado de custos por departamento ou filial",
-        "Identificação imediata de desperdícios e desvios de tráfego",
-        "Exportação simplificada de dados para sistemas financeiros"
+        "Agentes de voz inteligentes com fala fluida e compreensão natural",
+        "Fim das URAs travadas: diálogo aberto que entende a necessidade",
+        "Atendimento simultâneo de centenas de chamadas durante picos",
+        "Transcrição e análise de sentimento em tempo real das ligações"
       ],
-      ctaText: "Conhecer o Software de Gestão",
-      href: "/contato?servico=software-gestao",
-      icon: <BarChart3 className="w-5 h-5" />,
-      featured: false,
+      ctaText: "Conhecer Soluções Voice AI",
+      href: "/solucoes/inteligencia-artificial-voz-voice-ai",
+      icon: <Headphones className="w-5 h-5" />,
+      featured: true,
     },
   ];
 
@@ -218,7 +257,7 @@ export function EmpresasSolutionsCarousel() {
   };
 
   return (
-    <section id="portfolio-empresas" className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+    <section id="portfolio-empresas" className="py-16 sm:py-24 bg-white relative overflow-hidden">
       {/* Background Subtle Grid Texture */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#07224b08_1px,transparent_1px),linear-gradient(to_bottom,#07224b08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -254,7 +293,7 @@ export function EmpresasSolutionsCarousel() {
               aria-label="Card anterior"
               className={`w-11 h-11 rounded-2xl border flex items-center justify-center transition-all ${
                 canScrollLeft
-                  ? "bg-white border-slate-200 text-mundo-navy hover:bg-mundo-orange hover:text-white hover:border-mundo-orange shadow-sm hover:shadow-md"
+                  ? "bg-slate-50 border-slate-200 text-mundo-navy hover:bg-mundo-orange hover:text-white hover:border-mundo-orange shadow-sm hover:shadow-md"
                   : "bg-slate-100 border-slate-200 text-slate-300 cursor-not-allowed"
               }`}
             >
@@ -268,7 +307,7 @@ export function EmpresasSolutionsCarousel() {
               aria-label="Próximo card"
               className={`w-11 h-11 rounded-2xl border flex items-center justify-center transition-all ${
                 canScrollRight
-                  ? "bg-white border-slate-200 text-mundo-navy hover:bg-mundo-orange hover:text-white hover:border-mundo-orange shadow-sm hover:shadow-md"
+                  ? "bg-slate-50 border-slate-200 text-mundo-navy hover:bg-mundo-orange hover:text-white hover:border-mundo-orange shadow-sm hover:shadow-md"
                   : "bg-slate-100 border-slate-200 text-slate-300 cursor-not-allowed"
               }`}
             >
@@ -286,11 +325,11 @@ export function EmpresasSolutionsCarousel() {
           {b2bCards.map((card) => (
             <div
               key={card.id}
-              className="snap-start shrink-0 w-[300px] sm:w-[350px] lg:w-[380px] xl:w-[400px] min-h-[480px] rounded-3xl bg-white border border-slate-200/90 hover:border-mundo-orange/50 hover:shadow-xl p-6 sm:p-7 flex flex-col justify-between group relative overflow-hidden transition-all duration-300"
+              className="snap-start shrink-0 w-[300px] sm:w-[350px] lg:w-[380px] xl:w-[400px] min-h-[480px] rounded-3xl bg-slate-50 border border-slate-200/90 hover:border-mundo-orange/50 hover:shadow-xl p-6 sm:p-7 flex flex-col justify-between group relative overflow-hidden transition-all duration-300"
             >
               <div className="space-y-4">
                 {/* Header: Icon, Tag & Index */}
-                <div className="flex items-center justify-between border-b border-slate-100 pb-3.5">
+                <div className="flex items-center justify-between border-b border-slate-200/70 pb-3.5">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-mundo-navy/5 text-mundo-navy group-hover:bg-mundo-orange group-hover:text-white transition-all flex items-center justify-center shrink-0">
                       {card.icon}
@@ -337,7 +376,7 @@ export function EmpresasSolutionsCarousel() {
               </div>
 
               {/* Card Footer: Orange CTA Button */}
-              <div className="mt-6 pt-4 border-t border-slate-100">
+              <div className="mt-6 pt-4 border-t border-slate-200/70">
                 <Link
                   href={card.href}
                   className="w-full py-2.5 px-4 rounded-xl bg-mundo-orange hover:bg-mundo-orange-hover text-white flex items-center justify-center gap-1.5 text-xs font-display font-bold shadow-md shadow-mundo-orange/15 transition-all group-hover:shadow-lg text-center"

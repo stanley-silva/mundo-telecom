@@ -33,11 +33,14 @@ import { InteractiveSimulator } from "@/components/sections/InteractiveSimulator
 import { CasesShowcase } from "@/components/sections/CasesShowcase";
 import { CorporateClientsMarquee } from "@/components/sections/CorporateClientsMarquee";
 import { PortfolioSection } from "@/components/sections/PortfolioSection";
+import { CustomerPainPointsSection } from "@/components/sections/CustomerPainPointsSection";
+import { HeroPixelBackground } from "@/components/sections/HeroPixelBackground";
+import { TechPartnersSection } from "@/components/sections/TechPartnersSection";
 import { siteContent } from "@/lib/content";
 
 export const metadata = {
-  title: "Mundo Telecom | Telefonia em Nuvem e PABX Corporativo ANATEL",
-  description: "Aumente a taxa de atendimento e a eficiência da sua comunicação com telefonia corporativa em nuvem. Operadora licenciada pela ANATEL há mais de 20 anos para empresas e governos.",
+  title: "Mundo Telecom | Empresa de Tecnologia com Infraestrutura e Solução Própria",
+  description: "Transformamos a comunicação de empresas e órgãos públicos com telefonia inteligente, IA aplicada e mensageria sobre infraestrutura própria. Rechamada automática e zero chamadas perdidas.",
 };
 
 export default function HomePage() {
@@ -58,6 +61,8 @@ export default function HomePage() {
     TrendingUp: <TrendingUp className="w-5 h-5" />,
     Cpu: <Cpu className="w-5 h-5" />,
     Headphones: <Headphones className="w-5 h-5" />,
+    PhoneCall: <PhoneCall className="w-5 h-5" />,
+    MessageSquare: <MessageSquareText className="w-5 h-5" />,
   };
 
   return (
@@ -66,17 +71,8 @@ export default function HomePage() {
       {/* BLOCO 1: HERO SECTION COM IDENTIDADE INSTITUCIONAL        */}
       {/* ========================================================= */}
       <section className="relative bg-mundo-navy-deep min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-mundo-white overflow-hidden flex flex-col justify-center">
-        {/* Ambient Glow Background */}
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(0, 89, 242, 0.12) 0%, rgba(7, 34, 75, 0.6) 50%, rgba(4, 18, 38, 0.98) 100%)"
-          }}
-        />
-
-        {/* Subtle Arc Motif Layer */}
-        <div className="arc-decor w-[600px] h-[600px] -top-64 -right-48 opacity-20 hidden lg:block pointer-events-none z-0" />
-        <div className="arc-decor-glow w-[500px] h-[500px] -bottom-48 -left-32 opacity-15 hidden lg:block pointer-events-none z-0" />
+        {/* Dynamic PixelBlast Background */}
+        <HeroPixelBackground variant="home" />
 
         {/* Full Bleed Hero Image: Flush with right edge on mobile & desktop */}
         <div className="absolute right-0 bottom-0 h-[380px] sm:h-[450px] lg:top-24 lg:bottom-0 lg:h-auto w-full sm:w-[90%] md:w-[80%] lg:w-[55%] xl:w-[50%] 2xl:w-[46%] z-0 pointer-events-none select-none flex items-end justify-end overflow-hidden">
@@ -101,18 +97,18 @@ export default function HomePage() {
                 icon={<ShieldCheck className="w-3.5 h-3.5" />}
                 className="py-1 px-3.5 text-[11px] sm:text-xs"
               >
-                OPERADORA LICENCIADA PELA ANATEL • MAIS DE 20 ANOS DE MERCADO
+                EMPRESA DE TECNOLOGIA COM INFRAESTRUTURA E SOLUÇÃO PRÓPRIA • +20 ANOS
               </Badge>
             </div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-white tracking-tight leading-[1.12]">
-              Transforme sua comunicação em um ativo estratégico
+              Comunicação corporativa que custa menos e atende melhor para empresas e governo.
             </h1>
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              Unimos infraestrutura robusta de telecom e uma plataforma omnichannel com Inteligência Artificial, integrando Telefonia, Service Desk, CRM, WhatsApp e múltiplos canais digitais. Com URA humanizada e Contact Center automatizado, reduzimos seus custos e elevamos a experiência do seu cliente. Pronto para aumentar sua taxa de atendimento com a telefonia em nuvem?
+              PABX na nuvem, URA com IA e WhatsApp inteligente. Atendimento 24h que não deixa ninguém esperando e vende por você.
             </p>
 
             {/* CTAs */}
@@ -124,15 +120,15 @@ export default function HomePage() {
                 className="w-full sm:w-auto"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
               >
-                Fale com um Especialista
+                Falar com consultor
               </Button>
               <Button
-                href="#solucoes"
+                href="#solucoes-inteligentes"
                 variant="outline-white"
                 size="lg"
                 className="w-full sm:w-auto"
               >
-                Conhecer soluções
+                Explorar Soluções
               </Button>
             </div>
 
@@ -140,15 +136,15 @@ export default function HomePage() {
             <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Voz corporativa sem surpresa</span>
+                <span>Rechamada automática exclusiva</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Migração técnica sem interrupção</span>
+                <span>IA em produção no atendimento 24h</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Suporte e NOC 24/7 próprio</span>
+                <span>Infraestrutura própria e NOC 24/7</span>
               </div>
             </div>
           </div>
@@ -156,9 +152,14 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================= */}
-      {/* BLOCO 2: ALGUNS DE NOSSOS PARCEIROS (MARQUEE) */}
+      {/* BLOCO 2: ALGUNS DE NOSSOS CLIENTES (MARQUEE)              */}
       {/* ========================================================= */}
       <CorporateClientsMarquee />
+
+      {/* ========================================================= */}
+      {/* BLOCO: DIAGNÓSTICO DE DORES DO CLIENTE                    */}
+      {/* ========================================================= */}
+      <CustomerPainPointsSection />
 
       {/* ========================================================= */}
       {/* BLOCO 3: SEGMENTAÇÃO COM FOTOGRAFIA (EMPRESAS vs GOVERNO) */}
@@ -167,13 +168,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="text-xs font-display font-bold uppercase tracking-wider text-mundo-orange mb-2">
-              ATENDIMENTO DIMENSIONADO
+              PÚBLICOS & JORNADAS
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-black text-mundo-navy">
-              Tecnologia dimensionada para a realidade e criticidade da sua organização
+              Tecnologia e comunicação sob medida para seu segmento
             </h2>
             <p className="text-base text-slate-600 mt-3 leading-relaxed">
-              Atendemos desde empresas privadas que buscam produtividade e previsibilidade orçamentária até órgãos públicos que exigem total conformidade com normas regulatórias e segurança de dados.
+              Soluções inteligentes desenhadas para resolver as dores reais da sua operação, com eficiência nas chamadas, automação por IA e custos 100% previsíveis.
             </p>
           </div>
 
@@ -183,7 +184,7 @@ export default function HomePage() {
               <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                 <Image
                   src="/images/b2b-corporate.jpg"
-                  alt="Equipe corporativa utilizando telefonia em nuvem Mundo Telecom"
+                  alt="Equipe corporativa utilizando comunicações inteligentes da Mundo Telecom"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -192,33 +193,30 @@ export default function HomePage() {
 
               <div className="p-6 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">
                 <div className="space-y-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-mundo-orange">Empresas (B2B)</span>
                   <h3 className="text-2xl font-display font-bold text-mundo-navy">
-                    Soluções para Empresas
+                    Para empresas que precisam atender mais e gastar menos
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Potencialize suas operações comerciais e de suporte. Conte com um parceiro para aumentar o atendimento das suas ligações. Entregamos infraestrutura robusta de telecomunicações e a solução definitiva para seu atendimento, unindo tecnologia de ponta e eficiência operacional.
+                    Telefonia IP, PABX em nuvem, URA com IA e WhatsApp integrado. Sua operação inteira em uma plataforma, com custo previsível e suporte 24x7.
                   </p>
 
                   <div className="space-y-2 pt-2">
                     <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
-                      <span><strong className="text-slate-900 font-semibold">Plataforma Omnichannel:</strong> Telefonia, WhatsApp, Redes Sociais, CRM e Service Desk integrados em uma só tela.</span>
+                      <span><strong className="text-slate-900 font-semibold">PABX na Nuvem:</strong> URA com IA, filas inteligentes e gravação completa.</span>
                     </div>
                     <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
-                      <span><strong className="text-slate-900 font-semibold">Inteligência Artificial:</strong> Automação inteligente para guiar o seu atendimento (voz e texto) de ponta a ponta.</span>
+                      <span><strong className="text-slate-900 font-semibold">WhatsApp + IA:</strong> atendimento ágil 24h sem deixar nenhum cliente sem resposta.</span>
                     </div>
                     <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
-                      <span><strong className="text-slate-900 font-semibold">Tecnologia Avançada:</strong> URA humanizada, monitoramento contínuo (NOC) e Contact Center automatizado.</span>
+                      <span><strong className="text-slate-900 font-semibold">Agendamento & Outsourcing:</strong> confirmação automática e gestão total com SLA.</span>
                     </div>
                     <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
-                      <span>Telefonia em nuvem com alta taxa de completamento, com gravação integral de chamadas e histórico auditável.</span>
-                    </div>
-                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
-                      <span>Planos estruturados com custo previsível sem surpresas.</span>
+                      <span><strong className="text-slate-900 font-semibold">Clientes que confiam:</strong> Grupo Via (10+ unidades), TECBAN, Brascamp e Click Iluminação.</span>
                     </div>
                   </div>
                 </div>
@@ -231,7 +229,7 @@ export default function HomePage() {
                     className="w-full sm:w-auto"
                     rightIcon={<ArrowRight className="w-4 h-4" />}
                   >
-                    Explorar Soluções Corporativas
+                    Ver Soluções para Empresas (B2B)
                   </Button>
                 </div>
               </div>
@@ -251,29 +249,30 @@ export default function HomePage() {
 
               <div className="p-6 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">
                 <div className="space-y-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-mundo-orange">Órgãos Públicos (B2G)</span>
                   <h3 className="text-2xl font-display font-bold text-mundo-navy">
-                    Soluções para Órgãos Públicos
+                    Para órgãos públicos que precisam de confiança
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Infraestrutura robusta de Telefonia STFC e plataformas de comunicação para órgãos municipais, estaduais e federais. Conectividade segura, transparência operacional e atendimento ao cidadão em regime 24/7 com total conformidade.
+                    Infraestrutura própria, SLA auditável e relatório gerencial mensal. Operamos o MPMG (4.306 ramais) e a DPMG (R$ 14,6 mi) com 99,95% de disponibilidade.
                   </p>
 
                   <div className="space-y-2 pt-2">
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Licenciamento direto ANATEL e conformidade Lei 14.133/2021</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span><strong className="text-slate-900 font-semibold">Telefonia STFC B2G:</strong> outorga direta ANATEL sem intermediários e Lei 14.133/2021.</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Conectividade segura para serviços essenciais e emergências</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span><strong className="text-slate-900 font-semibold">PABX em Nuvem Governo:</strong> interligação de secretarias e polos com ramais e gravação segura.</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Relatórios gerenciais detalhados para prestação de contas</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span><strong className="text-slate-900 font-semibold">Omnichannel & Cidadão:</strong> canais unificados e IA para agilizar ouvidorias e postos públicos.</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0" />
-                      <span>Suporte técnico dedicado e monitoramento NOC 24/7 ininterrupto</span>
+                    <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
+                      <span><strong className="text-slate-900 font-semibold">NOC 24/7 & Prova Real:</strong> MPMG (4.306 ramais), DPMG (R$ 14,6 mi), Caixa e Prefeituras.</span>
                     </div>
                   </div>
                 </div>
@@ -286,7 +285,7 @@ export default function HomePage() {
                     className="w-full sm:w-auto"
                     rightIcon={<ArrowRight className="w-4 h-4" />}
                   >
-                    Explorar Soluções para Governo
+                    Ver Soluções para Governo (B2G)
                   </Button>
                 </div>
               </div>
@@ -346,7 +345,7 @@ export default function HomePage() {
               Motivos para escolher a Mundo Telecom como sua parceira estratégica
             </h2>
             <p className="text-base text-slate-600 mt-3 leading-relaxed">
-              Unimos a solidez técnica de uma operadora licenciada à flexibilidade e proximidade de atendimento que sua empresa ou órgão público necessita.
+              Unimos a solidez técnica de uma infraestrutura própria com outorga ANATEL à flexibilidade e proximidade de atendimento que sua empresa ou órgão público necessita.
             </p>
           </div>
 
@@ -381,7 +380,12 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================= */}
-      {/* BLOCO 8: ATENDIMENTO CONSULTIVO E CTA DE CONVERSÃO        */}
+      {/* BLOCO 8: TECNOLOGIAS PARCEIRAS & HARDWARE HOMOLOGADO      */}
+      {/* ========================================================= */}
+      <TechPartnersSection variant="light" />
+
+      {/* ========================================================= */}
+      {/* BLOCO 9: ATENDIMENTO CONSULTIVO E CTA DE CONVERSÃO        */}
       {/* ========================================================= */}
       <section id="especialista" className="py-20 sm:py-28 bg-slate-50 text-slate-900 relative border-t border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

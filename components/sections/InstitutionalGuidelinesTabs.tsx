@@ -23,27 +23,27 @@ export const InstitutionalGuidelinesTabs: React.FC = () => {
     {
       number: '01',
       title: 'Confiabilidade',
-      description: 'Estabilidade de rede, alta taxa de completamento e conformidade técnica ANATEL inegociáveis em cada chamada.',
+      description: 'Estabilidade da infraestrutura própria, 99,95% de disponibilidade garantida em SLA e conformidade regulatória plena.',
     },
     {
       number: '02',
       title: 'Transparência',
-      description: 'Eliminação de tarifas ocultas e surpresas de fatura, com precificação previsível e bilhetagem aberta.',
+      description: 'Previsibilidade orçamentária real, contratos claros sem tarifas ocultas e dados de bilhetagem auditáveis.',
     },
     {
       number: '03',
-      title: 'Responsabilidade',
-      description: 'Suporte técnico próprio 24/7/365 e gestão direta da operação de ponta a ponta sem terceirizações.',
+      title: 'Customer Success',
+      description: 'Não vendemos e abandonamos. Assumimos a responsabilidade pela operação e acompanhamos o cliente até o resultado.',
     },
     {
       number: '04',
-      title: 'Simplicidade',
-      description: 'Comunicação corporativa moderna e ágil, sem os entraves e o engessamento das operadoras legadas.',
+      title: 'Inovação & IA',
+      description: 'Inteligência Artificial aplicada ao atendimento em produção: URA de IA, rechamada automática e WhatsApp inteligente.',
     },
     {
       number: '05',
-      title: 'Evolução',
-      description: 'Integração permanente com inteligência artificial, canais de WhatsApp oficial e ecossistemas de CRM.',
+      title: 'Transformação Digital',
+      description: 'Conduzimos empresas e governos da telefonia tradicional e legada para a era digital com mobilidade e controle total.',
     },
   ];
 
@@ -59,7 +59,7 @@ export const InstitutionalGuidelinesTabs: React.FC = () => {
             Os pilares que sustentam cada conexão e decisão
           </h2>
           <p className="text-base text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
-            Conheça o propósito, a perspectiva estratégica e os valores éticos que orientam a Mundo Telecom há mais de 20 anos no mercado brasileiro.
+            Conheça o propósito, a perspectiva estratégica e os valores que orientam a Mundo Telecom como empresa de tecnologia com infraestrutura e solução própria.
           </p>
         </div>
 
@@ -124,44 +124,44 @@ export const InstitutionalGuidelinesTabs: React.FC = () => {
                       Missão
                     </span>
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-mundo-navy leading-tight">
-                      Eliminar as falhas de comunicação que custam vendas, tempo e credibilidade.
+                      Transformar a comunicação de empresas e órgãos públicos com telefonia inteligente, IA e infraestrutura própria.
                     </h3>
                     <p className="text-base text-slate-700 leading-relaxed font-medium">
-                      Nenhuma organização deveria perder oportunidades de negócio ou confiança pública por limitações evitáveis de telefonia.
+                      Ajudar organizações a atender, vender e operar melhor, eliminando falhas de comunicação com inteligência e previsibilidade.
                     </p>
                   </div>
 
                   {/* Coluna Direita: Descrição e Pilares */}
                   <div className="lg:col-span-6 space-y-6 lg:border-l lg:border-slate-100 lg:pl-12">
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Ajudamos empresas e instituições públicas a vender, atender e operar melhor por meio de telefonia em nuvem com licença própria da ANATEL, inteligência artificial, WhatsApp e CRM — assegurando custos previsíveis, gravação inegociável das chamadas e suporte técnico responsável.
+                      Transformamos a telefonia tradicional em uma operação de alta tecnologia: PABX na nuvem com URA de IA, rechamada automática exclusiva de ligações perdidas, WhatsApp oficial integrado e custos 100% previsíveis com compromisso de Customer Success.
                     </p>
 
                     <div className="space-y-4 pt-2">
                       <div className="border-t border-slate-100 pt-4">
                         <h4 className="text-sm font-display font-bold text-mundo-navy">
-                          Previsibilidade Orçamentária
+                          Rechamada Automática Exclusiva
                         </h4>
                         <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
-                          Planos corporativos estruturados sem cobranças ocultas ou tarifação surpresa por minuto.
+                          Nenhuma chamada perdida: se a linha estiver ocupada ou fora de horário, o sistema retorna automaticamente ao cliente.
                         </p>
                       </div>
 
                       <div className="border-t border-slate-100 pt-4">
                         <h4 className="text-sm font-display font-bold text-mundo-navy">
-                          Completamento com Identificador Local
+                          IA Aplicada ao Atendimento 24h
                         </h4>
                         <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
-                          Chamadas ativas tocam com o DDD da região do cliente, triplicando a taxa de atendimento.
+                          Inteligência artificial ativa triando dúvidas e acelerando respostas no WhatsApp oficial e na voz.
                         </p>
                       </div>
 
                       <div className="border-t border-slate-100 pt-4">
                         <h4 className="text-sm font-display font-bold text-mundo-navy">
-                          Suporte Consultivo e Engenharia 24/7
+                          Compromisso de Customer Success
                         </h4>
                         <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
-                          NOC próprio monitorando enlaces continuamente com tempo de resposta técnico imediato.
+                          Acompanhamento consultivo contínuo e engenharia dedicada com NOC 24/7 para garantir o resultado final.
                         </p>
                       </div>
                     </div>
@@ -189,10 +189,10 @@ export const InstitutionalGuidelinesTabs: React.FC = () => {
                       Visão
                     </span>
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-mundo-navy leading-tight">
-                      Ser a principal referência nacional em telefonia empresarial de alta criticidade.
+                      Ser a empresa de tecnologia referência nacional em comunicações inteligentes e infraestrutura própria.
                     </h3>
                     <p className="text-base text-slate-700 leading-relaxed font-medium">
-                      Consolidar-se como a alternativa sólida e descomplicada às grandes operadoras tradicionais.
+                      Liderar a evolução digital da telefonia corporativa e governamental no Brasil com inovação contínua e foco em customer success.
                     </p>
                   </div>
 

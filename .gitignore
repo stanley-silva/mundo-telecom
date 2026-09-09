@@ -42,3 +42,11 @@ next-env.d.ts.bak
 *.swo
 *~
 thumbs.db
+
+# Internal Briefings, Client Docs & Scratch
+*.pdf
+*.doc
+*.docx
+scratch/
+/public/novas-atualizacoes/
+

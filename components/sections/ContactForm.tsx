@@ -6,14 +6,6 @@ import {
   CheckCircle2, 
   AlertCircle, 
   ShieldCheck, 
-  Building2, 
-  Landmark, 
-  Users, 
-  Phone, 
-  Mail, 
-  User, 
-  MessageSquare,
-  Sparkles,
   Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -21,54 +13,43 @@ import { Button } from "@/components/ui/Button";
 interface ContactFormProps {
   initialProfile?: string;
   initialPlan?: string;
+  initialSolution?: string;
 }
 
-export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
+export function ContactForm({ initialProfile, initialPlan, initialSolution }: ContactFormProps) {
+  const getDefaultSolution = () => {
+    if (initialSolution) return initialSolution;
+    if (initialPlan) return `Plano ${initialPlan}`;
+    if (initialProfile === "governo") return "Telefonia Corporativa (Voz IP & STFC)";
+    return "PABX Virtual — Cloud PABX";
+  };
+
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
     telefone: "",
     empresa: "",
     perfil: initialProfile === "governo" ? "Órgão Público / Governo (B2G)" : "Empresa Privada (B2B)",
+    solucao: getDefaultSolution(),
     ramais: "De 6 a 15 ramais",
-    necessidades: initialPlan ? [`Plano ${initialPlan}`] : ["Telefonia em Nuvem com Identificador Local"],
     mensagem: "",
-    honeypot: "", // anti-spam bot trap
+    honeypot: "", // anti-spam trap
   });
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleCheckboxChange = (option: string) => {
-    setFormData((prev) => {
-      const exists = prev.necessidades.includes(option);
-      if (exists) {
-        return {
-          ...prev,
-          necessidades: prev.necessidades.filter((item) => item !== option),
-        };
-      } else {
-        return {
-          ...prev,
-          necessidades: [...prev.necessidades, option],
-        };
-      }
-    });
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Honeypot check
     if (formData.honeypot) {
       console.warn("Spam detected");
       return;
     }
 
-    // Required fields validation
     if (!formData.nome.trim() || !formData.email.trim() || !formData.telefone.trim() || !formData.empresa.trim()) {
       setStatus("error");
-      setErrorMessage("Por favor, preencha todos os campos obrigatórios (*) para que possamos direcionar seu atendimento.");
+      setErrorMessage("Por favor, preencha todos os campos obrigatórios (*) para direcionarmos seu atendimento.");
       return;
     }
 
@@ -78,7 +59,10 @@ export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
       const res = await fetch("/api/contacts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          necessidades: [formData.solucao],
+        }),
       });
 
       if (res.ok) {
@@ -87,42 +71,45 @@ export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
         const errorData = await res.json().catch(() => ({}));
         setStatus("error");
         setErrorMessage(
-          errorData.error ||
-            "Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato pelo telefone 0800 031 1919."
+          errorData.error || "Ocorreu um erro ao enviar. Por favor, tente novamente ou ligue para 0800 031 1919."
         );
       }
     } catch (err) {
       setStatus("error");
-      setErrorMessage("Ocorreu um erro de conexão. Por favor, verifique sua internet ou entre em contato pelo telefone 0800 031 1919.");
+      setErrorMessage("Erro de conexão. Por favor, tente novamente ou fale pelo WhatsApp oficial.");
     }
   };
 
-  const serviceOptions = [
-    "Telefonia em Nuvem com Identificador Local",
-    "WhatsApp Corporativo Centralizado (múltiplos atendentes)",
-    "Redução de custos e eliminação de surpresas na fatura",
-    "Central PABX em Nuvem sem equipamentos físicos",
-    "Gravação de chamadas e conformidade jurídica",
-    "Conectividade STFC para Órgãos Públicos / Licitação",
-    "Outros / Consultoria personalizada",
+  const solutionList = [
+    "PABX Virtual — Cloud PABX",
+    "Omnichannel & IA (Plataforma AIkon)",
+    "Telefonia Corporativa (Voz IP & STFC)",
+    "Infraestrutura de Redes (Alta Disponibilidade)",
+    "Experiência do Cliente (CX Routing)",
+    "Segurança & Compliance (Cybersecurity / LGPD)",
+    "Gestão de Serviços de TI (NOC 24/7 & ITSM)",
+    "Mensageria Corporativa (WhatsApp Meta Provider)",
+    "Inteligência Artificial por Voz (Voice AI)",
+    "Licitações e Editais Públicos (Lei 14.133)",
+    "Consultoria e Diagnóstico Geral",
   ];
 
   if (status === "success") {
     return (
-      <div className="p-8 sm:p-12 rounded-3xl bg-mundo-navy-surface border border-emerald-500/40 text-center space-y-6 shadow-2xl">
-        <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/30">
-          <CheckCircle2 className="w-9 h-9 stroke-[2.5]" />
+      <div className="p-8 sm:p-12 rounded-3xl bg-white border border-emerald-500/40 text-center space-y-6 shadow-xl">
+        <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+          <CheckCircle2 className="w-8 h-8 stroke-[2.5]" />
         </div>
         <div className="space-y-2">
-          <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
-            Mensagem enviada com sucesso!
+          <h3 className="text-2xl sm:text-3xl font-display font-black text-mundo-navy">
+            Solicitação recebida com sucesso!
           </h3>
-          <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-            Um consultor especializado da Mundo Telecom entrará em contato em breve para apresentar a proposta dimensionada para a sua necessidade.
+          <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+            Nosso especialista comercial entrará em contato em breve para apresentar a proposta dimensionada para sua operação.
           </p>
         </div>
-        <div className="p-4 rounded-xl bg-mundo-navy-deep/80 border border-white/10 text-xs text-slate-400 max-w-md mx-auto">
-          Caso tenha urgência ou deseje atendimento imediato, ligue gratuitamente para <strong className="text-white">0800 031 1919</strong> ou acione nosso WhatsApp.
+        <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-600 max-w-md mx-auto">
+          Caso tenha urgência, ligue gratuitamente para <strong className="text-mundo-navy">0800 031 1919</strong> ou acione nosso WhatsApp direto.
         </div>
         <Button
           type="button"
@@ -134,16 +121,16 @@ export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
               telefone: "",
               empresa: "",
               perfil: "Empresa Privada (B2B)",
+              solucao: "PABX Virtual — Cloud PABX",
               ramais: "De 6 a 15 ramais",
-              necessidades: ["Telefonia em Nuvem com Identificador Local"],
               mensagem: "",
               honeypot: "",
             });
           }}
-          variant="outline-white"
+          variant="outline"
           size="md"
         >
-          Enviar Nova Solicitação
+          Enviar Nova Mensagem
         </Button>
       </div>
     );
@@ -152,9 +139,9 @@ export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-6"
+      className="p-6 sm:p-8 lg:p-9 rounded-3xl bg-white border border-slate-200/90 shadow-xl space-y-5 relative overflow-hidden"
     >
-      {/* Hidden Honeypot Field */}
+      {/* Honeypot field for bot protection */}
       <input
         type="text"
         name="website_url_hp"
@@ -166,26 +153,25 @@ export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
       />
 
       <div className="border-b border-slate-100 pb-4">
-        <h3 className="text-xl sm:text-2xl font-display font-bold text-mundo-navy">
-          Solicite um Diagnóstico Técnico ou Fale com um Especialista
+        <h3 className="text-xl sm:text-2xl font-display font-black text-mundo-navy">
+          Solicitar Proposta ou Atendimento
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 mt-1">
-          Preencha as informações abaixo para que nosso especialista comercial e técnico entre em contato com a solução dimensionada para a sua necessidade.
+          Preencha os dados abaixo para receber um diagnóstico técnico sem compromisso.
         </p>
       </div>
 
       {status === "error" && (
-        <div className="p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3 text-xs text-red-700">
+        <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 flex items-start gap-2.5 text-xs text-red-700">
           <AlertCircle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
           <span>{errorMessage}</span>
         </div>
       )}
 
-      {/* Grid: Name, Email, Phone, Company */}
+      {/* Row 1: Nome & E-mail */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1.5">
-          <label className="text-xs font-display font-bold text-slate-800 flex items-center gap-1.5">
-            <User className="w-3.5 h-3.5 text-mundo-orange" />
+          <label className="text-xs font-display font-bold text-slate-800 block">
             Nome Completo *
           </label>
           <input
@@ -194,83 +180,81 @@ export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
             placeholder="Ex.: Ricardo Andrade"
             value={formData.nome}
             onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
           />
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-xs font-display font-bold text-slate-800 flex items-center gap-1.5">
-            <Mail className="w-3.5 h-3.5 text-mundo-orange" />
-            E-mail Corporativo / Institucional *
+          <label className="text-xs font-display font-bold text-slate-800 block">
+            E-mail Corporativo *
           </label>
           <input
             type="email"
             required
-            placeholder="Ex.: ricardo@suaempresa.com.br"
+            placeholder="Ex.: ricardo@empresa.com.br"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
-          />
-        </div>
-
-        <div className="space-y-1.5">
-          <label className="text-xs font-display font-bold text-slate-800 flex items-center gap-1.5">
-            <Phone className="w-3.5 h-3.5 text-mundo-orange" />
-            Telefone / WhatsApp com DDD *
-          </label>
-          <input
-            type="tel"
-            required
-            placeholder="Ex.: (11) 99999-9999"
-            value={formData.telefone}
-            onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
-          />
-        </div>
-
-        <div className="space-y-1.5">
-          <label className="text-xs font-display font-bold text-slate-800 flex items-center gap-1.5">
-            <Building2 className="w-3.5 h-3.5 text-mundo-orange" />
-            Nome da Empresa ou Órgão Público *
-          </label>
-          <input
-            type="text"
-            required
-            placeholder="Ex.: Distribuidora ABC / Prefeitura Municipal"
-            value={formData.empresa}
-            onChange={(e) => setFormData({ ...formData, empresa: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
           />
         </div>
       </div>
 
-      {/* Dropdowns: Profile & Ramais */}
+      {/* Row 2: Telefone/WhatsApp & Empresa/Órgão */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1.5">
-          <label className="text-xs font-display font-bold text-slate-800 flex items-center gap-1.5">
-            <Landmark className="w-3.5 h-3.5 text-mundo-orange" />
-            Perfil da Organização *
+          <label className="text-xs font-display font-bold text-slate-800 block">
+            Telefone / WhatsApp *
+          </label>
+          <input
+            type="tel"
+            required
+            placeholder="Ex.: (31) 99999-9999"
+            value={formData.telefone}
+            onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
+          />
+        </div>
+
+        <div className="space-y-1.5">
+          <label className="text-xs font-display font-bold text-slate-800 block">
+            Empresa ou Órgão Público *
+          </label>
+          <input
+            type="text"
+            required
+            placeholder="Ex.: Grupo ABC / Prefeitura Municipal"
+            value={formData.empresa}
+            onChange={(e) => setFormData({ ...formData, empresa: e.target.value })}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all"
+          />
+        </div>
+      </div>
+
+      {/* Row 3: Perfil & Ramais */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="space-y-1.5">
+          <label className="text-xs font-display font-bold text-slate-800 block">
+            Perfil da Operação *
           </label>
           <select
             value={formData.perfil}
             onChange={(e) => setFormData({ ...formData, perfil: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 bg-white outline-none transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 bg-white outline-none transition-all"
           >
             <option value="Empresa Privada (B2B)">Empresa Privada (B2B)</option>
             <option value="Órgão Público / Governo (B2G)">Órgão Público / Governo (B2G)</option>
-            <option value="Parceiro de Tecnologia / Integrador">Parceiro de Tecnologia / Integrador</option>
+            <option value="Parceiro / Integrador">Parceiro / Integrador de TI</option>
           </select>
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-xs font-display font-bold text-slate-800 flex items-center gap-1.5">
-            <Users className="w-3.5 h-3.5 text-mundo-orange" />
-            Quantidade Estimada de Ramais / Usuários *
+          <label className="text-xs font-display font-bold text-slate-800 block">
+            Quantidade de Ramais / Usuários
           </label>
           <select
             value={formData.ramais}
             onChange={(e) => setFormData({ ...formData, ramais: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 bg-white outline-none transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 bg-white outline-none transition-all"
           >
             <option value="De 1 a 5 ramais">De 1 a 5 ramais</option>
             <option value="De 6 a 15 ramais">De 6 a 15 ramais</option>
@@ -281,77 +265,58 @@ export function ContactForm({ initialProfile, initialPlan }: ContactFormProps) {
         </div>
       </div>
 
-      {/* Checkboxes: Solution Interests */}
-      <div className="space-y-2.5">
+      {/* Row 4: Solução de Interesse (Select Categorizado) */}
+      <div className="space-y-1.5">
         <label className="text-xs font-display font-bold text-slate-800 block">
-          Principal Necessidade ou Solução de Interesse (selecione uma ou mais)
+          Solução de Interesse Principal *
         </label>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {serviceOptions.map((option) => {
-            const isSelected = formData.necessidades.includes(option);
-            return (
-              <label
-                key={option}
-                className={`flex items-start gap-2.5 p-2.5 rounded-xl border text-xs cursor-pointer select-none transition-all ${
-                  isSelected
-                    ? "bg-mundo-orange/10 border-mundo-orange/60 text-mundo-navy font-semibold"
-                    : "bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300"
-                }`}
-              >
-                <input
-                  type="checkbox"
-                  checked={isSelected}
-                  onChange={() => handleCheckboxChange(option)}
-                  className="sr-only"
-                />
-                <div
-                  className={`w-4 h-4 rounded mt-0.5 flex items-center justify-center border transition-all shrink-0 ${
-                    isSelected
-                      ? "bg-mundo-orange border-mundo-orange text-white"
-                      : "border-slate-400 bg-white"
-                  }`}
-                >
-                  {isSelected && <span className="text-[10px] font-black">✓</span>}
-                </div>
-                <span className="leading-tight">{option}</span>
-              </label>
-            );
-          })}
-        </div>
+        <select
+          value={formData.solucao}
+          onChange={(e) => setFormData({ ...formData, solucao: e.target.value })}
+          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 bg-white outline-none transition-all font-medium"
+        >
+          {solutionList.map((sol) => (
+            <option key={sol} value={sol}>
+              {sol}
+            </option>
+          ))}
+        </select>
       </div>
 
-      {/* Message textarea */}
+      {/* Row 5: Mensagem Opcional */}
       <div className="space-y-1.5">
-        <label className="text-xs font-display font-bold text-slate-800 flex items-center gap-1.5">
-          <MessageSquare className="w-3.5 h-3.5 text-mundo-orange" />
+        <label className="text-xs font-display font-bold text-slate-800 block">
           Mensagem ou Detalhes da Demanda (Opcional)
         </label>
         <textarea
-          rows={3}
-          placeholder="Conte-nos brevemente o volume aproximado de chamadas ou o principal desafio atual da sua telefonia..."
+          rows={2}
+          placeholder="Ex.: Desejamos migrar centrais físicas para nuvem ou cotar links dedicados..."
           value={formData.mensagem}
           onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all resize-none"
+          className="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:border-mundo-orange focus:ring-2 focus:ring-mundo-orange/20 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all resize-none"
         />
       </div>
 
-      {/* Submit Button & LGPD */}
-      <div className="space-y-3 pt-2">
+      {/* Submit Button */}
+      <div className="space-y-2.5 pt-1">
         <Button
           type="submit"
           disabled={status === "loading"}
           variant="primary"
           size="lg"
-          className="w-full justify-center"
+          className="w-full justify-center shadow-lg shadow-mundo-orange/20"
           rightIcon={status === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
         >
-          {status === "loading" ? "Processando solicitação..." : "Solicitar Diagnóstico e Proposta sem Compromisso"}
+          {status === "loading" ? "Enviando solicitação..." : "Solicitar Atendimento Comercial"}
         </Button>
         <p className="text-[11px] text-center text-slate-500 flex items-center justify-center gap-1">
           <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
-          Seus dados estão protegidos de acordo com a LGPD e serão utilizados exclusivamente para o contato do nosso time técnico.
+          Seus dados estão protegidos pela LGPD e serão utilizados exclusivamente para este atendimento.
         </p>
       </div>
     </form>
   );
 }
+
+export default ContactForm;
+

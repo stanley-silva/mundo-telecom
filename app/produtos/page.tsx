@@ -28,8 +28,8 @@ import { InteractiveSimulator } from "@/components/sections/InteractiveSimulator
 import { siteContent } from "@/lib/content";
 
 export const metadata = {
-  title: "Planos e Plataformas de Telefonia em Nuvem | Mundo Telecom",
-  description: "Conheça nossas plataformas e planos de telefonia em nuvem corporativa. Identificador local, voz ilimitada, gravação em nuvem, WhatsApp centralizado e PABX virtual com licença própria ANATEL.",
+  title: "Planos e Plataformas de Comunicação Inteligente | Mundo Telecom",
+  description: "PABX na nuvem com URA de IA, rechamada automática de ligações perdidas, WhatsApp oficial com múltiplos atendentes e planos estruturados com custos 100% previsíveis.",
 };
 
 export default function ProdutosPage() {
@@ -63,15 +63,15 @@ export default function ProdutosPage() {
               icon={<ShieldCheck className="w-3.5 h-3.5" />}
               className="py-1 px-3.5"
             >
-              TECNOLOGIA ESCALÁVEL • OPERADORA LICENCIADA PELA ANATEL
+              EMPRESA DE TECNOLOGIA COM INFRAESTRUTURA E SOLUÇÃO PRÓPRIA • +20 ANOS
             </Badge>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-white tracking-tight leading-[1.1]">
-              Comece pela telefonia de alta performance e escale seus canais no ritmo da sua operação.
+              PABX na nuvem com URA de IA, rechamada automática e WhatsApp inteligente.
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
-              Plataformas integradas em nuvem e planos estruturados para eliminar cobranças ocultas, aumentar a taxa de atendimento com identificador local e registrar 100% das interações da sua empresa ou órgão público.
+              Plataforma própria e planos estruturados para eliminar ligações perdidas, automatizar o atendimento com IA 24 horas por dia e garantir custos 100% previsíveis sem surpresas na fatura.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
@@ -82,31 +82,22 @@ export default function ProdutosPage() {
                 className="w-full sm:w-auto"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
               >
-                Fale com um Especialista
-              </Button>
-              <Button
-                href={siteContent.brand.whatsappUrl}
-                isExternal
-                variant="outline-white"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                Atendimento via WhatsApp
+                Falar com um Consultor
               </Button>
             </div>
 
             <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Voz corporativa sem surpresa</span>
+                <span>Rechamada automática exclusiva</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Migração sem parada técnica</span>
+                <span>IA ativa no atendimento 24h</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
-                <span>Suporte e SLA formal 24/7</span>
+                <span>Infraestrutura própria e suporte NOC 24/7</span>
               </div>
             </div>
           </div>

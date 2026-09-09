@@ -19,9 +19,20 @@ export function MetricCounter({
   description,
   variant = "dark",
 }: MetricCounterProps) {
+  const isDecimal = value % 1 !== 0;
   const [count, setCount] = useState<number>(0);
   const [hasAnimated, setHasAnimated] = useState<boolean>(false);
   const elementRef = useRef<HTMLDivElement>(null);
+
+  const formatNumber = (val: number) => {
+    if (isDecimal) {
+      return val.toLocaleString("pt-BR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+    }
+    return val.toLocaleString("pt-BR");
+  };
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -45,7 +56,9 @@ export function MetricCounter({
             const progress = Math.min(elapsed / duration, 1);
             // Ease out cubic
             const easeOutProgress = 1 - Math.pow(1 - progress, 3);
-            const currentVal = Math.floor(easeOutProgress * value);
+            const currentVal = isDecimal
+              ? parseFloat((easeOutProgress * value).toFixed(2))
+              : Math.floor(easeOutProgress * value);
 
             setCount(currentVal);
 
@@ -67,39 +80,56 @@ export function MetricCounter({
     }
 
     return () => observer.disconnect();
-  }, [value, hasAnimated]);
+  }, [value, isDecimal, hasAnimated]);
 
   const isLight = variant === "light";
+  const cleanSuffix = suffix.trim();
+  const isSymbolSuffix = cleanSuffix === "%" || cleanSuffix === "+";
 
   return (
     <div
       ref={elementRef}
-      className={`p-6 sm:p-7 rounded-3xl transition-all duration-300 group flex flex-col justify-between ${
+      className={`p-6 sm:p-7 rounded-3xl transition-all duration-300 group flex flex-col justify-between overflow-hidden ${
         isLight
           ? "bg-white border border-slate-200/90 hover:border-mundo-orange/50 hover:shadow-xl shadow-sm"
           : "bg-mundo-navy-surface/80 border border-mundo-navy-border/70 hover:border-mundo-orange/40 shadow-lg"
       }`}
     >
-      <div>
+      <div className="space-y-3">
+        {/* Número e Sufixo com Proporção Visual Correta para não vazar */}
         <div
-          className={`text-3xl sm:text-4xl lg:text-5xl font-display font-black tracking-tight flex items-baseline gap-1 transition-colors ${
+          className={`font-display font-black tracking-tight flex flex-wrap items-baseline gap-1.5 transition-colors ${
             isLight
               ? "text-mundo-navy group-hover:text-mundo-orange"
               : "text-mundo-white group-hover:text-mundo-orange"
           }`}
         >
-          <span>{prefix}</span>
-          <span>{hasAnimated ? count : value}</span>
-          <span className="text-mundo-orange">{suffix}</span>
+          <span className="text-3xl sm:text-4xl lg:text-[38px] xl:text-[42px] leading-none whitespace-nowrap">
+            {prefix}
+            {formatNumber(hasAnimated ? count : value)}
+          </span>
+          {cleanSuffix && (
+            <span
+              className={`font-display font-bold text-mundo-orange leading-none ${
+                isSymbolSuffix
+                  ? "text-2xl sm:text-3xl lg:text-3xl"
+                  : "text-sm sm:text-base lg:text-lg tracking-wide uppercase"
+              }`}
+            >
+              {cleanSuffix}
+            </span>
+          )}
         </div>
+
         <div
-          className={`text-base sm:text-lg font-display font-bold mt-2 ${
+          className={`text-base sm:text-lg font-display font-bold ${
             isLight ? "text-mundo-navy" : "text-slate-100"
           }`}
         >
           {label}
         </div>
       </div>
+
       <p
         className={`text-xs sm:text-sm mt-3 leading-relaxed ${
           isLight ? "text-slate-600" : "text-slate-300"
