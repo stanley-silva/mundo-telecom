@@ -13,7 +13,7 @@ export function CustomerPainPointsSection() {
     {
       number: "01",
       icon: <PhoneOff className="w-5 h-5 text-mundo-orange" />,
-      title: "Ligações perdidas no ocupado",
+      title: "Ligações perdidas ou linha ocupada",
       description:
         "Em horários de pico ou fora do expediente, o cliente ouve sinal de ocupado, cansa de esperar e busca o concorrente no Google. Sua empresa nem fica sabendo que perdeu a venda.",
     },

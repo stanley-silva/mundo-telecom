@@ -327,7 +327,7 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
       "Filas de atendimento inteligentes com música de espera personalizada e relatórios ao vivo"
     ],
     problemTitle: "Centrais Físicas Obsoletas e Chamadas Perdidas por Ocupado",
-    problemDescription: "Aparelhos físicos caros em salas de TI, fiação antiga que oxida, clientes dando 'ocupado' e equipes remotas isoladas sem conseguir atender ramais da empresa.",
+    problemDescription: "Equipamentos de PABX físicos e caros instalados no escritório, fiação antiga que oxida, clientes dando 'ocupado' e equipes remotas isoladas sem conseguir atender ramais da empresa.",
     solutionTitle: "Comunicação 100% em Nuvem com Rechamada Automática",
     solutionDescription: "Uma central telefônica digital acessível de qualquer lugar, com URA inteligente, ramais no celular e computador e o recurso exclusivo de rechamada automática que resgata 100% dos clientes.",
     features: [

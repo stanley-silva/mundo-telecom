@@ -268,7 +268,7 @@ export default async function SolutionLandingPage({ params }: PageProps) {
           {/* Sleek Split Container */}
           <div className="rounded-3xl bg-white border border-slate-200/90 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
             {/* Left: O Cenário Tradicional / Gargalos */}
-            <div className="p-8 sm:p-12 bg-slate-50/50 space-y-4 flex flex-col justify-between">
+            <div className="p-8 sm:p-12 bg-slate-50/50 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-rose-50 border border-rose-200/80 text-rose-700 text-xs font-mono font-bold uppercase tracking-wider">
                   <span>✕ O Cenário Anterior</span>
@@ -281,14 +281,14 @@ export default async function SolutionLandingPage({ params }: PageProps) {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-200/60 text-xs font-medium text-slate-500 flex items-center gap-2">
+              <div className="pt-6 mt-8 border-t border-slate-200/60 text-xs font-medium text-slate-500 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-rose-400" />
                 <span>Gargalos operacionais, chamadas perdidas e custos ocultos</span>
               </div>
             </div>
 
             {/* Right: A Solução Mundo Telecom */}
-            <div className="p-8 sm:p-12 bg-white space-y-4 flex flex-col justify-between relative overflow-hidden">
+            <div className="p-8 sm:p-12 bg-white flex flex-col justify-between relative overflow-hidden">
               {/* Subtle Orange Accent Glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-mundo-orange/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -304,7 +304,7 @@ export default async function SolutionLandingPage({ params }: PageProps) {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 text-xs font-medium text-emerald-700 flex items-center gap-2 relative z-10">
+              <div className="pt-6 mt-8 border-t border-slate-100 text-xs font-medium text-emerald-700 flex items-center gap-2 relative z-10">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span className="font-semibold">Plataforma em nuvem, controle total e estabilidade contínua</span>
               </div>
