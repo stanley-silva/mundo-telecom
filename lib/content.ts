@@ -135,9 +135,9 @@ export const siteContent = {
 
   metrics: [
     { value: 20, prefix: "+", suffix: "Anos", label: "Tempo de Mercado", description: "Duas décadas de pioneirismo tecnológico, evolução contínua e solidez operacional." },
-    { value: 60, prefix: "+", suffix: "Clientes", label: "Clientes Ativos", description: "Grandes corporações e órgãos públicos com comunicação crítica em produção." },
+    { value: 100, prefix: "+", suffix: "Clientes", label: "Clientes Ativos", description: "Grandes corporações e órgãos públicos com comunicação crítica em produção." },
     { value: 4306, prefix: "", suffix: "Ramais", label: "Ramais no MPMG", description: "4.306 ramais operados no Ministério Público de Minas Gerais com 80 mil+ chamadas/mês." },
-    { value: 99.95, prefix: "", suffix: "%", label: "Disponibilidade SLA", description: "SLA de 99,95% de disponibilidade com monitoramento proativo contínuo via NOC 24x7." },
+    { value: 99.95, prefix: "", suffix: "%", label: "Disponibilidade SLA", description: "SLA de 99,95% de disponibilidade com monitoramento proativo contínuo." },
   ],
 
   differentials: [

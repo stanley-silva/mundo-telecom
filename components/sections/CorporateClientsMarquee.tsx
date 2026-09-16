@@ -54,7 +54,7 @@ export function CorporateClientsMarquee({
 
   let row1 = [];
   let row2 = [];
-  let defaultBadge = "+60 CLIENTES ATIVOS";
+  let defaultBadge = "+100 CLIENTES ATIVOS";
   let defaultTitle = "Organizações que confiam na Mundo Telecom";
   let defaultSubtitle = (
     <>
@@ -130,7 +130,7 @@ export function CorporateClientsMarquee({
 
       {/* Track 1: Moves Left */}
       <div className="relative w-full overflow-hidden marquee-fade-mask py-2">
-        <div 
+        <div
           className="animate-marquee gap-6 sm:gap-8 flex items-center"
           style={{ animationDuration: durationTrack1 }}
         >
@@ -155,7 +155,7 @@ export function CorporateClientsMarquee({
 
       {/* Track 2: Moves Right */}
       <div className="relative w-full overflow-hidden marquee-fade-mask py-2 mt-4">
-        <div 
+        <div
           className="animate-marquee-reverse gap-6 sm:gap-8 flex items-center"
           style={{ animationDuration: durationTrack2 }}
         >

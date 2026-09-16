@@ -103,7 +103,7 @@ export default function HomePage() {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-white tracking-tight leading-[1.12]">
-              Comunicação corporativa que custa menos e atende melhor para empresas e governo.
+              Comunicação corporativa que custa menos e atende melhor, para empresas e governo.
             </h1>
 
             {/* Subheadline */}

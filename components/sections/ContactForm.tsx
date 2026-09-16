@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { 
-  Send, 
-  CheckCircle2, 
-  AlertCircle, 
-  ShieldCheck, 
+import {
+  Send,
+  CheckCircle2,
+  AlertCircle,
+  ShieldCheck,
   Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -249,7 +249,7 @@ export function ContactForm({ initialProfile, initialPlan, initialSolution }: Co
 
         <div className="space-y-1.5">
           <label className="text-xs font-display font-bold text-slate-800 block">
-            Quantidade de Ramais / Usuários
+            Quantidade de Usuários / Ramais
           </label>
           <select
             value={formData.ramais}

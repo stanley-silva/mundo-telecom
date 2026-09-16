@@ -11,16 +11,16 @@ export interface DetailedSolution {
   heroImage?: string;
   iconName: string;
   accentColor?: string;
-  
+
   // Bullets in Hero
   heroBullets: string[];
-  
+
   // Pain vs Solution
   problemTitle: string;
   problemDescription: string;
   solutionTitle: string;
   solutionDescription: string;
-  
+
   // Key Features / Architecture
   features: {
     title: string;
@@ -28,33 +28,33 @@ export interface DetailedSolution {
     tag?: string;
     image?: string;
   }[];
-  
+
   // Technical Differentials
   differentials: {
     title: string;
     description: string;
   }[];
-  
+
   // Metrics / Stats
   stats: {
     value: string;
     label: string;
     description: string;
   }[];
-  
+
   // Comparison vs Traditional Market
   comparison: {
     feature: string;
     mundo: string;
     traditional: string;
   }[];
-  
+
   // FAQ
   faqs: {
     question: string;
     answer: string;
   }[];
-  
+
   // Related Cases
   cases: {
     client: string;
@@ -63,7 +63,7 @@ export interface DetailedSolution {
     summary: string;
     logo?: string;
   }[];
-  
+
   cta: {
     primaryText: string;
     primaryHref: string;
@@ -326,10 +326,10 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
       "Cofre de gravações em nuvem 100% auditável com busca avançada por data, ramal e atendente",
       "Filas de atendimento inteligentes com música de espera personalizada e relatórios ao vivo"
     ],
-    problemTitle: "Centrais Físicas Obsoletas e Chamadas Perdidas por Ocupado",
+    problemTitle: "Centrais Físicas, Ramais Ocupados e Chamadas Perdidas",
     problemDescription: "Equipamentos de PABX físicos e caros instalados no escritório, fiação antiga que oxida, clientes dando 'ocupado' e equipes remotas isoladas sem conseguir atender ramais da empresa.",
     solutionTitle: "Comunicação 100% em Nuvem com Rechamada Automática",
-    solutionDescription: "Uma central telefônica digital acessível de qualquer lugar, com URA inteligente, ramais no celular e computador e o recurso exclusivo de rechamada automática que resgata 100% dos clientes.",
+    solutionDescription: "Uma central telefônica digital acessível de qualquer lugar, com URA inteligente, ramais no celular e computador e rechamada automática para recuperar chamadas perdidas. Expanda a comunicação para filiais, escritórios e home office sem precisar adquirir uma nova central ou aparelho.",
     features: [
       {
         title: "Rechamada Automática (Callback Exclusivo)",

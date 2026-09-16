@@ -278,20 +278,10 @@ export function PortfolioSection() {
               className="snap-start shrink-0 w-[300px] sm:w-[340px] lg:w-[380px] xl:w-[390px] min-h-[440px] rounded-3xl bg-white border border-slate-200/90 hover:border-mundo-orange/50 hover:shadow-xl transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between group relative overflow-hidden text-slate-800"
             >
               <div className="space-y-4">
-                {/* Header: Icon, Category & Index */}
+                {/* Header: Icon & Index */}
                 <div className="flex items-center justify-between border-b border-slate-100 pb-3.5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-mundo-navy/5 text-mundo-navy group-hover:bg-mundo-orange group-hover:text-white transition-all flex items-center justify-center shrink-0">
-                      {card.icon}
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange block">
-                        {card.categoryTag}
-                      </span>
-                      <span className="text-[10px] font-mono text-slate-400 block truncate max-w-[170px]">
-                        {card.code}
-                      </span>
-                    </div>
+                  <div className="w-10 h-10 rounded-xl bg-mundo-navy/5 text-mundo-navy group-hover:bg-mundo-orange group-hover:text-white transition-all flex items-center justify-center shrink-0">
+                    {card.icon}
                   </div>
 
                   <span className="text-base font-mono font-black text-slate-300 group-hover:text-mundo-orange/60 transition-colors">
