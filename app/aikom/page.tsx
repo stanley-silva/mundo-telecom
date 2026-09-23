@@ -40,7 +40,7 @@ export default function AikomPage() {
       {/* ========================================================================= */}
       {/* 1. HERO SECTION (Exclusiva AIKOM: Fundo #163358, Acentos #D7593C e #1C3D6F)*/}
       {/* ========================================================================= */}
-      <section className="relative bg-[#163358] text-white pt-24 pb-12 sm:pt-28 sm:pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
+      <section className="relative bg-[#163358] text-white pt-28 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden">
         {/* Grafismo Oficial de Apoio da Marca AIKOM */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <Image
@@ -57,8 +57,8 @@ export default function AikomPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Breadcrumb Navigation com selo co-branded */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-6 sm:mb-8">
+          {/* Breadcrumb Navigation */}
+          <div className="flex items-center gap-4 mb-8 sm:mb-12">
             <nav className="flex items-center gap-2 text-xs font-mono text-slate-300">
               <Link href="/" className="hover:text-white transition-colors">Início</Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
@@ -66,16 +66,11 @@ export default function AikomPage() {
               <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
               <span className="text-[#D7593C] font-bold">AIKOM Omnichannel & IA</span>
             </nav>
-
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Plataforma Própria • Infraestrutura Mundo Telecom</span>
-            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Coluna Esquerda: Apresentação da Marca & Value Proposition */}
-            <div className="lg:col-span-6 space-y-5">
+            <div className="lg:col-span-6 space-y-6">
               {/* Logotipo Oficial AIKOM com Tipografia Branca Direta (Sem Caixa Branca) */}
               <div className="flex items-center">
                 <Image
@@ -120,7 +115,7 @@ export default function AikomPage() {
             {/* Coluna Direita: Fotografia Real de Especialista em Atendimento Omnichannel */}
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl bg-white/[0.03] backdrop-blur-sm group">
-                <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full overflow-hidden">
+                <div className="relative aspect-square w-full overflow-hidden">
                   <Image
                     src="/images/solucoes/aikon/hero.jpg"
                     alt="Especialista em atendimento utilizando a plataforma AIKOM com headset corporativo"
@@ -571,7 +566,7 @@ export default function AikomPage() {
       {/* 6. TABELA COMPARATIVA: AIKOM VS FERRAMENTAS NÃO OFICIAIS                 */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D7593C]/10 text-[#D7593C] text-xs font-mono font-bold uppercase tracking-wider">
               COMPARATIVO TÉCNICO
@@ -600,8 +595,8 @@ export default function AikomPage() {
 
               <div className="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-slate-50/80 transition-colors">
                 <div className="col-span-5 sm:col-span-4 font-semibold text-slate-800">Integração de Voz & PABX</div>
-                <div className="col-span-4 sm:col-span-4 font-bold text-[#1C3D6F] flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 shrink-0 text-[#1C3D6F]" />
+                <div className="col-span-4 sm:col-span-4 font-bold text-emerald-700 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
                   <span>Nativa (Operadora STFC própria)</span>
                 </div>
                 <div className="col-span-3 sm:col-span-4 text-slate-500">Voz isolada em central física</div>
@@ -609,8 +604,8 @@ export default function AikomPage() {
 
               <div className="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-slate-50/80 transition-colors">
                 <div className="col-span-5 sm:col-span-4 font-semibold text-slate-800">Inteligência Artificial (NLP)</div>
-                <div className="col-span-4 sm:col-span-4 font-bold text-[#D7593C] flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 shrink-0 text-[#D7593C]" />
+                <div className="col-span-4 sm:col-span-4 font-bold text-emerald-700 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
                   <span>Compreensão cognitiva de áudio/texto</span>
                 </div>
                 <div className="col-span-3 sm:col-span-4 text-slate-500">Apenas menus numéricos rígidos</div>
@@ -618,7 +613,7 @@ export default function AikomPage() {
 
               <div className="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-slate-50/80 transition-colors">
                 <div className="col-span-5 sm:col-span-4 font-semibold text-slate-800">Suporte & Customer Success</div>
-                <div className="col-span-4 sm:col-span-4 font-bold text-slate-800 flex items-center gap-1.5">
+                <div className="col-span-4 sm:col-span-4 font-bold text-emerald-700 flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
                   <span>Equipe própria Mundo Telecom</span>
                 </div>
@@ -633,7 +628,7 @@ export default function AikomPage() {
       {/* 7. PERGUNTAS FREQUENTES (FAQ AIKOM)                                       */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/80">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C3D6F]/10 text-[#1C3D6F] text-xs font-mono font-bold uppercase tracking-wider">
               DÚVIDAS FREQUENTES
