@@ -40,6 +40,8 @@ export const metadata: Metadata = {
     "telefonia setor publico",
     "noc 24/7",
     "mundo telecom",
+    "aikom",
+    "omnichannel ia",
   ],
   authors: [{ name: "Mundo Telecom" }],
   creator: "Mundo Telecom",
