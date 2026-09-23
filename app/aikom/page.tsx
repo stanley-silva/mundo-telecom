@@ -41,21 +41,19 @@ export default function AikomPage() {
       {/* 1. HERO SECTION (Exclusiva AIKOM: Fundo #163358, Acentos #D7593C e #1C3D6F)*/}
       {/* ========================================================================= */}
       <section className="relative bg-[#163358] text-white pt-24 pb-12 sm:pt-28 sm:pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
-        {/* Grafismo Angular de Apoio extraído do Manual AIKOM (Páginas 22, 23, 35) */}
+        {/* Grafismo Oficial de Apoio da Marca AIKOM */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Silhueta angular em corte diagonal azul institucional (#1C3D6F) */}
-          <div 
-            className="absolute -top-24 -right-24 w-[700px] h-[700px] opacity-25"
-            style={{
-              background: "linear-gradient(135deg, #1C3D6F 0%, transparent 70%)",
-              clipPath: "polygon(25% 0%, 100% 0%, 100% 100%, 0% 75%)"
-            }}
+          <Image
+            src="/images/grafismo-aikom-bg.png"
+            alt="Grafismo institucional AIKOM"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-85"
           />
-          {/* Brilho sutil terracota / coral nos cantos */}
-          <div className="absolute top-1/4 -left-40 w-96 h-96 bg-[#D7593C]/15 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#1C3D6F]/40 rounded-full blur-2xl" />
-          {/* Grade suave para profundidade técnica */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:3.5rem_3.5rem]" />
+          {/* Gradiente sutil para garantir contraste perfeito com o texto */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#163358]/80 via-[#163358]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#163358]/30 via-transparent to-[#163358]/70" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
