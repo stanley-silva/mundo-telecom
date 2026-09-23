@@ -1,5 +1,5 @@
 import React from "react";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
@@ -114,6 +114,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function SolutionLandingPage({ params }: PageProps) {
   const { slug } = await params;
+
+  if (slug === "omnichannel-ia-aikon" || slug === "omnichannel-ia-aikom" || slug === "aikom") {
+    redirect("/aikom");
+  }
+
   const targetSlug = solutionSlugAliases[slug] || slug;
   const solution: DetailedSolution | undefined = detailedSolutionsCatalog[targetSlug];
 

@@ -81,14 +81,15 @@ export function TechPartnersSection({
               className={`h-16 sm:h-20 min-w-[330px] sm:min-w-[370px] w-auto shrink-0 px-6 sm:px-7 rounded-2xl border transition-all duration-300 flex items-center justify-between gap-5 sm:gap-6 group ${cardBg}`}
             >
               {/* Logo do Parceiro */}
-              <div className="relative h-8 sm:h-10 w-28 sm:w-32 shrink-0 flex items-center justify-start">
+              <div className="h-8 sm:h-10 w-28 sm:w-32 shrink-0 flex items-center justify-start">
                 {partner.logo ? (
                   <Image
                     src={partner.logo}
                     alt={`Logo ${partner.name}`}
-                    fill
-                    sizes="(max-width: 768px) 120px, 140px"
-                    className="object-contain object-left transition-transform duration-300 group-hover:scale-105"
+                    width={140}
+                    height={40}
+                    style={{ maxHeight: "40px", width: "auto" }}
+                    className="max-h-8 sm:max-h-10 w-auto object-contain object-left transition-transform duration-300 group-hover:scale-105"
                   />
                 ) : (
                   <span className={`text-base sm:text-lg font-display font-black tracking-tight ${titleColor}`}>

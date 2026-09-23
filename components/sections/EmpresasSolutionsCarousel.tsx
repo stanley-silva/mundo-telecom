@@ -23,20 +23,20 @@ import { Badge } from "@/components/ui/Badge";
 export function EmpresasSolutionsCarousel() {
   const b2bCards = [
     {
-      id: "omnichannel-ia-aikon",
+      id: "omnichannel-ia-aikom",
       index: "01",
       code: "PLATAFORMA PRÓPRIA // ATENDIMENTO",
       tag: "ATENDIMENTO & IA",
-      title: "Omnichannel & IA (Plataforma AIkon)",
+      title: "Omnichannel & IA (Plataforma AIKOM)",
       headline: "Centralize todos os canais de atendimento da sua empresa em uma única tela inteligente desenvolvida pela Mundo Telecom.",
       benefits: [
-        "Plataforma própria AIkon com autonomia e evolução contínua",
+        "Plataforma própria AIKOM com autonomia e evolução contínua",
         "Voz, WhatsApp, redes sociais e e-mail integrados em uma tela",
         "Múltiplos atendentes em 1 só número oficial com controle total",
         "Triagem ágil com IA (NLP) para resolver dúvidas 24/7 sem fila"
       ],
-      ctaText: "Conhecer Plataforma AIkon",
-      href: "/solucoes/omnichannel-ia-aikon",
+      ctaText: "Conhecer Plataforma AIKOM",
+      href: "/aikom",
       icon: <MessageSquareText className="w-5 h-5" />,
       featured: true,
     },

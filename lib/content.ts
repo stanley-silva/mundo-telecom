@@ -304,16 +304,16 @@ export const siteContent = {
 
   commercialSolutions: [
     {
-      id: "omnichannel-ia-aikon",
+      id: "omnichannel-ia-aikom",
       number: "01",
-      name: "Omnichannel & IA (Plataforma AIkon)",
-      shortName: "AIkon Omnichannel & IA",
+      name: "Omnichannel & IA (Plataforma AIKOM)",
+      shortName: "AIKOM Omnichannel & IA",
       tag: "ATENDIMENTO",
       pillar: "Atendimento & IA",
       headline: "Centralize todos os canais de atendimento da sua empresa em uma única tela inteligente desenvolvida pela Mundo Telecom.",
-      subtitle: "Plataforma própria AIkon, múltiplos atendentes em 1 número e triagem com IA.",
+      subtitle: "Plataforma própria AIKOM, múltiplos atendentes em 1 número e triagem com IA.",
       benefits: [
-        "Plataforma própria AIkon com autonomia e evolução contínua sem depender de terceiros",
+        "Plataforma própria AIKOM com autonomia e evolução contínua sem depender de terceiros",
         "Painel centralizado: Voz, WhatsApp, redes sociais e e-mail integrados em uma única tela",
         "Múltiplos atendentes em 1 só número oficial com distribuição ágil e controle de conversas",
         "Triagem com IA e Chatbots NLP para reduzir até 40% da carga manual e resolver dúvidas 24/7",
@@ -322,11 +322,11 @@ export const siteContent = {
       ],
       differentials: [
         "Plataforma proprietária desenvolvida pela Mundo Telecom com customização avançada e suporte sem intermediários",
-        "Conexão nativa entre o PABX Mundo Telecom e a plataforma AIkon",
+        "Conexão nativa entre o PABX Mundo Telecom e a plataforma AIKOM",
         "Conformidade absoluta com a LGPD com criptografia e mascaramento de dados sensíveis",
       ],
-      ctaText: "Solicitar Demonstração da AIkon",
-      href: "/solucoes/omnichannel-ia-aikon",
+      ctaText: "Solicitar Demonstração da AIKOM",
+      href: "/aikom",
       iconName: "MessageSquareText",
       featured: true,
     },

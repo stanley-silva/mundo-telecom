@@ -62,9 +62,9 @@ export function Header() {
   // Soluções para Empresas (9 Categorias Oficiais)
   const empresasItems = [
     {
-      title: "Omnichannel & IA (Plataforma AIkon)",
+      title: "Omnichannel & IA (Plataforma AIKOM)",
       desc: "Plataforma própria, múltiplos atendentes em 1 número e triagem com IA",
-      href: "/solucoes/omnichannel-ia-aikon",
+      href: "/aikom",
     },
     {
       title: "Telefonia Corporativa (Voz IP & STFC)",

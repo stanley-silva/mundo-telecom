@@ -82,7 +82,7 @@ export function ContactForm({ initialProfile, initialPlan, initialSolution }: Co
 
   const solutionList = [
     "PABX Virtual — Cloud PABX",
-    "Omnichannel & IA (Plataforma AIkon)",
+    "Omnichannel & IA (Plataforma AIKOM)",
     "Telefonia Corporativa (Voz IP & STFC)",
     "Infraestrutura de Redes (Alta Disponibilidade)",
     "Experiência do Cliente (CX Routing)",

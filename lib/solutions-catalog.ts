@@ -73,20 +73,20 @@ export interface DetailedSolution {
 }
 
 export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
-  "omnichannel-ia-aikon": {
-    slug: "omnichannel-ia-aikon",
+  "omnichannel-ia-aikom": {
+    slug: "omnichannel-ia-aikom",
     number: "01",
-    badge: "PLATAFORMA PRÓPRIA AIKON // ATENDIMENTO INTELIGENTE",
+    badge: "PLATAFORMA PRÓPRIA AIKOM // ATENDIMENTO INTELIGENTE",
     pillar: "Atendimento & IA",
-    title: "Omnichannel & IA (Plataforma AIkon)",
-    shortTitle: "AIkon Omnichannel & IA",
+    title: "Omnichannel & IA (Plataforma AIKOM)",
+    shortTitle: "AIKOM Omnichannel & IA",
     headline: "Centralize todos os canais de atendimento da sua empresa em uma única tela inteligente desenvolvida pela Mundo Telecom.",
-    subtitle: "Plataforma proprietária AIkon, múltiplos atendentes em 1 número e triagem com inteligência artificial.",
-    heroDescription: "Desenvolvemos a AIkon: nossa plataforma própria de Omnichannel e IA. Voz, WhatsApp oficial, redes sociais e e-mail integrados em uma só tela para sua equipe, com múltiplos atendentes no mesmo número, triagem automática com processamento de linguagem natural (NLP) e visão 360º do histórico do cliente.",
+    subtitle: "Plataforma proprietária AIKOM, múltiplos atendentes em 1 número e triagem com inteligência artificial.",
+    heroDescription: "Desenvolvemos a AIKOM: nossa plataforma própria de Omnichannel e IA. Voz, WhatsApp oficial, redes sociais e e-mail integrados em uma só tela para sua equipe, com múltiplos atendentes no mesmo número, triagem automática com processamento de linguagem natural (NLP) e visão 360º do histórico do cliente.",
     heroImage: "/images/solucoes/aikon/hero.jpg",
     iconName: "MessageSquareText",
     heroBullets: [
-      "Plataforma própria AIkon com autonomia total e evolução contínua sem intermediários",
+      "Plataforma própria AIKOM com autonomia total e evolução contínua sem intermediários",
       "Voz, WhatsApp Oficial, Instagram, Messenger e E-mail integrados em uma única tela",
       "Múltiplos atendentes conversando ao mesmo tempo no mesmo número corporativo oficial",
       "Triagem inteligente com Chatbots NLP reduzindo até 40% do volume manual repetitivo",
@@ -95,7 +95,7 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
     problemTitle: "O Caos do Atendimento Descentralizado e Lento",
     problemDescription: "Clientes esperando horas por retorno, atendentes usando celulares pessoais sem controle da empresa, dados dispersos e perda constante de histórico de conversas entre setores.",
     solutionTitle: "Centralização Inteligente e Visão 360° do Cliente",
-    solutionDescription: "A plataforma AIkon unifica todos os pontos de contato da sua empresa em uma interface web intuitiva, distribuindo conversas por departamento, com IA respondendo 24/7 e supervisão em tempo real.",
+    solutionDescription: "A plataforma AIKOM unifica todos os pontos de contato da sua empresa em uma interface web intuitiva, distribuindo conversas por departamento, com IA respondendo 24/7 e supervisão em tempo real.",
     features: [
       {
         title: "Painel Unificado Omnichannel",
@@ -154,19 +154,19 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
       { value: "100%", label: "Histórico Centralizado", description: "Zero perda de conversas ou contatos em celulares pessoais" }
     ],
     comparison: [
-      { feature: "Infraestrutura", mundo: "Plataforma própria AIkon + Operadora STFC integrada", traditional: "Sistemas dispersos que dependem de vários integradores" },
+      { feature: "Infraestrutura", mundo: "Plataforma própria AIKOM + Operadora STFC integrada", traditional: "Sistemas dispersos que dependem de vários integradores" },
       { feature: "Atendimento no WhatsApp", mundo: "API Oficial Meta com múltiplos atendentes e selo de verificação", traditional: "Aparelhos físicos ou soluções não oficiais com risco de banimento" },
       { feature: "Transição Voz / Chat", mundo: "Linha do tempo unificada com gravação de áudio e texto", traditional: "Voz isolada em uma central física e WhatsApp solto em celulares" },
       { feature: "Suporte e Evolução", mundo: "Engenharia direta da Mundo Telecom com Customer Success", traditional: "Suporte terceirizado e abertura de chamados demorados" }
     ],
     faqs: [
       {
-        question: "Minha equipe precisa trocar de número para usar o WhatsApp na AIkon?",
+        question: "Minha equipe precisa trocar de número para usar o WhatsApp na AIKOM?",
         answer: "Não. Realizamos a migração do seu número fixo ou 0800 atual diretamente para a API Oficial do WhatsApp sem nenhuma perda de contato ou interrupção de serviço."
       },
       {
-        question: "A AIkon exige instalação de servidores na minha empresa?",
-        answer: "Não. A AIkon opera 100% em nuvem de alta disponibilidade. Seus colaboradores acessam pelo navegador ou aplicativo seguro em qualquer computador ou notebook com internet."
+        question: "A AIKOM exige instalação de servidores na minha empresa?",
+        answer: "Não. A AIKOM opera 100% em nuvem de alta disponibilidade. Seus colaboradores acessam pelo navegador ou aplicativo seguro em qualquer computador ou notebook com internet."
       },
       {
         question: "Como funciona a triagem com inteligência artificial?",
@@ -183,8 +183,8 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
       }
     ],
     cta: {
-      primaryText: "Solicitar Demonstração da AIkon",
-      primaryHref: "/contato?solucao=aikon-omnichannel",
+      primaryText: "Solicitar Demonstração da AIKOM",
+      primaryHref: "/contato?solucao=aikom-omnichannel",
       secondaryText: "Falar com Especialista",
       secondaryHref: "/contato"
     }
@@ -1148,7 +1148,10 @@ export const solutionSlugAliases: Record<string, string> = {
   "infraestrutura-stfc": "telefonia-corporativa-stfc",
   "noc-monitoramento-redes": "gestao-servicos-ti-noc-itsm",
   "noc-monitoramento": "gestao-servicos-ti-noc-itsm",
-  "aikon-omnichannel": "omnichannel-ia-aikon",
+  "aikon-omnichannel": "omnichannel-ia-aikom",
+  "omnichannel-ia-aikon": "omnichannel-ia-aikom",
+  "aikom": "omnichannel-ia-aikom",
+  "aikom-omnichannel": "omnichannel-ia-aikom",
   "voice-ai": "inteligencia-artificial-voz-voice-ai",
   "telefonia-stfc": "telefonia-corporativa-stfc",
   "infraestrutura-redes": "infraestrutura-rede-alta-disponibilidade",

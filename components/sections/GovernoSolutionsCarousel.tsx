@@ -72,9 +72,9 @@ export function GovernoSolutionsCarousel() {
     {
       id: "omnichannel-governo",
       index: "04",
-      code: "PLATAFORMA AIKON // PROTOCOLOS AUDITÁVEIS",
+      code: "PLATAFORMA AIKOM // PROTOCOLOS AUDITÁVEIS",
       tag: "ATENDIMENTO AO CIDADÃO & OUVIDORIAS",
-      title: "Omnichannel Governo (AIkon)",
+      title: "Omnichannel Governo (AIKOM)",
       headline: "Centralize ouvidorias, WhatsApp oficial verificado e telefone em uma plataforma integrada com geração de protocolos auditáveis.",
       benefits: [
         "Atendimento ao cidadão via WhatsApp oficial com múltiplos atendentes",
