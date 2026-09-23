@@ -23,7 +23,6 @@ import {
   Database, 
   Lock, 
   Headphones, 
-  Check, 
   HelpCircle,
   Zap,
   Radio
@@ -41,7 +40,7 @@ export default function AikomPage() {
       {/* ========================================================================= */}
       {/* 1. HERO SECTION (Exclusiva AIKOM: Fundo #163358, Acentos #D7593C e #1C3D6F)*/}
       {/* ========================================================================= */}
-      <section className="relative bg-[#163358] text-white pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 overflow-hidden">
+      <section className="relative bg-[#163358] text-white pt-24 pb-12 sm:pt-28 sm:pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
         {/* Grafismo Angular de Apoio extraído do Manual AIKOM (Páginas 22, 23, 35) */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {/* Silhueta angular em corte diagonal azul institucional (#1C3D6F) */}
@@ -61,7 +60,7 @@ export default function AikomPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Breadcrumb Navigation com selo co-branded */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-8 sm:mb-12">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-6 sm:mb-8">
             <nav className="flex items-center gap-2 text-xs font-mono text-slate-300">
               <Link href="/" className="hover:text-white transition-colors">Início</Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
@@ -78,7 +77,7 @@ export default function AikomPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Coluna Esquerda: Apresentação da Marca & Value Proposition */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-5">
               {/* Logotipo Oficial AIKOM com Tipografia Branca Direta (Sem Caixa Branca) */}
               <div className="flex items-center">
                 <Image
@@ -101,30 +100,8 @@ export default function AikomPage() {
                 Voz, WhatsApp oficial da Meta, redes sociais e e-mail integrados em uma só tela para sua equipe. Múltiplos atendentes em um único número, triagem automática com IA (NLP) e histórico unificado de conversas.
               </p>
 
-              {/* Destaques com bullets */}
-              <ul className="space-y-2.5 text-xs sm:text-sm text-slate-200 font-medium">
-                <li className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D7593C]/20 text-[#D7593C] flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <span>API Oficial do WhatsApp (Meta Business Solution Provider) sem risco de banimento</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D7593C]/20 text-[#D7593C] flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <span>Triagem inteligente com IA: resolve dúvidas frequentes e transfere com resumo em tempo real</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D7593C]/20 text-[#D7593C] flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <span>Integração nativa com PABX e telefonia STFC da Mundo Telecom no mesmo fone de ouvido</span>
-                </li>
-              </ul>
-
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-3">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
                 <Link
                   href="/contato?solucao=aikom-omnichannel"
                   className="inline-flex items-center justify-center gap-2 bg-[#D7593C] hover:bg-[#c04b30] text-white font-bold shadow-lg shadow-[#D7593C]/25 text-sm sm:text-base px-7 py-3.5 rounded-2xl transition-all hover:-translate-y-0.5"
@@ -158,12 +135,6 @@ export default function AikomPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#163358]/90 via-[#163358]/20 to-transparent" />
                 </div>
 
-                {/* Badge Flutuante Superior: Status de Conexão */}
-                <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#163358]/85 backdrop-blur-md border border-white/20 text-white text-xs font-medium shadow-lg">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="font-mono text-[11px]">Central Unificada Ativa • Meta API Oficial</span>
-                </div>
-
                 {/* Card Flutuante Inferior: Métrica de Produtividade */}
                 <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#163358]/90 backdrop-blur-md border border-white/20 text-white shadow-xl flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
@@ -184,12 +155,6 @@ export default function AikomPage() {
                         Fila única de WhatsApp, Voz, Instagram e E-mail
                       </p>
                     </div>
-                  </div>
-                  <div className="hidden sm:block text-right shrink-0">
-                    <span className="text-[10px] font-mono text-[#D7593C] font-bold block uppercase tracking-wider">
-                      TEMPO DE RESPOSTA
-                    </span>
-                    <span className="text-xs font-mono font-bold text-emerald-300">&lt; 2 segundos</span>
                   </div>
                 </div>
               </div>
