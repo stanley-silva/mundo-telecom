@@ -441,7 +441,7 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
     headline: "Conectividade dedicada, redundância física e topologia em anel para operações críticas que não podem parar.",
     subtitle: "Links dedicados, redundância de rotas e SLA formal com monitoramento.",
     heroDescription: "Projetamos e operamos redes corporativas de alta performance com links dedicados simétricos, baixíssima latência e redundância física automática. Garantimos a continuidade operacional da sua matriz e filiais com hardware homologado e suporte de engenharia especializada.",
-    heroImage: "/images/b2g-government.jpg",
+    heroImage: "/images/network-infrastructure.jpg",
     iconName: "Wrench",
     heroBullets: [
       "SLA formal contratual de disponibilidade para manter sua empresa faturando sem interrupções",
