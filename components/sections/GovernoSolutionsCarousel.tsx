@@ -31,42 +31,42 @@ export function GovernoSolutionsCarousel() {
         "Alta disponibilidade física para serviços essenciais e emergências",
         "Relatórios detalhados de bilhetagem para prestação de contas"
       ],
-      ctaText: "Solicitar Viabilidade STFC",
-      href: "/contato?tipo=governo&servico=telefonia-stfc",
+      ctaText: "Ver Solução Telefonia STFC",
+      href: "/solucoes/telefonia-corporativa-stfc",
       icon: <Landmark className="w-5 h-5" />,
     },
     {
       id: "pabx-em-nuvem-governo",
       index: "02",
-      code: "NUVEM & IA // INTEGRAÇÃO PÚBLICA",
-      tag: "MODERNIZAÇÃO ADMINISTRATIVA",
+      code: "NUVEM & IA // MULTI-FABRICANTE",
+      tag: "EDITAIS & ESPECIFICAÇÕES TÉCNICAS",
       title: "PABX em Nuvem Governo",
-      headline: "Central virtual unificada para interligar secretarias, escolas e polos administrativos a custo zero de ligação interna.",
+      headline: "Central virtual unificada e telefonia IP multi-fabricante (Grandstream, 3CX, Leucotron, Khomp e Aikom) para interligar secretarias e atender a qualquer Termo de Referência.",
       benefits: [
+        "Arquitetura multi-fabricante compatível com marcas de referência de editais",
         "Chamadas internas gratuitas entre todos os prédios públicos",
         "Ramais em aparelhos IP, computadores ou celulares institucionais",
-        "Painel web para remanejamento rápido de ramais entre secretarias",
-        "Fim dos contratos terceirizados para manutenção de fiação física"
+        "Painel web para remanejamento rápido de ramais entre secretarias"
       ],
-      ctaText: "Cotar PABX para Órgão Público",
-      href: "/contato?tipo=governo&servico=pabx-governo",
+      ctaText: "Conhecer PABX para Editais",
+      href: "/governo/solucoes/pabx-governo-editais",
       icon: <Cloud className="w-5 h-5" />,
     },
     {
       id: "noc-monitoramento-governo",
       index: "03",
-      code: "SUPERVISÃO CONTÍNUA // SLA FORMAL",
+      code: "SUPERVISÃO CONTÍNUA // SLA ANUAL",
       tag: "ALTA DISPONIBILIDADE",
       title: "NOC 24×7 / Monitoramento",
-      headline: "Centro de Operações de Rede com vigilância ininterrupta de circuitos e troncos para garantir a continuidade dos canais públicos essenciais.",
+      headline: "Centro de Operações de Rede com vigilância ininterrupta de circuitos e troncos para garantir a continuidade dos canais públicos essenciais com SLA anual.",
       benefits: [
         "Monitoramento 24/7/365 por equipe própria de engenharia",
-        "Acordo de Nível de Serviço (SLA) formal com métricas contratuais",
+        "Acordo de Nível de Serviço (SLA) anual com métricas auditáveis",
         "Prevenção proativa de quedas em canais críticos e de emergência",
-        "Relatórios técnicos periódicos de disponibilidade e saúde de rede"
+        "Painéis gráficos em tempo real e histórico comprovado (DPMG e MPMG)"
       ],
-      ctaText: "Solicitar Proposta de Monitoramento",
-      href: "/contato?tipo=governo&servico=noc-monitoramento",
+      ctaText: "Conhecer NOC & Monitoramento",
+      href: "/governo/solucoes/noc-governo-monitoramento",
       icon: <Activity className="w-5 h-5" />,
     },
     {
@@ -75,15 +75,15 @@ export function GovernoSolutionsCarousel() {
       code: "PLATAFORMA AIKOM // PROTOCOLOS AUDITÁVEIS",
       tag: "ATENDIMENTO AO CIDADÃO & OUVIDORIAS",
       title: "Omnichannel Governo (AIKOM)",
-      headline: "Centralize ouvidorias, WhatsApp oficial verificado e telefone em uma plataforma integrada com geração de protocolos auditáveis.",
+      headline: "Centralize ouvidorias, WhatsApp oficial verificado e telefone em uma plataforma própria integrada com geração de protocolos auditáveis e triagem por IA.",
       benefits: [
-        "Atendimento ao cidadão via WhatsApp oficial com múltiplos atendentes",
+        "Plataforma própria AIKOM integrada ao WhatsApp oficial de atendimento",
         "Geração e rastreamento automático de números de protocolo",
         "URA dinâmica e objetiva para direcionamento rápido por secretaria",
         "Gravação e guarda segura de 100% das interações com o cidadão"
       ],
-      ctaText: "Agendar Demonstração para Ouvidoria",
-      href: "/contato?tipo=governo&servico=omnichannel-governo",
+      ctaText: "Conhecer Plataforma AIKOM",
+      href: "/aikom",
       icon: <MessageSquareText className="w-5 h-5" />,
     },
     {
@@ -99,8 +99,8 @@ export function GovernoSolutionsCarousel() {
         "Relatórios transparentes de consumo para auditoria de tribunais",
         "Equipe dedicada para suporte técnico a termos de referência"
       ],
-      ctaText: "Falar com Especialista em Licitações",
-      href: "/contato?tipo=governo&interesse=licitacoes",
+      ctaText: "Ver Diretrizes de Licitações",
+      href: "/governo#compliance-licitacoes",
       icon: <FileCheck2 className="w-5 h-5" />,
     },
   ];

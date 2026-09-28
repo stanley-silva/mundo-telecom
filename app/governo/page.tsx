@@ -62,10 +62,10 @@ export default function GovernoPage() {
     {
       organ: "Caixa Econômica Federal",
       logo: "/images/clientes-governamentais/caixa_economica_federal_logo_1x.webp",
-      metricLine1: "99,95%",
-      metricLine2: "Disponibilidade",
+      metricLine1: "SLA Anual",
+      metricLine2: "Contratual",
       secondary: "Infraestrutura Crítica & Rotas Seguras",
-      detail: "Rotas corporativas seguras, outorga direta ANATEL e supervisão contínua em tempo real pelo NOC 24x7 próprio.",
+      detail: "Rotas corporativas seguras, outorga direta ANATEL e supervisão contínua em tempo real pelo NOC 24x7 próprio com SLA anual.",
     },
   ];
 
@@ -117,7 +117,7 @@ export default function GovernoPage() {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-navy tracking-tight leading-[1.12]">
-              Infraestrutura de tecnologia com 99,95% de disponibilidade e conformidade pública.
+              Infraestrutura de tecnologia com a mais alta taxa de disponibilidade e conformidade pública.
             </h1>
 
             {/* Subheadline */}
@@ -225,7 +225,74 @@ export default function GovernoPage() {
       </section>
 
       {/* ========================================================= */}
-      {/* BLOCO 4: CONVERSÃO FINAL (CTA B2G)                         */}
+      {/* BLOCO 4: COMPLIANCE & LICITAÇÕES (LEI 14.133/2021)         */}
+      {/* ========================================================= */}
+      <section id="compliance-licitacoes" className="py-16 sm:py-24 bg-white relative border-t border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <Badge variant="orange">SEGURANÇA JURÍDICA & LICITAÇÕES</Badge>
+            <h2 className="text-3xl sm:text-4xl font-display font-black text-mundo-navy tracking-tight">
+              Total Enquadramento à Nova Lei de Licitações (Lei nº 14.133/2021)
+            </h2>
+            <p className="text-base text-slate-600">
+              Apoio técnico especializado a gestores públicos, membros de comissões de contratação e fiscais de contrato em todas as esferas.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-mundo-orange/40 hover:shadow-lg transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-mundo-orange/10 text-mundo-orange flex items-center justify-center font-bold">
+                01
+              </div>
+              <h3 className="font-display font-bold text-slate-900 text-base">
+                Outorga Direta ANATEL
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Contratação direta com detentora de outorga STFC/SCM, garantindo segurança jurídica plena e eliminando intermediários de revenda.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-mundo-orange/40 hover:shadow-lg transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-mundo-orange/10 text-mundo-orange flex items-center justify-center font-bold">
+                02
+              </div>
+              <h3 className="font-display font-bold text-slate-900 text-base">
+                Suporte a Termos de Referência
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Subsídios técnicos para elaboração de TRs claros, aderentes à realidade do mercado e imunes a impugnações técnicas ou direcionamento.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-mundo-orange/40 hover:shadow-lg transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-mundo-orange/10 text-mundo-orange flex items-center justify-center font-bold">
+                03
+              </div>
+              <h3 className="font-display font-bold text-slate-900 text-base">
+                Atestados Técnicos Válidos
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Acervo documental robusto com atestados de capacidade emitidos por tribunais, defensorias, ministérios públicos e prefeituras.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-mundo-orange/40 hover:shadow-lg transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-mundo-orange/10 text-mundo-orange flex items-center justify-center font-bold">
+                04
+              </div>
+              <h3 className="font-display font-bold text-slate-900 text-base">
+                SLA Anual & Sem Glosas
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Métricas de disponibilidade contratual calculadas em base anual com relatórios auditáveis, protegendo o órgão e a prestadora.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* BLOCO 5: CONVERSÃO FINAL (CTA B2G)                         */}
       {/* ========================================================= */}
       <section className="py-16 sm:py-24 bg-mundo-navy text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#EF831C_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none" />

@@ -193,24 +193,24 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
   "telefonia-corporativa-stfc": {
     slug: "telefonia-corporativa-stfc",
     number: "02",
-    badge: "OPERADORA OFICIAL ANATEL // VOZ IP CORPORATIVA",
+    badge: "OPERADORA ANATEL // CORPORATIVO & SETOR PÚBLICO",
     pillar: "Voz & Conectividade",
-    title: "Telefonia Corporativa (Voz IP & STFC)",
-    shortTitle: "Telefonia Voz IP & STFC",
-    headline: "Operadora oficial STFC com outorga direta ANATEL, áudio HD, portabilidade sem downtime e protocolo anti-fraude STIR/SHAKEN.",
-    subtitle: "Rotas oficiais STFC, portabilidade sem downtime e protocolo STIR/SHAKEN.",
-    heroDescription: "Somos operadora STFC licenciada pela ANATEL há mais de 20 anos. Garantimos rotas de voz corporativas de alta densidade, numeração própria, protocolo anti-fraude STIR/SHAKEN para aumentar sua taxa de atendimento (Answer Rate) e evitar marcação como SPAM, e planos sob medida com bilhetagem segundo a segundo.",
+    title: "Telefonia Corporativa & STFC B2G (Voz IP Homologada)",
+    shortTitle: "Telefonia Voz IP & STFC B2G",
+    headline: "Operadora oficial STFC com outorga direta ANATEL, áudio HD, portabilidade sem downtime e protocolo anti-fraude STIR/SHAKEN para empresas e órgãos públicos.",
+    subtitle: "Rotas oficiais STFC, portabilidade sem downtime, protocolo STIR/SHAKEN e conformidade com a Lei 14.133/21.",
+    heroDescription: "Somos operadora STFC licenciada pela ANATEL há mais de 20 anos. Garantimos rotas de voz de alta densidade, numeração própria DDR para empresas e secretarias públicas, protocolo anti-fraude STIR/SHAKEN para elevar sua taxa de atendimento (Answer Rate) e evitar marcação como SPAM, além de contratação direta sem intermediários em total conformidade com a Lei 14.133/2021.",
     heroImage: "/images/b2b-corporate.jpg",
     iconName: "PhoneCall",
     heroBullets: [
-      "Conexão STFC oficial licenciada pela ANATEL com segurança regulatória e numeração DDR",
+      "Conexão STFC oficial licenciada pela ANATEL com segurança regulatória e blocos DDR dedicados",
       "Protocolo STIR/SHAKEN: autenticação de chamadas ativas para evitar marcação como SPAM",
       "Qualidade de voz HD cristalina com QoS (Quality of Service) no backbone próprio",
-      "Portabilidade numérica assistida com zero downtime (sem interrupção na migração)",
-      "Tronco SIP (SIP Trunking) de alta capacidade compatível com qualquer PABX do mercado"
+      "Portabilidade numérica assistida com zero downtime (sem interrupção na virada técnica)",
+      "Tronco SIP (SIP Trunking) de alta capacidade compatível com qualquer central ou PABX"
     ],
     problemTitle: "Chamadas Não Atendidas por Bloqueio de SPAM e Custos Ocultos",
-    problemDescription: "Empresas sofrendo com quedas nas taxas de atendimento por números marcados como spam, contratos com minutagens confusas, áudio com chiado e operadoras que cobram valores abusivos em faturas.",
+    problemDescription: "Empresas e órgãos públicos sofrendo com baixas taxas de atendimento por números identificados como spam, contratos com minutagens confusas, áudio com chiado e operadoras com faturas imprevisíveis.",
     solutionTitle: "Telefonia Oficial com STIR/SHAKEN e Áudio HD Cristalino",
     solutionDescription: "Entregamos troncos SIP diretos com chancela oficial da ANATEL, protocolo de autenticação de chamadas STIR/SHAKEN para garantir atendimento e bilhetagem 100% transparente em tempo real.",
     features: [
@@ -267,7 +267,7 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
     ],
     stats: [
       { value: "+20 Anos", label: "Experiência de Mercado", description: "Pioneirismo em infraestrutura própria de voz sobre IP e STFC" },
-      { value: "99.95%", label: "Disponibilidade SLA", description: "Alta resiliência contratual assegurada por NOC 24x7" },
+      { value: "SLA Anual", label: "Alta Disponibilidade", description: "Alta resiliência contratual assegurada por NOC 24x7 sem riscos de descontinuidade" },
       { value: "0 Segundos", label: "Downtime em Portabilidade", description: "Transição planejada e homologada sem perda de clientes" }
     ],
     comparison: [
@@ -300,10 +300,10 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
       }
     ],
     cta: {
-      primaryText: "Consultar Telefonia STFC",
-      primaryHref: "/contato?solucao=telefonia-stfc",
-      secondaryText: "Falar com Consultor B2B",
-      secondaryHref: "/contato"
+      primaryText: "Consultar Telefonia STFC (B2B & B2G)",
+      primaryHref: "#contato",
+      secondaryText: "Falar com Consultor",
+      secondaryHref: "https://wa.me/553120112000"
     }
   },
 
@@ -509,7 +509,7 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
     stats: [
       { value: "100%", label: "Garantia de Banda", description: "Velocidade simétrica dedicada sem compartilhamento de tráfego" },
       { value: "< 15ms", label: "Latência Ultrabaixa", description: "Tráfego otimizado para sistemas de missão crítica e voz IP" },
-      { value: "99.95%", label: "Disponibilidade SLA", description: "Infraestrutura redundante com comutação instantânea" }
+      { value: "SLA Anual", label: "Alta Disponibilidade", description: "Infraestrutura redundante com comutação instantânea e SLA contratual" }
     ],
     comparison: [
       { feature: "Garantia de Velocidade", mundo: "100% da banda contratada simétrica (Download = Upload)", traditional: "Banda larga assimétrica com oscilações e garantia mínima regulatória" },
@@ -859,7 +859,7 @@ export const detailedSolutionsCatalog: Record<string, DetailedSolution> = {
     ],
     stats: [
       { value: "24/7/365", label: "Vigilância Ininterrupta", description: "Monitoramento contínuo em tempo real todos os dias" },
-      { value: "99.95%", label: "Disponibilidade SLA", description: "Métrica média auditada em clientes públicos e corporativos" },
+      { value: "SLA Anual", label: "Alta Disponibilidade", description: "Métrica de disponibilidade contratual assegurada por monitoramento NOC contínuo" },
       { value: "< 15 min", label: "Tempo de Resposta", description: "Atendimento imediato para incidentes de alta criticidade" }
     ],
     comparison: [

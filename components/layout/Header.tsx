@@ -110,10 +110,10 @@ export function Header() {
 
   // Soluções para Governo (Sub-itens)
   const governoItems = [
-    { title: "Telefonia STFC B2G", desc: "Atendimento a prefeituras e órgãos públicos", href: "/governo#telefonia-stfc" },
-    { title: "PABX em Nuvem Governo", desc: "Comunicação pública sem aquisição de servidor", href: "/governo#pabx-governo" },
-    { title: "NOC 24×7 / Monitoramento", desc: "SLA estrito para serviços essenciais", href: "/governo#noc-governo" },
-    { title: "Omnichannel Governo", desc: "Canais unificados para atendimento ao cidadão", href: "/governo#omnichannel-governo" },
+    { title: "Telefonia STFC B2G", desc: "Atendimento a prefeituras e órgãos públicos", href: "/solucoes/telefonia-corporativa-stfc" },
+    { title: "PABX em Nuvem Governo", desc: "Comunicação pública sem aquisição de servidor", href: "/governo/solucoes/pabx-governo-editais" },
+    { title: "NOC 24×7 / Monitoramento", desc: "SLA estrito para serviços essenciais", href: "/governo/solucoes/noc-governo-monitoramento" },
+    { title: "Omnichannel Governo", desc: "Canais unificados para atendimento ao cidadão", href: "/aikom" },
     { title: "Compliance & Licitações", desc: "Termos de Referência e apoio em editais", href: "/governo#compliance-licitacoes" },
   ];
 
