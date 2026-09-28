@@ -47,7 +47,7 @@ export default function ContatoPage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION                                     */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy-deep min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-mundo-white overflow-hidden flex flex-col justify-center">
+      <section className="relative bg-white min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-slate-900 overflow-hidden flex flex-col justify-center border-b border-slate-200/60">
         {/* Dynamic PixelBlast Background */}
         <HeroPixelBackground variant="contato" />
 
@@ -62,13 +62,15 @@ export default function ContatoPage() {
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="object-contain object-right-bottom"
             />
+            {/* Soft transparent fade at the base */}
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent opacity-60 pointer-events-none" />
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full lg:py-16">
           <div className="max-w-2xl xl:max-w-3xl space-y-6 text-center lg:text-left">
-            <nav className="flex items-center justify-center lg:justify-start gap-2 text-xs text-slate-300 mb-2 font-display">
-              <Link href="/" className="hover:text-mundo-orange transition-colors">
+            <nav className="flex items-center justify-center lg:justify-start gap-2 text-xs text-slate-500 mb-2 font-display font-medium">
+              <Link href="/" className="hover:text-mundo-navy transition-colors">
                 Início
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -87,13 +89,13 @@ export default function ContatoPage() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-navy tracking-tight leading-[1.12]">
               Converse com nossos especialistas em comunicação inteligente.
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              Análise técnica sem custo, propostas personalizadas para empresas e órgãos públicos e suporte de engenharia especializada com <strong>SLA garantido em todo o Brasil</strong>.
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+              Análise técnica sem custo, propostas personalizadas para empresas e órgãos públicos e suporte de engenharia especializada com <strong className="text-mundo-navy font-semibold">SLA garantido em todo o Brasil</strong>.
             </p>
 
             {/* CTAs */}
@@ -111,7 +113,7 @@ export default function ContatoPage() {
             </div>
 
             {/* Selos de Garantia */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div className="pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600 font-medium">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Resposta ágil em horário comercial</span>

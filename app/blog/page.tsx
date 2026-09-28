@@ -50,10 +50,13 @@ export default function BlogPage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION (BLOG)                              */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy pt-32 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-24 text-mundo-white overflow-hidden">
+      <section className="relative bg-white pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-20 text-slate-900 overflow-hidden border-b border-slate-200/60">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(239,131,28,0.04)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(248,250,252,0.6),transparent)] pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center gap-2 text-xs text-slate-300 mb-6 font-display">
-            <Link href="/" className="hover:text-mundo-orange transition-colors">
+          <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-display font-medium">
+            <Link href="/" className="hover:text-mundo-navy transition-colors">
               Início
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -69,23 +72,21 @@ export default function BlogPage() {
               CONTEÚDO TÉCNICO & ESTRATÉGICO
             </Badge>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-white tracking-tight leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-mundo-navy tracking-tight leading-[1.1]">
               Informação prática para quem decide sobre a comunicação da sua organização.
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
               Análises sobre eficiência de chamadas, comparativos de infraestrutura em nuvem, melhores práticas para o setor público e guias para eliminar desperdícios na telefonia corporativa. Conteúdo direto ao ponto, escrito por quem opera telecomunicações há mais de 20 anos.
             </p>
 
-            <div className="pt-2 text-xs text-slate-300 flex items-center gap-2">
+            <div className="pt-2 text-xs text-slate-500 font-medium flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-mundo-orange" />
               <span>Sem termos vazios de marketing • Foco em redução de custos, conformidade e produtividade operacional</span>
             </div>
           </div>
         </div>
       </section>
-
-      <SectionDivider fromColor="#07224B" direction="down" height={36} />
 
       {/* ========================================================= */}
       {/* BLOCO 2 & 3: FILTROS, BUSCA & LISTAGEM DE ARTIGOS         */}

@@ -19,6 +19,7 @@ import {
   Headphones
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ContactModalButton } from "@/components/ui/ContactModal";
 import { Badge } from "@/components/ui/Badge";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { CorporateClientsMarquee } from "@/components/sections/CorporateClientsMarquee";
@@ -45,10 +46,10 @@ export default function GovernoPage() {
     {
       organ: "Defensoria Pública de Minas Gerais (DPMG)",
       logo: "/images/clientes-governamentais/dpmg_logo_1x.webp",
-      metricLine1: "R$ 14,6",
-      metricLine2: "milhões",
-      secondary: "600+ ramais · Call Center 50 posições",
-      detail: "Contrato de 36 meses fornecendo telefonia inteligente, call center e suporte 24x7 para as comarcas de todo o estado.",
+      metricLine1: "+3.000",
+      metricLine2: "ramais",
+      secondary: "140 plataformas · 300 links dedicados",
+      detail: "Telefonia em nuvem, call center e suporte NOC 24x7 conectando comarcas e unidades de atendimento em todo o estado de Minas Gerais.",
     },
     {
       organ: "Prefeitura de Betim",
@@ -73,8 +74,8 @@ export default function GovernoPage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION B2G COM IDENTIDADE INSTITUCIONAL     */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy-deep min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-mundo-white overflow-hidden flex flex-col justify-center">
-        {/* Dynamic PixelBlast Background */}
+      <section className="relative bg-white min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-slate-900 overflow-hidden flex flex-col justify-center border-b border-slate-200/60">
+        {/* Dynamic PixelBlast Background (Light Adapted) */}
         <HeroPixelBackground variant="governo" />
 
         {/* Full Bleed Hero Image: Flush with right edge on mobile & desktop */}
@@ -88,12 +89,14 @@ export default function GovernoPage() {
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="object-contain object-right-bottom"
             />
+            {/* Soft blend fade into light floor */}
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-60" />
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full lg:py-16">
           <div className="max-w-2xl xl:max-w-3xl space-y-6 text-center lg:text-left">
-            <nav className="flex items-center justify-center lg:justify-start gap-2 text-xs text-slate-300 mb-2 font-display">
+            <nav className="flex items-center justify-center lg:justify-start gap-2 text-xs text-slate-500 mb-2 font-display">
               <Link href="/" className="hover:text-mundo-orange transition-colors">
                 Início
               </Link>
@@ -113,30 +116,33 @@ export default function GovernoPage() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-navy tracking-tight leading-[1.12]">
               Infraestrutura de tecnologia com 99,95% de disponibilidade e conformidade pública.
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              Contratação direta sem intermediários para órgãos municipais, estaduais e federais. Casos comprovados como <strong>DPMG (R$ 14,6 mi)</strong> e <strong>MPMG (4.306 ramais)</strong> com SLA auditável e relatórios mensais.
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+              Contratação direta sem intermediários para órgãos municipais, estaduais e federais. Casos comprovados como <strong>DPMG (+3.000 ramais)</strong> e <strong>MPMG (4.306 ramais)</strong> com SLA auditável e relatórios mensais.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <Button
-                href="/contato?tipo=governo"
+              <ContactModalButton
                 variant="primary"
                 size="lg"
                 className="w-full sm:w-auto"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
+                initialProfile="governo"
+                initialSolution="Licitações e Editais Públicos (Lei 14.133)"
+                modalTitle="Solicitar Atendimento para Governo"
+                modalSubtitle="Preencha os dados abaixo para receber um diagnóstico técnico e proposta em conformidade com a Lei 14.133/21."
               >
                 Solicitar Atendimento para Governo
-              </Button>
+              </ContactModalButton>
             </div>
 
             {/* Selos de Garantia */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600 font-medium">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Outorga direta ANATEL sem intermediários</span>
@@ -238,15 +244,18 @@ export default function GovernoPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button
-              href="/contato?tipo=governo"
+            <ContactModalButton
               variant="primary"
               size="lg"
               className="w-full sm:w-auto"
               rightIcon={<ArrowRight className="w-4 h-4" />}
+              initialProfile="governo"
+              initialSolution="Licitações e Editais Públicos (Lei 14.133)"
+              modalTitle="Solicitar Atendimento para Governo"
+              modalSubtitle="Preencha os dados abaixo para receber um diagnóstico técnico e proposta em conformidade com a Lei 14.133/21."
             >
               Solicitar Atendimento para Governo
-            </Button>
+            </ContactModalButton>
             <Button
               href={`https://wa.me/${siteContent.brand.whatsappNumber}?text=${encodeURIComponent("Olá! Gostaria de falar com um consultor B2G da Mundo Telecom via WhatsApp.")}`}
               isExternal

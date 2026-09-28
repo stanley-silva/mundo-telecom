@@ -14,9 +14,21 @@ interface ContactFormProps {
   initialProfile?: string;
   initialPlan?: string;
   initialSolution?: string;
+  title?: string;
+  subtitle?: string;
+  isModal?: boolean;
+  onClose?: () => void;
 }
 
-export function ContactForm({ initialProfile, initialPlan, initialSolution }: ContactFormProps) {
+export function ContactForm({
+  initialProfile,
+  initialPlan,
+  initialSolution,
+  title,
+  subtitle,
+  isModal,
+  onClose,
+}: ContactFormProps) {
   const getDefaultSolution = () => {
     if (initialSolution) return initialSolution;
     if (initialPlan) return `Plano ${initialPlan}`;
@@ -96,7 +108,13 @@ export function ContactForm({ initialProfile, initialPlan, initialSolution }: Co
 
   if (status === "success") {
     return (
-      <div className="p-8 sm:p-12 rounded-3xl bg-white border border-emerald-500/40 text-center space-y-6 shadow-xl">
+      <div
+        className={
+          isModal
+            ? "p-4 sm:p-8 text-center space-y-6"
+            : "p-8 sm:p-12 rounded-3xl bg-white border border-emerald-500/40 text-center space-y-6 shadow-xl"
+        }
+      >
         <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
           <CheckCircle2 className="w-8 h-8 stroke-[2.5]" />
         </div>
@@ -111,27 +129,39 @@ export function ContactForm({ initialProfile, initialPlan, initialSolution }: Co
         <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-600 max-w-md mx-auto">
           Caso tenha urgência, ligue gratuitamente para <strong className="text-mundo-navy">0800 031 1919</strong> ou acione nosso WhatsApp direto.
         </div>
-        <Button
-          type="button"
-          onClick={() => {
-            setStatus("idle");
-            setFormData({
-              nome: "",
-              email: "",
-              telefone: "",
-              empresa: "",
-              perfil: "Empresa Privada (B2B)",
-              solucao: "PABX Virtual — Cloud PABX",
-              ramais: "De 6 a 15 ramais",
-              mensagem: "",
-              honeypot: "",
-            });
-          }}
-          variant="outline"
-          size="md"
-        >
-          Enviar Nova Mensagem
-        </Button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          {onClose && (
+            <Button
+              type="button"
+              onClick={onClose}
+              variant="primary"
+              size="md"
+            >
+              Fechar Janela
+            </Button>
+          )}
+          <Button
+            type="button"
+            onClick={() => {
+              setStatus("idle");
+              setFormData({
+                nome: "",
+                email: "",
+                telefone: "",
+                empresa: "",
+                perfil: initialProfile === "governo" ? "Órgão Público / Governo (B2G)" : "Empresa Privada (B2B)",
+                solucao: getDefaultSolution(),
+                ramais: "De 6 a 15 ramais",
+                mensagem: "",
+                honeypot: "",
+              });
+            }}
+            variant="outline"
+            size="md"
+          >
+            Enviar Nova Mensagem
+          </Button>
+        </div>
       </div>
     );
   }
@@ -139,7 +169,11 @@ export function ContactForm({ initialProfile, initialPlan, initialSolution }: Co
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 sm:p-8 lg:p-9 rounded-3xl bg-white border border-slate-200/90 shadow-xl space-y-5 relative overflow-hidden"
+      className={
+        isModal
+          ? "p-0 bg-transparent space-y-4 sm:space-y-5 relative"
+          : "p-6 sm:p-8 lg:p-9 rounded-3xl bg-white border border-slate-200/90 shadow-xl space-y-5 relative overflow-hidden"
+      }
     >
       {/* Honeypot field for bot protection */}
       <input
@@ -154,10 +188,10 @@ export function ContactForm({ initialProfile, initialPlan, initialSolution }: Co
 
       <div className="border-b border-slate-100 pb-4">
         <h3 className="text-xl sm:text-2xl font-display font-black text-mundo-navy">
-          Solicitar Proposta ou Atendimento
+          {title || "Solicitar Proposta ou Atendimento"}
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 mt-1">
-          Preencha os dados abaixo para receber um diagnóstico técnico sem compromisso.
+          {subtitle || "Preencha os dados abaixo para receber um diagnóstico técnico sem compromisso."}
         </p>
       </div>
 

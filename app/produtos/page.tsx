@@ -47,9 +47,14 @@ export default function ProdutosPage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION (PRODUTOS)                          */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy pt-32 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-24 text-mundo-white overflow-hidden">
+      <section className="relative bg-white pt-32 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-24 text-slate-900 overflow-hidden border-b border-slate-200/60">
+        {/* Subtle ambient lighting */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8FAFC] via-[#FFFFFF] to-[#F8FAFC] pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-mundo-orange/[0.07] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-600/[0.04] rounded-full blur-3xl pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center gap-2 text-xs text-slate-300 mb-6 font-display">
+          <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-display">
             <Link href="/" className="hover:text-mundo-orange transition-colors">
               Início
             </Link>
@@ -66,11 +71,11 @@ export default function ProdutosPage() {
               EMPRESA DE TECNOLOGIA COM INFRAESTRUTURA E SOLUÇÃO PRÓPRIA • +20 ANOS
             </Badge>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-white tracking-tight leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-mundo-navy tracking-tight leading-[1.1]">
               PABX na nuvem com URA de IA, rechamada automática e WhatsApp inteligente.
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
               Plataforma própria e planos estruturados para eliminar ligações perdidas, automatizar o atendimento com IA 24 horas por dia e garantir custos 100% previsíveis sem surpresas na fatura.
             </p>
 
@@ -86,7 +91,7 @@ export default function ProdutosPage() {
               </Button>
             </div>
 
-            <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600 font-medium">
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Rechamada automática exclusiva</span>
@@ -103,8 +108,6 @@ export default function ProdutosPage() {
           </div>
         </div>
       </section>
-
-      <SectionDivider fromColor="#07224B" direction="down" height={36} />
 
       {/* ========================================================= */}
       {/* BLOCO 2: ARQUITETURA DE PLANOS EM DEGRAUS                 */}

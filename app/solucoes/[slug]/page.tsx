@@ -33,6 +33,7 @@ import {
 import { siteContent } from "@/lib/content";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { ContactModalButton } from "@/components/ui/ContactModal";
 
 interface PageProps {
   params: Promise<{
@@ -131,29 +132,29 @@ export default async function SolutionLandingPage({ params }: PageProps) {
       {/* ========================================================================= */}
       {/* 1. HERO SECTION (Clean, High-End Corporate with Real Photography)          */}
       {/* ========================================================================= */}
-      <section className="relative bg-mundo-navy-deep text-white pt-32 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-24 overflow-hidden">
-        {/* Subtle grid and accent glow */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none" />
+      <section className="relative bg-white text-slate-900 pt-32 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-24 overflow-hidden border-b border-slate-200/60">
+        {/* Subtle light grid and accent glow */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000006_1px,transparent_1px),linear-gradient(to_bottom,#00000006_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none" />
         <div
           className="absolute inset-0 pointer-events-none z-0"
           style={{
-            background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(0, 89, 242, 0.12) 0%, rgba(7, 34, 75, 0.6) 50%, rgba(4, 18, 38, 0.98) 100%)"
+            background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(239, 131, 28, 0.05) 0%, rgba(7, 34, 75, 0.03) 50%, rgba(248, 250, 252, 0.9) 100%)"
           }}
         />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-mundo-orange/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-mundo-orange/[0.08] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-600/[0.05] rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs font-mono text-slate-300 mb-8 overflow-x-auto whitespace-nowrap">
+          <nav className="flex items-center gap-2 text-xs font-mono text-slate-500 mb-8 overflow-x-auto whitespace-nowrap">
             <Link href="/" className="hover:text-mundo-orange transition-colors">
               Início
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             <Link href="/empresas" className="hover:text-mundo-orange transition-colors">
               Soluções
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             <span className="text-mundo-orange font-bold truncate">
               {solution.shortTitle}
             </span>
@@ -168,11 +169,11 @@ export default async function SolutionLandingPage({ params }: PageProps) {
                 </Badge>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white tracking-tight leading-[1.12]">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-mundo-navy tracking-tight leading-[1.12]">
                 {solution.title}
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-200 font-normal leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
                 {solution.headline}
               </p>
 
@@ -180,10 +181,10 @@ export default async function SolutionLandingPage({ params }: PageProps) {
               <div className="pt-2 space-y-3">
                 {solution.heroBullets.map((bullet, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-mundo-orange/20 border border-mundo-orange/40 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-5 h-5 rounded-full bg-mundo-orange/15 border border-mundo-orange/35 flex items-center justify-center shrink-0 mt-0.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-mundo-orange" />
                     </div>
-                    <span className="text-xs sm:text-sm text-slate-200 leading-snug">
+                    <span className="text-xs sm:text-sm text-slate-700 leading-snug">
                       {bullet}
                     </span>
                   </div>
@@ -193,7 +194,7 @@ export default async function SolutionLandingPage({ params }: PageProps) {
               {/* Action CTAs */}
               <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <Button
-                  href={solution.cta.primaryHref}
+                  href="#contato"
                   variant="primary"
                   size="lg"
                   rightIcon={<ArrowRight className="w-4 h-4" />}
@@ -206,7 +207,7 @@ export default async function SolutionLandingPage({ params }: PageProps) {
 
             {/* Right Column: High Quality Visual Showcase Image */}
             <div className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-[#041530]/60 backdrop-blur-md group">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-white group">
                 {/* Hero Image Container */}
                 <div className="relative h-[360px] sm:h-[440px] lg:h-[480px] w-full">
                   <Image
@@ -217,11 +218,11 @@ export default async function SolutionLandingPage({ params }: PageProps) {
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#041530]/90 via-[#041530]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
                 </div>
 
                 {/* Floating Glassmorphism Status Badge */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-[#07224B]/90 backdrop-blur-xl border border-white/20 shadow-xl flex items-center justify-between">
+                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/95 backdrop-blur-xl border border-slate-200 shadow-xl flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-mundo-orange text-white flex items-center justify-center font-bold shrink-0 shadow-md shadow-mundo-orange/30">
                       {getSolutionIcon(solution.iconName, "w-5 h-5")}
@@ -230,13 +231,13 @@ export default async function SolutionLandingPage({ params }: PageProps) {
                       <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange block">
                         INFRAESTRUTURA PRÓPRIA & OUTORGA ANATEL
                       </span>
-                      <span className="text-xs sm:text-sm font-display font-bold text-white block truncate">
+                      <span className="text-xs sm:text-sm font-display font-bold text-slate-900 block truncate">
                         {solution.shortTitle}
                       </span>
                     </div>
                   </div>
 
-                  <div className="hidden sm:flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-1 rounded-lg">
+                  <div className="hidden sm:flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg">
                     <Shield className="w-3.5 h-3.5" />
                     <span>99,95% SLA</span>
                   </div>
@@ -597,7 +598,7 @@ export default async function SolutionLandingPage({ params }: PageProps) {
       {/* ========================================================================= */}
       {/* 8. FINAL HIGH-CONVERSION CTA BANNER (max-w-7xl)                           */}
       {/* ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pb-20">
+      <section id="contato" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pb-20 scroll-mt-24">
         <div className="rounded-3xl bg-gradient-to-br from-[#07224B] via-[#041530] to-[#07224B] p-8 sm:p-14 text-white text-center relative overflow-hidden shadow-2xl border border-white/15">
           {/* Subtle Orange Glow */}
           <div className="absolute -top-24 -right-24 w-80 h-80 bg-mundo-orange/20 rounded-full blur-3xl pointer-events-none" />
@@ -613,15 +614,18 @@ export default async function SolutionLandingPage({ params }: PageProps) {
               Fale diretamente com os engenheiros e especialistas da Mundo Telecom. Sem intermediários, sem surpresas na fatura e com portabilidade assistida.
             </p>
             <div className="pt-4 flex items-center justify-center">
-              <Button
-                href={solution.cta.primaryHref}
+              <ContactModalButton
                 variant="primary"
                 size="lg"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
                 className="w-full sm:w-auto text-sm font-bold shadow-xl shadow-mundo-orange/30 px-8 py-4"
+                initialProfile="empresa"
+                initialSolution={solution.title}
+                modalTitle={`Solicitar Atendimento — ${solution.shortTitle}`}
+                modalSubtitle={`Preencha os dados abaixo para receber um diagnóstico técnico e dimensionamento sem compromisso para ${solution.title}.`}
               >
                 {solution.cta.primaryText}
-              </Button>
+              </ContactModalButton>
             </div>
           </div>
         </div>

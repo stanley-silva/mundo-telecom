@@ -120,7 +120,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300">
       {/* Top Utility Bar */}
-      <div className="bg-[#041530]/75 backdrop-blur-md border-b border-white/[0.08] text-slate-300 text-xs py-1.5 px-4 sm:px-8 hidden md:block">
+      <div className="bg-[#041530] border-b border-white/[0.08] text-slate-300 text-xs py-1.5 px-4 sm:px-8 hidden md:block">
         <div className="max-w-7xl mx-auto flex items-center justify-end gap-5">
           <a
             href={`tel:${siteContent.brand.phoneRegional.replace(/[^0-9]/g, "")}`}
@@ -146,10 +146,10 @@ export function Header() {
 
       {/* Main Navbar */}
       <nav
-        className={`w-full transition-all duration-300 backdrop-blur-md border-b border-white/[0.08] ${
+        className={`w-full transition-all duration-300 bg-[#07224B] border-b border-white/[0.08] ${
           isScrolled
-            ? "bg-[#07224B]/80 py-3.5 shadow-[0_8px_32px_0_rgba(7,34,75,0.35)]"
-            : "bg-[#07224B]/70 py-4 shadow-[0_4px_20px_0_rgba(7,34,75,0.15)]"
+            ? "py-3.5 shadow-lg shadow-black/20"
+            : "py-4 shadow-md shadow-black/10"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -194,27 +194,42 @@ export function Header() {
 
               {activeDropdown === "empresas" && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 animate-in fade-in zoom-in-95 duration-150">
-                  <div className="w-[740px] xl:w-[780px] rounded-2xl bg-[#07224B]/95 border border-white/15 p-5 shadow-2xl backdrop-blur-2xl">
+                  <div className="w-[730px] rounded-2xl bg-[#07224B] border border-white/15 p-5 shadow-2xl">
                     <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange mb-3 pb-2 border-b border-white/10">
                       {"// PORTFÓLIO CORPORATIVO DE TECNOLOGIA (9 SOLUÇÕES)"}
                     </div>
-                    <div className="grid grid-cols-2 gap-2">
-                      {empresasItems.map((item, idx) => (
-                        <Link
-                          key={idx}
-                          href={item.href}
-                          className="p-2.5 rounded-xl hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all group block"
-                        >
-                          <div className="space-y-0.5">
-                            <div className="text-xs font-display font-bold text-white group-hover:text-mundo-orange transition-colors truncate">
+                    <div className="grid grid-cols-2 gap-x-6 divide-x divide-white/10">
+                      {/* Coluna 1 */}
+                      <div className="space-y-1 pr-4">
+                        {empresasItems.slice(0, 5).map((item, idx) => (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all group"
+                          >
+                            <span className="text-xs font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
                               {item.title}
-                            </div>
-                            <div className="text-[11px] text-slate-300 group-hover:text-slate-200 transition-colors leading-tight line-clamp-2">
-                              {item.desc}
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
+                            </span>
+                            <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-mundo-orange group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Coluna 2 */}
+                      <div className="space-y-1 pl-4">
+                        {empresasItems.slice(5).map((item, idx) => (
+                          <Link
+                            key={idx + 5}
+                            href={item.href}
+                            className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all group"
+                          >
+                            <span className="text-xs font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
+                              {item.title}
+                            </span>
+                            <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-mundo-orange group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -245,8 +260,8 @@ export function Header() {
 
               {activeDropdown === "governo" && (
                 <div className="absolute top-full left-0 mt-2 z-50 animate-in fade-in zoom-in-95 duration-150">
-                  <div className="w-[420px] rounded-2xl bg-[#07224B] border border-white/15 p-4 shadow-2xl backdrop-blur-2xl">
-                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange mb-3 pb-2 border-b border-white/10">
+                  <div className="w-[360px] rounded-2xl bg-[#07224B] border border-white/15 p-4 shadow-2xl">
+                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-mundo-orange mb-2.5 pb-2 border-b border-white/10">
                       {"// ATENDIMENTO GOVERNAMENTAL B2G"}
                     </div>
                     <div className="grid grid-cols-1 gap-1">
@@ -254,16 +269,11 @@ export function Header() {
                         <Link
                           key={idx}
                           href={item.href}
-                          className="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all group"
+                          className="flex items-center justify-between px-3.5 py-2 rounded-xl hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all group"
                         >
-                          <div className="space-y-0.5">
-                            <div className="text-xs font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
-                              {item.title}
-                            </div>
-                            <div className="text-[11px] text-slate-300 group-hover:text-slate-200 transition-colors leading-tight">
-                              {item.desc}
-                            </div>
-                          </div>
+                          <span className="text-xs font-display font-bold text-white group-hover:text-mundo-orange transition-colors">
+                            {item.title}
+                          </span>
                           <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-mundo-orange group-hover:translate-x-0.5 transition-all shrink-0 ml-3" />
                         </Link>
                       ))}
@@ -311,7 +321,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-slate-200 hover:text-white bg-white/10 backdrop-blur-md border border-white/15"
+              className="p-2 rounded-xl text-slate-200 hover:text-white bg-white/10 border border-white/15"
               aria-label="Abrir menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -358,10 +368,7 @@ export function Header() {
                         href={item.href}
                         className="flex items-center justify-between p-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
                       >
-                        <div className="space-y-0.5">
-                          <div className="font-semibold text-white">{item.title}</div>
-                          <div className="text-[11px] text-slate-400">{item.desc}</div>
-                        </div>
+                        <span className="font-semibold text-white">{item.title}</span>
                         <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0 ml-2" />
                       </Link>
                     ))}
@@ -395,10 +402,7 @@ export function Header() {
                         href={item.href}
                         className="flex items-center justify-between p-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
                       >
-                        <div className="space-y-0.5">
-                          <div className="font-semibold text-white">{item.title}</div>
-                          <div className="text-[11px] text-slate-400">{item.desc}</div>
-                        </div>
+                        <span className="font-semibold text-white">{item.title}</span>
                         <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0 ml-2" />
                       </Link>
                     ))}

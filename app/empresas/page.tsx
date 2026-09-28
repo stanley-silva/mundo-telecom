@@ -22,6 +22,7 @@ import {
   Lock
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ContactModalButton } from "@/components/ui/ContactModal";
 import { Badge } from "@/components/ui/Badge";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { EmpresasSolutionsCarousel } from "@/components/sections/EmpresasSolutionsCarousel";
@@ -71,8 +72,8 @@ export default function EmpresasPage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION B2B COM IDENTIDADE INSTITUCIONAL     */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy-deep min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-mundo-white overflow-hidden flex flex-col justify-center">
-        {/* Dynamic PixelBlast Background */}
+      <section className="relative bg-white min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-slate-900 overflow-hidden flex flex-col justify-center border-b border-slate-200/60">
+        {/* Dynamic PixelBlast Background (Light Adapted) */}
         <HeroPixelBackground variant="empresas" />
 
         {/* Full Bleed Hero Image: Flush with right edge on mobile & desktop */}
@@ -86,6 +87,8 @@ export default function EmpresasPage() {
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="object-contain object-right-bottom"
             />
+            {/* Soft blend fade into light floor */}
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-60" />
           </div>
         </div>
 
@@ -103,30 +106,33 @@ export default function EmpresasPage() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-navy tracking-tight leading-[1.12]">
               Sua empresa perde clientes no telefone e no WhatsApp?
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
               <strong>Atenda mais e gaste menos.</strong> Nossa plataforma inteligente com Inteligência Artificial assume o atendimento repetitivo, ativa múltiplos atendentes no mesmo número de WhatsApp e elimina de vez as ligações perdidas com a <strong>rechamada automática exclusiva</strong>.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <Button
-                href="/contato?perfil=empresa"
+              <ContactModalButton
                 variant="primary"
                 size="lg"
                 className="w-full sm:w-auto"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
+                initialProfile="empresa"
+                initialSolution="PABX Virtual — Cloud PABX"
+                modalTitle="Falar com um Consultor B2B"
+                modalSubtitle="Preencha os dados abaixo para receber um diagnóstico comercial sem compromisso e conhecer nossas soluções."
               >
                 Falar com um Consultor B2B
-              </Button>
+              </ContactModalButton>
             </div>
 
             {/* Microcopy de Confiança */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600 font-medium">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Rechamada automática exclusiva</span>
@@ -225,15 +231,18 @@ export default function EmpresasPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button
-              href="/contato?perfil=empresa"
+            <ContactModalButton
               variant="primary"
               size="lg"
               className="w-full sm:w-auto"
               rightIcon={<ArrowRight className="w-4 h-4" />}
+              initialProfile="empresa"
+              initialSolution="PABX Virtual — Cloud PABX"
+              modalTitle="Falar com um Consultor B2B"
+              modalSubtitle="Preencha os dados abaixo para receber um diagnóstico comercial sem compromisso e conhecer nossas soluções."
             >
               Solicitar Atendimento para Empresas
-            </Button>
+            </ContactModalButton>
             <Button
               href={`https://wa.me/${siteContent.brand.whatsappNumber}?text=${encodeURIComponent("Olá! Gostaria de falar com um consultor via WhatsApp sobre soluções corporativas.")}`}
               isExternal

@@ -61,16 +61,19 @@ export default function SobreNosPage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION (QUEM SOMOS)                        */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-20 text-mundo-white overflow-hidden">
+      {/* ========================================================= */}
+      {/* BLOCO 1: HERO SECTION (QUEM SOMOS)                        */}
+      {/* ========================================================= */}
+      <section className="relative bg-white pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-20 text-slate-900 overflow-hidden border-b border-slate-200/60">
         {/* Animated PixelBlast Background (Autonomous, full height, no mouse interaction) */}
         <QuemSomosHeroBackground />
 
         {/* Ambient Gradient Overlay for Text Legibility & Contrast */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,34,75,0.2)_0%,rgba(4,21,48,0.65)_100%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.7)_0%,rgba(248,250,252,0.92)_100%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-xs text-slate-300 mb-6 font-display">
-            <Link href="/" className="hover:text-mundo-orange transition-colors">
+          <nav className="flex items-center justify-center gap-2 text-xs text-slate-500 mb-6 font-display font-medium">
+            <Link href="/" className="hover:text-mundo-navy transition-colors">
               Início
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -88,11 +91,11 @@ export default function SobreNosPage() {
               </Badge>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-display font-black text-white tracking-tight leading-[1.14] text-center max-w-4xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-display font-black text-mundo-navy tracking-tight leading-[1.14] text-center max-w-4xl">
               Empresa de Tecnologia com infraestrutura e solução própria
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal text-center max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal text-center max-w-3xl mx-auto">
               Somos uma empresa de tecnologia. Das telecomunicações às comunicações inteligentes: tecnologia, IA e mensageria aplicadas ao atendimento. Licenciados pela ANATEL, operamos nossos próprios servidores e plataformas. Atendemos desde clínicas e concessionárias até ministérios públicos, com IA aplicada em produção, não é promessa, é operação.
             </p>
 
@@ -108,7 +111,7 @@ export default function SobreNosPage() {
               </Button>
               <Button
                 href="/produtos"
-                variant="outline-white"
+                variant="outline"
                 size="lg"
                 className="w-full sm:w-auto"
               >
@@ -116,7 +119,7 @@ export default function SobreNosPage() {
               </Button>
             </div>
 
-            <div className="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300 w-full max-w-3xl">
+            <div className="pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-600 font-medium w-full max-w-3xl">
               <div className="flex items-center justify-center gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Infraestrutura Própria & ANATEL</span>

@@ -70,8 +70,8 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* BLOCO 1: HERO SECTION COM IDENTIDADE INSTITUCIONAL        */}
       {/* ========================================================= */}
-      <section className="relative bg-mundo-navy-deep min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-mundo-white overflow-hidden flex flex-col justify-center">
-        {/* Dynamic PixelBlast Background */}
+      <section className="relative bg-white min-h-[85vh] pt-32 pb-[380px] sm:pt-36 sm:pb-[450px] lg:pt-36 lg:pb-16 text-slate-900 overflow-hidden flex flex-col justify-center border-b border-slate-200/60">
+        {/* Dynamic PixelBlast Background (Light Adapted) */}
         <HeroPixelBackground variant="home" />
 
         {/* Full Bleed Hero Image: Flush with right edge on mobile & desktop */}
@@ -85,6 +85,8 @@ export default function HomePage() {
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="object-contain object-right-bottom"
             />
+            {/* Soft blend fade into light floor */}
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-60" />
           </div>
         </div>
 
@@ -102,19 +104,19 @@ export default function HomePage() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-display font-black text-mundo-navy tracking-tight leading-[1.12]">
               Comunicação corporativa que custa menos e atende melhor, para empresas e governo.
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
               PABX na nuvem, URA com IA e WhatsApp inteligente. Atendimento 24h que não deixa ninguém esperando e vende por você.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <Button
-                href="/contato"
+                href="#contato"
                 variant="primary"
                 size="lg"
                 className="w-full sm:w-auto"
@@ -124,16 +126,16 @@ export default function HomePage() {
               </Button>
               <Button
                 href="#solucoes-inteligentes"
-                variant="outline-white"
+                variant="outline"
                 size="lg"
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto bg-white/80"
               >
                 Explorar Soluções
               </Button>
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600 font-medium">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <Check className="w-4 h-4 text-mundo-orange shrink-0 stroke-[3]" />
                 <span>Rechamada automática exclusiva</span>
@@ -254,7 +256,7 @@ export default function HomePage() {
                     Para órgãos públicos que precisam de confiança
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Infraestrutura própria, SLA auditável e relatório gerencial mensal. Operamos o MPMG (4.306 ramais) e a DPMG (R$ 14,6 mi) com 99,95% de disponibilidade.
+                    Infraestrutura própria, SLA auditável e relatório gerencial mensal. Operamos o MPMG (4.306 ramais) e a DPMG (+3.000 ramais) com 99,95% de disponibilidade.
                   </p>
 
                   <div className="space-y-2 pt-2">
@@ -272,7 +274,7 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-start gap-2 text-xs font-medium text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-mundo-orange shrink-0 mt-0.5" />
-                      <span><strong className="text-slate-900 font-semibold">NOC 24/7 & Prova Real:</strong> MPMG (4.306 ramais), DPMG (R$ 14,6 mi), Caixa e Prefeituras.</span>
+                      <span><strong className="text-slate-900 font-semibold">NOC 24/7 & Prova Real:</strong> MPMG (4.306 ramais), DPMG (+3.000 ramais), Caixa e Prefeituras.</span>
                     </div>
                   </div>
                 </div>
@@ -387,7 +389,8 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* BLOCO 9: ATENDIMENTO CONSULTIVO E CTA DE CONVERSÃO        */}
       {/* ========================================================= */}
-      <section id="especialista" className="py-20 sm:py-28 bg-slate-50 text-slate-900 relative border-t border-slate-200/80">
+      <section id="contato" className="py-20 sm:py-28 bg-slate-50 text-slate-900 relative border-t border-slate-200/80 scroll-mt-20">
+        <div id="especialista" className="sr-only" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <InteractiveSimulator />
         </div>

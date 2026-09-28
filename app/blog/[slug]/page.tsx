@@ -69,15 +69,18 @@ export default async function BlogPostPage({ params }: PostPageProps) {
   return (
     <div className="w-full bg-[#FFFEFF]">
       {/* Post Header Hero */}
-      <section className="bg-mundo-navy pt-32 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-24 text-mundo-white relative overflow-hidden">
+      <section className="relative bg-white pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-20 text-slate-900 overflow-hidden border-b border-slate-200/60">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(239,131,28,0.04)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(248,250,252,0.6),transparent)] pointer-events-none" />
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs text-slate-300 font-display">
-            <Link href="/" className="hover:text-mundo-orange transition-colors">
+          <nav className="flex items-center gap-2 text-xs text-slate-500 font-display font-medium">
+            <Link href="/" className="hover:text-mundo-navy transition-colors">
               Início
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <Link href="/blog" className="hover:text-mundo-orange transition-colors">
+            <Link href="/blog" className="hover:text-mundo-navy transition-colors">
               Blog
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -88,7 +91,7 @@ export default async function BlogPostPage({ params }: PostPageProps) {
             <Badge variant="orange" className="text-xs">
               {post.category}
             </Badge>
-            <span className="text-xs text-slate-300 font-mono flex items-center gap-1">
+            <span className="text-xs text-slate-500 font-mono flex items-center gap-1">
               <Clock className="w-3.5 h-3.5 text-mundo-orange" />
               {post.readTime}
             </span>
@@ -97,29 +100,27 @@ export default async function BlogPostPage({ params }: PostPageProps) {
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white tracking-tight leading-[1.15]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-mundo-navy tracking-tight leading-[1.15]">
             {post.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             {post.summary}
           </p>
 
-          <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
+          <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-mundo-orange flex items-center justify-center font-display font-bold text-white text-xs">
                 MT
               </div>
               <div>
-                <span className="font-bold text-white block">Equipe Técnica Mundo Telecom</span>
-                <span className="text-slate-400">Engenharia de Redes & Telecomunicações</span>
+                <span className="font-bold text-mundo-navy block">Equipe Técnica Mundo Telecom</span>
+                <span className="text-slate-500">Engenharia de Redes & Telecomunicações</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <SectionDivider fromColor="#07224B" direction="down" height={36} />
 
       {/* Main Post Body & Table of Contents */}
       <section className="py-16 sm:py-20 bg-white">

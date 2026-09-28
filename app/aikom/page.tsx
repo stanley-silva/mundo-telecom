@@ -27,6 +27,7 @@ import {
   Zap,
   Radio
 } from "lucide-react";
+import { ContactModalButton } from "@/components/ui/ContactModal";
 
 export default function AikomPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -38,14 +39,14 @@ export default function AikomPage() {
   return (
     <div className="w-full bg-[#FFFEFF] selection:bg-[#D7593C] selection:text-white font-sans">
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION (Exclusiva AIKOM: Fundo #163358, Acentos #D7593C e #1C3D6F)*/}
+      {/* 1. HERO SECTION (Exclusiva Aikom: Fundo #163358, Acentos #D7593C e #1C3D6F)*/}
       {/* ========================================================================= */}
       <section className="relative bg-[#163358] text-white pt-28 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden">
-        {/* Grafismo Oficial de Apoio da Marca AIKOM */}
+        {/* Grafismo Oficial de Apoio da Marca Aikom */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <Image
             src="/images/grafismo-aikom-bg.png"
-            alt="Grafismo institucional AIKOM"
+            alt="Grafismo institucional Aikom"
             fill
             priority
             sizes="100vw"
@@ -64,18 +65,18 @@ export default function AikomPage() {
               <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
               <Link href="/solucoes" className="hover:text-white transition-colors">Soluções</Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-              <span className="text-[#D7593C] font-bold">AIKOM Omnichannel & IA</span>
+              <span className="text-[#D7593C] font-bold">Aikom Omnichannel & IA</span>
             </nav>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Coluna Esquerda: Apresentação da Marca & Value Proposition */}
             <div className="lg:col-span-6 space-y-6">
-              {/* Logotipo Oficial AIKOM com Tipografia Branca Direta (Sem Caixa Branca) */}
+              {/* Logotipo Oficial Aikom com Tipografia Branca Direta (Sem Caixa Branca) */}
               <div className="flex items-center">
                 <Image
                   src="/images/logo-aikom-branco.svg"
-                  alt="Logo AIKOM Omnichannel & IA"
+                  alt="Logo Aikom Omnichannel & IA"
                   width={185}
                   height={39}
                   priority
@@ -95,13 +96,13 @@ export default function AikomPage() {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
-                <Link
-                  href="/contato?solucao=aikom-omnichannel"
+                <a
+                  href="#demonstracao"
                   className="inline-flex items-center justify-center gap-2 bg-[#D7593C] hover:bg-[#c04b30] text-white font-bold shadow-lg shadow-[#D7593C]/25 text-sm sm:text-base px-7 py-3.5 rounded-2xl transition-all hover:-translate-y-0.5"
                 >
                   <span>Solicitar Demonstração da AIKOM</span>
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
 
                 <a
                   href="#recursos-aikom"
@@ -118,7 +119,7 @@ export default function AikomPage() {
                 <div className="relative aspect-square w-full overflow-hidden">
                   <Image
                     src="/images/solucoes/aikon/hero.jpg"
-                    alt="Especialista em atendimento utilizando a plataforma AIKOM com headset corporativo"
+                    alt="Especialista em atendimento utilizando a plataforma Aikom com headset corporativo"
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -134,7 +135,7 @@ export default function AikomPage() {
                     <div className="w-10 h-10 rounded-xl bg-[#D7593C] flex items-center justify-center shrink-0 shadow-md">
                       <Image
                         src="/images/icone-aikom.svg"
-                        alt="Ícone AIKOM"
+                        alt="Ícone Aikom"
                         width={22}
                         height={22}
                         className="w-5 h-5 object-contain brightness-0 invert"
@@ -157,7 +158,7 @@ export default function AikomPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. PILARES & MÉTRICAS AUDITÁVEIS (Paleta AIKOM #1C3D6F + #D7593C)         */}
+      {/* 2. PILARES & MÉTRICAS AUDITÁVEIS (Paleta Aikom #1C3D6F + #D7593C)         */}
       {/* ========================================================================= */}
       <section className="py-12 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,7 +207,7 @@ export default function AikomPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. O IMPACTO DA MODERNIZAÇÃO: CENÁRIO ANTERIOR VS COM A AIKOM             */}
+      {/* 3. O IMPACTO DA MODERNIZAÇÃO: CENÁRIO ANTERIOR VS COM A Aikom             */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,7 +216,7 @@ export default function AikomPage() {
               TRANSFORMAÇÃO DIGITAL
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-black text-[#163358] tracking-tight">
-              O impacto da plataforma AIKOM na sua operação
+              O impacto da plataforma Aikom na sua operação
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
               Substitua ferramentas improvisadas e celulares individuais por uma plataforma corporativa com SLA e supervisão completa.
@@ -243,13 +244,13 @@ export default function AikomPage() {
               </div>
             </div>
 
-            {/* Direita: A Solução com a AIKOM */}
+            {/* Direita: A Solução com a Aikom */}
             <div className="p-8 sm:p-12 bg-white flex flex-col justify-between relative overflow-hidden">
               <div className="absolute top-0 right-0 w-36 h-36 bg-[#D7593C]/10 rounded-full blur-2xl pointer-events-none" />
 
               <div className="space-y-4 relative z-10">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs font-mono font-bold uppercase tracking-wider">
-                  <span>✓ Com a Plataforma AIKOM</span>
+                  <span>✓ Com a Plataforma Aikom</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-display font-bold text-[#1C3D6F] tracking-tight">
                   Painel Unificado em Nuvem, IA Ativa e Gestão em Tempo Real
@@ -269,7 +270,7 @@ export default function AikomPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. ECOSSISTEMA MULTI-CANAL DA AIKOM                                       */}
+      {/* 4. ECOSSISTEMA MULTI-CANAL DA Aikom                                       */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -281,7 +282,7 @@ export default function AikomPage() {
               Todos os seus pontos de contato em uma fila inteligente
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              O cliente escolhe o canal favorito. Sua equipe gerencia tudo através da mesma tela com a AIKOM.
+              O cliente escolhe o canal favorito. Sua equipe gerencia tudo através da mesma tela com a Aikom.
             </p>
           </div>
 
@@ -356,7 +357,7 @@ export default function AikomPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. ESPECIFICAÇÕES & RECURSOS DA PLATAFORMA AIKOM (#recursos-aikom)        */}
+      {/* 5. ESPECIFICAÇÕES & RECURSOS DA PLATAFORMA Aikom (#recursos-aikom)        */}
       {/* ========================================================================= */}
       <section id="recursos-aikom" className="py-16 sm:py-24 bg-slate-50 border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -368,7 +369,7 @@ export default function AikomPage() {
               Recursos construídos para alta performance de atendimento
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Descubra por que a AIKOM é a escolha de grandes corporações e órgãos governamentais para simplificar a comunicação.
+              Descubra por que a Aikom é a escolha de grandes corporações e órgãos governamentais para simplificar a comunicação.
             </p>
           </div>
 
@@ -378,7 +379,7 @@ export default function AikomPage() {
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
                 <Image
                   src="/images/solucoes/aikon/feature-nlp.jpg"
-                  alt="Interface de triagem inteligente e workflow de NLP da AIKOM"
+                  alt="Interface de triagem inteligente e workflow de NLP da Aikom"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
@@ -563,7 +564,7 @@ export default function AikomPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 6. TABELA COMPARATIVA: AIKOM VS FERRAMENTAS NÃO OFICIAIS                 */}
+      {/* 6. TABELA COMPARATIVA: Aikom VS FERRAMENTAS NÃO OFICIAIS                 */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -572,14 +573,14 @@ export default function AikomPage() {
               COMPARATIVO TÉCNICO
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-black text-[#163358] tracking-tight">
-              Por que a AIKOM é a escolha segura?
+              Por que a Aikom é a escolha segura?
             </h2>
           </div>
 
           <div className="rounded-3xl border border-slate-200/90 overflow-hidden shadow-lg bg-white">
             <div className="grid grid-cols-12 bg-[#1C3D6F] text-white p-4 sm:p-5 font-display font-bold text-xs sm:text-sm">
               <div className="col-span-5 sm:col-span-4">Critério de Avaliação</div>
-              <div className="col-span-4 sm:col-span-4 text-[#D7593C]">Plataforma AIKOM</div>
+              <div className="col-span-4 sm:col-span-4 text-[#D7593C]">Plataforma Aikom</div>
               <div className="col-span-3 sm:col-span-4 text-slate-300">Soluções Dispersas / Piratas</div>
             </div>
 
@@ -625,7 +626,7 @@ export default function AikomPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 7. PERGUNTAS FREQUENTES (FAQ AIKOM)                                       */}
+      {/* 7. PERGUNTAS FREQUENTES (FAQ Aikom)                                       */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -634,27 +635,27 @@ export default function AikomPage() {
               DÚVIDAS FREQUENTES
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-black text-[#163358] tracking-tight">
-              Perguntas frequentes sobre a AIKOM
+              Perguntas frequentes sobre a Aikom
             </h2>
           </div>
 
           <div className="space-y-3">
             {[
               {
-                q: "Minha empresa precisa trocar de número para usar o WhatsApp na AIKOM?",
+                q: "Minha empresa precisa trocar de número para usar o WhatsApp na Aikom?",
                 a: "Não. Realizamos a migração assistida do seu número fixo comercial ou 0800 atual diretamente para a API Oficial do WhatsApp Business da Meta, sem nenhuma perda de histórico ou interrupção de atendimento."
               },
               {
-                q: "A AIKOM exige a compra ou instalação de servidores no meu escritório?",
-                a: "Não. A AIKOM é uma plataforma 100% em nuvem de alta disponibilidade. Seus colaboradores e atendentes acessam pelo navegador de forma segura em qualquer computador, notebook ou smartphone com acesso à internet."
+                q: "A Aikom exige a compra ou instalação de servidores no meu escritório?",
+                a: "Não. A Aikom é uma plataforma 100% em nuvem de alta disponibilidade. Seus colaboradores e atendentes acessam pelo navegador de forma segura em qualquer computador, notebook ou smartphone com acesso à internet."
               },
               {
                 q: "Como funciona a triagem com Inteligência Artificial?",
                 a: "Nossa IA cognitiva processa a mensagem inicial do cliente em linguagem natural (texto ou áudio), identifica a necessidade (suporte, financeiro, vendas), responde perguntas rotineiras automaticamente e transfere com resumo em tela para a fila do setor responsável."
               },
               {
-                q: "A plataforma AIKOM está em conformidade com a LGPD?",
-                a: "Sim. A AIKOM conta com mascaramento automático de dados confidenciais (CPF, números de cartões), cofre de logs imutáveis, controle rigoroso de permissões por usuário e trilhas de auditoria para atender plenamente às diretrizes da LGPD."
+                q: "A plataforma Aikom está em conformidade com a LGPD?",
+                a: "Sim. A Aikom conta com mascaramento automático de dados confidenciais (CPF, números de cartões), cofre de logs imutáveis, controle rigoroso de permissões por usuário e trilhas de auditoria para atender plenamente às diretrizes da LGPD."
               }
             ].map((faq, i) => (
               <div
@@ -688,9 +689,9 @@ export default function AikomPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 8. BANNER FINAL DE CONVERSÃO (Cores AIKOM: Fundo #163358, CTA #D7593C)   */}
+      {/* 8. BANNER FINAL DE CONVERSÃO (Cores Aikom: Fundo #163358, CTA #D7593C)   */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 bg-[#163358] text-white relative overflow-hidden">
+      <section id="demonstracao" className="py-16 sm:py-24 bg-[#163358] text-white relative overflow-hidden scroll-mt-20">
         {/* Corte angular geométrico sutil */}
         <div 
           className="absolute inset-0 pointer-events-none opacity-20"
@@ -715,21 +716,19 @@ export default function AikomPage() {
             Agende uma demonstração ao vivo guiada por um especialista da Mundo Telecom. Avalie a plataforma em produção e descubra como unificar seus canais com inteligência artificial.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link
-              href="/contato?solucao=aikom-omnichannel"
-              className="inline-flex items-center justify-center gap-2 bg-[#D7593C] hover:bg-[#c04b30] text-white font-bold shadow-xl shadow-[#D7593C]/30 text-sm sm:text-base px-8 py-4 rounded-2xl transition-all hover:-translate-y-0.5"
+          <div className="pt-4 flex items-center justify-center">
+            <ContactModalButton
+              variant="primary"
+              size="lg"
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+              className="w-full sm:w-auto !bg-[#D7593C] hover:!bg-[#c04b30] text-white font-bold shadow-xl shadow-[#D7593C]/30 text-sm sm:text-base px-8 py-4 rounded-2xl transition-all hover:-translate-y-0.5 border-none"
+              initialProfile="empresa"
+              initialSolution="Omnichannel & IA (Plataforma AIKOM)"
+              modalTitle="Solicitar Demonstração da AIKOM"
+              modalSubtitle="Preencha os dados abaixo para agendar uma demonstração guiada da plataforma AIKOM com um de nossos especialistas."
             >
-              <span>Solicitar Demonstração da AIKOM</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
-              href="/contato"
-              className="inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white text-white hover:bg-white/10 font-semibold text-sm sm:text-base px-7 py-4 rounded-2xl transition-all"
-            >
-              <span>Falar com Consultor Técnico</span>
-            </Link>
+              Solicitar Demonstração da AIKOM
+            </ContactModalButton>
           </div>
         </div>
       </section>

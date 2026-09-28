@@ -623,7 +623,7 @@ export const siteContent = {
       valueProposition: "Projetos de alta complexidade com entroncamentos STFC dedicados, faixas DDR sob medida, redundância geográfica entre datacenters, monitoramento NOC 24/7/365 e gerente de conta exclusivo.",
       features: [
         "Disponibilidade formal de 99,95% com monitoramento NOC 24/7/365",
-        "Casos auditáveis: DPMG (R$ 14,6 mi / 36m) e MPMG (4.306 ramais)",
+        "Casos auditáveis: DPMG (+3.000 ramais) e MPMG (4.306 ramais)",
         "Entroncamentos STFC dedicados e faixas DDR customizadas",
         "Redundância física e geográfica entre múltiplos datacenters",
         "Relatórios técnicos de bilhetagem para prestação de contas pública",
@@ -722,7 +722,7 @@ export const siteContent = {
     {
       number: "02",
       title: "Casos de Sucesso Comprovados em Grandes Órgãos Públicos",
-      description: "Operamos 4.306 ramais com mais de 80 mil chamadas/mês no MPMG e mantemos contrato de R$ 14,6 milhões (36 meses) na DPMG, além de dezenas de prefeituras e autarquias.",
+      description: "Operamos 4.306 ramais com mais de 80 mil chamadas/mês no MPMG e fornecemos infraestrutura para mais de 3.000 ramais na DPMG, além de dezenas de prefeituras e autarquias.",
     },
     {
       number: "03",
@@ -789,9 +789,9 @@ export const siteContent = {
     {
       client: "DPMG — Defensoria Pública de MG",
       segment: "Órgão Público Estadual (B2G)",
-      tag: "Contrato de R$ 14,6 Milhões (36 meses)",
+      tag: "+3.000 Ramais & 300 Links Dedicados",
       description: "Fornecemos soluções de telecomunicações em todo o estado de Minas Gerais há mais de 10 anos. O projeto abrange mais de 3.000 ramais, 140 plataformas de comunicação e 300 links de dados, todos entregues via fibra óptica. Além disso, oferecemos telefonia fixa e 1.200 aparelhos IP.",
-      stats: "Contrato de R$ 14,6 milhões em 36 meses com SLA de 99,95% e suporte NOC 24x7",
+      stats: "Mais de 3.000 ramais corporativos e 300 links dedicados com SLA de 99,95% e suporte NOC 24x7",
       image: "/images/fotos-cases/dpmg.png",
       authorName: "Diretoria de Tecnologia e Comunicação",
       authorRole: "Gestão Pública Estadual",
